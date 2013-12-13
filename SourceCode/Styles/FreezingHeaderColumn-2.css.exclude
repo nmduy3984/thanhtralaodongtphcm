@@ -1,0 +1,120 @@
+﻿    table#table-header-right
+    {
+        border-spacing: 0;
+        border-collapse: collapse;
+        border: 1px solid;
+        table-layout: fixed;
+        width: 1000px;
+        border: 1px solid #000;
+        border-left:0px;
+    }
+    table#table-header-left
+    {
+        border-spacing: 0;
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 285px;
+        border: 1px solid #000;
+        border-right:0px;
+        margin-top: 1px;
+    }
+    table.table-content-right
+    {
+        border-spacing: 0;
+        border-collapse: collapse;
+        border: 1px solid;
+        table-layout: fixed;
+        width: 1500px;
+        font: normal 11px Tahoma, Geneva, sans-serif;
+    }
+    
+    table.table-content-right td, table#table-header-right th
+    {
+        border-top: 0px solid #000;
+        border-bottom: 1px solid #000;
+        border-right: 1px solid #000;
+        border-left: 0px solid #000;
+        height: 28px;
+        
+    }
+    div#header-container-right
+    {
+        overflow: hidden;
+        padding: 1px 0px 0px 0px;
+    }
+    div#header-container-left
+    {
+    	float:left;
+    	border-right:1px solid #000;
+	}
+    div#scroll
+    {
+        overflow: hidden;
+        max-height: 600px;
+    }
+    
+    div#fake-scroll-container
+    {
+        width: 950px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    div#y-fake-scroll
+    {
+        overflow-y: auto;
+        overflow-x: hidden;
+        background: transparent;
+        position: absolute;
+        right: 0;
+        position: absolute;
+        max-height: 600px;
+        top: 30px;
+    }
+    
+    div#x-fake-scroll
+    {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        margin-top: expression('0px');
+        height: 20px;
+    }
+    
+    div#y-scroll
+    {
+        max-height: 600px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 0px 1px 1px 1px;
+    }
+
+    div#container-left
+    {
+        overflow: hidden;
+        max-height: 600px;
+        float:left;
+        border-right:1px solid #000
+    }
+    table#table-content-left
+    {
+        border-spacing: 0;
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 285px;
+        font: normal 11px Tahoma, Geneva, sans-serif;
+        border-left: 1px solid #000;
+        border-right: 0px solid #000;
+    }
+    table#table-content-left td
+    {
+        border-bottom: 1px solid #000;
+        border-left: 1px solid #000;
+        padding-left: 2px;
+    }
+    table#table-header-left th
+    {
+        border-bottom: 1px solid #000;
+        border-left: 1px solid #000;
+        height: 28px;
+        padding-left:5px;
+    }
