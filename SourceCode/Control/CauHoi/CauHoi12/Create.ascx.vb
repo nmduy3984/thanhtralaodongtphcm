@@ -1342,7 +1342,7 @@ Partial Class Control_CauHoi12_Create
                 'TH sai 4.6. Mức trả lương làm thêm giờ theo
                 Dim arrKL As New ArrayList
                 Dim arrKN As New ArrayList
-                If (Not IsNothing(q4.Q46a) AndAlso q4.Q46a) Or (Not IsNothing(q4.Q46a) AndAlso q4.Q46a) Then
+                If (Not IsNothing(q4.Q46a) AndAlso q4.Q46a) Or (Not IsNothing(q4.Q46b) AndAlso q4.Q46b) Then
                     kl = New ThanhTraLaoDongModel.KetLuan
                     kl.NDKetLuan = "Trả lương làm thêm giờ với người hưởng "
                     Dim strlink1 As String = ""
