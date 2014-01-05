@@ -5,6 +5,7 @@ Imports SecurityService
 Imports ThanhTraLaoDongModel
 Imports Novacode
 Imports System.IO
+Imports System.Web.Configuration
 Partial Class Control_Quyetdinhthanhtra_Create
     Inherits System.Web.UI.UserControl
     Private Shared ReadOnly log As log4net.ILog = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
@@ -185,11 +186,28 @@ Partial Class Control_Quyetdinhthanhtra_Create
                 p.NguoiKyQuyetDinh = txtNguoiKyQuyetDinh.Text.Trim()
                 p.NgayTao = Now()
                 p.NguoiTao = Session("UserName")
+                Dim r As New Random
+                Dim IdNumber As String = RandomString(r)
+                Dim qdtt = (From q In data.QuyetDinhThanhTras Where q.IdNumber.Equals(IdNumber)).ToList
+                While qdtt.Count > 0
+                    IdNumber = RandomString(r)
+                    qdtt = (From q In data.QuyetDinhThanhTras Where q.IdNumber.Equals(IdNumber)).ToList
+                End While
+                p.IdNumber = IdNumber
                 data.QuyetDinhThanhTras.AddObject(p)
                 data.SaveChanges()
-                Dim strInsert = "insert into QuyetDinhThanhTra(SoQuyetDinh, LoaiQuyetDinh,PhamVi,CanCuLuat,CanCuQuyetDinh,DiaBanTTKT,ThanhVienDoan,TrachNhiemThiHanh,ChucDanhNguoiKy,NoiNhan,NguoiKyQuyetDinh,NgayTao,NguoiTao,IsEdited) values("
+
+                'Create script insert table QuyetDinhThanhTra
+                Dim strInsert = "insert into QuyetDinhThanhTra(SoQuyetDinh, LoaiQuyetDinh,PhamVi,CanCuLuat,CanCuQuyetDinh,DiaBanTTKT,"
+                strInsert = strInsert & "ThanhVienDoan,TrachNhiemThiHanh,ChucDanhNguoiKy,NoiNhan,NguoiKyQuyetDinh,NgayTao,NguoiTao,IsEdited,IdNumber) values("
                 strInsert = strInsert & "'" & p.SoQuyetDinh & "'," & p.LoaiQuyetDinh & ",'" & p.PhamVi & "','" & p.CanCuLuat & "','" & p.CanCuQuyetDinh & "'," & p.DiaBanTTKT
-                strInsert = strInsert & ",'" & p.ThanhVienDoan & "','" & p.TrachNhiemThiHanh & "'," & p.ChucDanhNguoiKy & ",'" & p.NoiNhan & "','" & p.NguoiKyQuyetDinh & "','" & p.NgayTao & "','" & p.NguoiTao & "', 0);"
+                strInsert = strInsert & ",'" & p.ThanhVienDoan & "','" & p.TrachNhiemThiHanh & "'," & p.ChucDanhNguoiKy & ",'" & p.NoiNhan & "','" & p.NguoiKyQuyetDinh & "',"
+                strInsert = strInsert & "'" & p.NgayTao & "','" & p.NguoiTao & "', " & p.IsEdited & ",'" & p.IdNumber & "');"
+                Dim s As Stream = New FileStream("c:\test.txt", FileMode.Append)
+                Using sr As New StreamWriter(s, Encoding.UTF8)
+                    sr.WriteLine(strInsert.Trim)
+                End Using
+
                 'Save danh sách doanh nghiệp
                 Dim lstDoanhNghiep() As String = hidlstDoanhNghiep.Value.Split(Str_Symbol_Group)
                 Dim lstDiaChi() As String = hidlstDiaChi.Value.Split(Str_Symbol_Group)
@@ -206,16 +224,32 @@ Partial Class Control_Quyetdinhthanhtra_Create
                         .ThoiGianLamViec = StringToDate(lstThoiGian(i))
                         .NgayTao = Now()
                         .NguoiTao = Session("UserName")
+                        .IdNumber = IdNumber
                     End With
                     data.DoanhNghieps.AddObject(dn)
                     data.SaveChanges()
+                    'Create script insert table DoanhNghieps
+                    strInsert = "insert into DoanhNghiep(TenDoanhNghiep, TruSoChinh, TinhId, HuyenId, ThoiGianLamViec, NgayTao, NguoiTao, IdNumber) values("
+                    strInsert = strInsert & "'" & dn.TenDoanhNghiep & "', '" & dn.TruSoChinh & "', " & dn.TinhId & ", " & dn.HuyenId & ", " & dn.ThoiGianLamViec
+                    strInsert = strInsert & ", '" & dn.NgayTao & "', '" & dn.NguoiTao & "', '" & dn.IdNumber & "'"
+                    Using sr As New StreamWriter(s, Encoding.UTF8)
+                        sr.WriteLine(strInsert.Trim)
+                    End Using
+
                     Dim qdtt_dn As New QuyetDinhTTDoanhNghiep
                     With qdtt_dn
                         .QuyetDinhTT = p.SoQuyetDinh
                         .DoanhNghiepId = dn.DoanhNghiepId
                         .IsMoi = True
+                        .IdNumber = IdNumber
                     End With
                     data.QuyetDinhTTDoanhNghieps.AddObject(qdtt_dn)
+                    'Create script insert table QuyetDinhTTDoanhNghieps
+                    strInsert = "insert into QuyetDinhTTDoanhNghiep(QuyetDinhTT, DoanhNghiepId, IsMoi, IdNumber) values("
+                    strInsert = strInsert & "'" & qdtt_dn.QuyetDinhTT & "', " & qdtt_dn.DoanhNghiepId & ", " & qdtt_dn.IsMoi & ", '" & dn.IdNumber & "'"
+                    Using sr As New StreamWriter(s, Encoding.UTF8)
+                        sr.WriteLine(strInsert.Trim)
+                    End Using
                 Next
                 data.SaveChanges()
                 Session("SoQD") = p.SoQuyetDinh

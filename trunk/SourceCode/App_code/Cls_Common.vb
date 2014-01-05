@@ -515,7 +515,16 @@ Public Class Cls_Common
         Randomize()
         Return validChar(Int((61 * Rnd()) + 1))
     End Function
-
+    Public Shared Function RandomString(ByVal r As Random) As String
+        Dim s As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+        Dim sb As New StringBuilder
+        Dim cnt As Integer = r.Next(50, 50)
+        For i As Integer = 1 To cnt
+            Dim idx As Integer = r.Next(0, s.Length)
+            sb.Append(s.Substring(idx, 1))
+        Next
+        Return sb.ToString()
+    End Function
     Public Shared Function Get_Address_Name(ByVal strName As String) As String
         Dim tmp As String
         If strName <> "" Then
@@ -1171,5 +1180,6 @@ Public Class Cls_Common
         killexcel.EnsureProcessKilled(iHandle, caption)
 
     End Sub
+    
 End Class
 

@@ -230,21 +230,9 @@
             <End Role="Function" EntitySet="Function" />
             <End Role="SysFuncRolesStatusPermission" EntitySet="SysFuncRolesStatusPermission" />
           </AssociationSet>
-          <AssociationSet Name="FK_SysFuncRolesStatusPermission_Roles" Association="ThanhTraLaoDongModel.Store.FK_SysFuncRolesStatusPermission_Roles">
-            <End Role="Roles" EntitySet="Roles" />
-            <End Role="SysFuncRolesStatusPermission" EntitySet="SysFuncRolesStatusPermission" />
-          </AssociationSet>
           <AssociationSet Name="FK_UserDetails_Users" Association="ThanhTraLaoDongModel.Store.FK_UserDetails_Users">
             <End Role="Users" EntitySet="Users" />
             <End Role="UsersProfile" EntitySet="UsersProfile" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UserRole_Roles" Association="ThanhTraLaoDongModel.Store.FK_UserRole_Roles">
-            <End Role="Roles" EntitySet="Roles" />
-            <End Role="UserRole" EntitySet="UserRole" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UserRole_Users" Association="ThanhTraLaoDongModel.Store.FK_UserRole_Users">
-            <End Role="Users" EntitySet="Users" />
-            <End Role="UserRole" EntitySet="UserRole" />
           </AssociationSet>
           <AssociationSet Name="FK_UsersMenu_Menu" Association="ThanhTraLaoDongModel.Store.FK_UsersMenu_Menu">
             <End Role="Menu" EntitySet="Menu" />
@@ -282,6 +270,7 @@
           <Property Name="NgaySua" Type="datetime" />
           <Property Name="BDHieuLuc" Type="datetime" />
           <Property Name="KTHieuLuc" Type="datetime" />
+          <Property Name="IdNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
         </EntityType>
         <EntityType Name="CauHoi10">
           <Key>
@@ -301,6 +290,7 @@
           <Property Name="KTHieuLuc" Type="datetime" />
           <Property Name="Q105" Type="int" />
           <Property Name="Q106" Type="int" />
+          <Property Name="IdNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
         </EntityType>
         <EntityType Name="CauHoi11">
           <Key>
@@ -327,6 +317,7 @@
           <Property Name="Q1131" Type="int" />
           <Property Name="Q118" Type="bit" />
           <Property Name="Q119" Type="bit" />
+          <Property Name="IdNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
         </EntityType>
         <EntityType Name="CauHoi12">
           <Key>
@@ -348,6 +339,7 @@
           <Property Name="NgaySua" Type="datetime" />
           <Property Name="BDHieuLuc" Type="datetime" />
           <Property Name="KTHieuLuc" Type="datetime" />
+          <Property Name="IdNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
         </EntityType>
         <EntityType Name="CauHoi2">
           <Key>
@@ -398,6 +390,7 @@
           <Property Name="Q236" Type="bit" />
           <Property Name="Q237" Type="bit" />
           <Property Name="Q238" Type="int" />
+          <Property Name="IdNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
         </EntityType>
         <EntityType Name="CauHoi3">
           <Key>
@@ -418,6 +411,7 @@
           <Property Name="Q341" Type="nvarchar" />
           <Property Name="Q35" Type="bit" />
           <Property Name="Q351" Type="nvarchar" />
+          <Property Name="IdNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
         </EntityType>
         <EntityType Name="CauHoi4">
           <Key>
@@ -469,6 +463,7 @@
           <Property Name="Q4105" Type="int" />
           <Property Name="Q41041" Type="nvarchar" MaxLength="500" />
           <Property Name="Q4116" Type="int" />
+          <Property Name="IdNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
         </EntityType>
         <EntityType Name="CauHoi5">
           <Key>
@@ -497,6 +492,7 @@
           <Property Name="Q55" Type="bit" />
           <Property Name="Q514" Type="numeric" Scale="2" />
           <Property Name="Q515" Type="numeric" Scale="2" />
+          <Property Name="IdNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
         </EntityType>
         <EntityType Name="CauHoi6">
           <Key>
@@ -525,6 +521,7 @@
           <Property Name="Q68" Type="bit" />
           <Property Name="Q681" Type="nvarchar" MaxLength="1000" />
           <Property Name="Q631" Type="int" />
+          <Property Name="IdNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
         </EntityType>
         <EntityType Name="CauHoi7">
           <Key>
@@ -637,6 +634,7 @@
           <Property Name="Q7059" Type="int" />
           <Property Name="Q71118" Type="int" />
           <Property Name="Q706" Type="bit" />
+          <Property Name="IdNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
         </EntityType>
         <EntityType Name="CauHoi8">
           <Key>
@@ -668,6 +666,7 @@
           <Property Name="KTHieuLuc" Type="datetime" />
           <Property Name="Q81" Type="bit" />
           <Property Name="Q8241" Type="nvarchar" />
+          <Property Name="IdNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
         </EntityType>
         <EntityType Name="CauHoi9">
           <Key>
@@ -693,6 +692,7 @@
           <Property Name="BDHieuLuc" Type="datetime" />
           <Property Name="KTHieuLuc" Type="datetime" />
           <Property Name="Q925" Type="int" />
+          <Property Name="IdNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
         </EntityType>
         <EntityType Name="CauHoiHierarchy">
           <Key>
@@ -806,6 +806,7 @@
           <Property Name="NguoiLienHe" Type="nvarchar" MaxLength="50" />
           <Property Name="ThoiGianLamViec" Type="datetime" />
           <Property Name="IsHoanThanh" Type="bit" />
+          <Property Name="IdNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
         </EntityType>
         <EntityType Name="Event">
           <Key>
@@ -1029,6 +1030,7 @@
           <Property Name="DienThoaiLH" Type="nvarchar" MaxLength="20" />
           <Property Name="EmailLH" Type="nvarchar" MaxLength="150" />
           <Property Name="NguoiLienHe" Type="nvarchar" MaxLength="50" />
+          <Property Name="IdNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
         </EntityType>
         <EntityType Name="QuyetDinhThanhTra">
           <Key>
@@ -1051,6 +1053,7 @@
           <Property Name="NgaySua" Type="datetime" />
           <Property Name="NguoiSua" Type="nvarchar" MaxLength="50" />
           <Property Name="IsEdited" Type="bit" />
+          <Property Name="IdNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
         </EntityType>
         <EntityType Name="QuyetDinhTTDoanhNghiep">
           <Key>
@@ -1060,6 +1063,7 @@
           <Property Name="QuyetDinhTT" Type="nvarchar" Nullable="false" MaxLength="200" />
           <Property Name="DoanhNghiepId" Type="bigint" />
           <Property Name="IsMoi" Type="bit" />
+          <Property Name="IdNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'ThanhTraLaoDongTpHCM.dbo.RoleMenu' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
@@ -1717,20 +1721,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_SysFuncRolesStatusPermission_Roles">
-          <End Role="Roles" Type="ThanhTraLaoDongModel.Store.Roles" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="SysFuncRolesStatusPermission" Type="ThanhTraLaoDongModel.Store.SysFuncRolesStatusPermission" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Roles">
-              <PropertyRef Name="RoleId" />
-            </Principal>
-            <Dependent Role="SysFuncRolesStatusPermission">
-              <PropertyRef Name="RoleId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_UserDetails_Users">
           <End Role="Users" Type="ThanhTraLaoDongModel.Store.Users" Multiplicity="1" />
           <End Role="UsersProfile" Type="ThanhTraLaoDongModel.Store.UsersProfile" Multiplicity="0..1" />
@@ -1739,32 +1729,6 @@
               <PropertyRef Name="UserId" />
             </Principal>
             <Dependent Role="UsersProfile">
-              <PropertyRef Name="UserId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_UserRole_Roles">
-          <End Role="Roles" Type="ThanhTraLaoDongModel.Store.Roles" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="UserRole" Type="ThanhTraLaoDongModel.Store.UserRole" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Roles">
-              <PropertyRef Name="RoleId" />
-            </Principal>
-            <Dependent Role="UserRole">
-              <PropertyRef Name="RoleId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_UserRole_Users">
-          <End Role="Users" Type="ThanhTraLaoDongModel.Store.Users" Multiplicity="1" />
-          <End Role="UserRole" Type="ThanhTraLaoDongModel.Store.UserRole" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Users">
-              <PropertyRef Name="UserId" />
-            </Principal>
-            <Dependent Role="UserRole">
               <PropertyRef Name="UserId" />
             </Dependent>
           </ReferentialConstraint>
@@ -2191,7 +2155,6 @@
             <End Role="Status" EntitySet="Status" />
             <End Role="StatusAction" EntitySet="StatusActions" />
           </AssociationSet>
-          <EntitySet Name="CauHoi1" EntityType="ThanhTraLaoDongModel.CauHoi1" />
           <EntitySet Name="LoaiHinhDoanhNghieps" EntityType="ThanhTraLaoDongModel.LoaiHinhDoanhNghiep" />
           <EntitySet Name="Users" EntityType="ThanhTraLaoDongModel.User" />
           <AssociationSet Name="FK_UserRole_Users" Association="ThanhTraLaoDongModel.FK_UserRole_Users">
@@ -2210,7 +2173,6 @@
             <End Role="User" EntitySet="Users" />
             <End Role="UserSurvey" EntitySet="UserSurveys" />
           </AssociationSet>
-          <EntitySet Name="CauHoi12" EntityType="ThanhTraLaoDongModel.CauHoi12" />
           <FunctionImport Name="usp_Rpt_KetQuaThanhTra1" ReturnType="Collection(ThanhTraLaoDongModel.usp_RptSumary_Result)">
             <Parameter Name="pr_Tinh" Mode="In" Type="String" />
             <Parameter Name="pr_Huyen" Mode="In" Type="String" />
@@ -2400,23 +2362,6 @@
           <Parameter Name="PhieuId" Mode="In" Type="Int32" />
           </FunctionImport>
           <EntitySet Name="SYS_PARAMETERS" EntityType="ThanhTraLaoDongModel.SYS_PARAMETERS" />
-          <EntitySet Name="PhieuNhapHeaders" EntityType="ThanhTraLaoDongModel.PhieuNhapHeader" />
-          <AssociationSet Name="FK_CauHoi1_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi1_PhieuNhapHeader">
-            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
-            <End Role="CauHoi1" EntitySet="CauHoi1" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CauHoi12_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi12_PhieuNhapHeader">
-            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
-            <End Role="CauHoi12" EntitySet="CauHoi12" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HanhViDN_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_HanhViDN_PhieuNhapHeader">
-            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
-            <End Role="HanhViDN" EntitySet="HanhViDNs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_KetLuan_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_KetLuan_PhieuNhapHeader">
-            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
-            <End Role="KetLuan" EntitySet="KetLuans" />
-          </AssociationSet>
           <FunctionImport Name="uspListKienNghiDNPhaiTHByPhieuId" ReturnType="Collection(ThanhTraLaoDongModel.uspListKienNghiDNPhaiTHByPhieuId_Result)">
           <Parameter Name="PhieuId" Mode="In" Type="Int32" />
           </FunctionImport>
@@ -2437,21 +2382,11 @@
             <End Role="CauHoiHierarchy" EntitySet="CauHoiHierarchies" />
             <End Role="CauHoiKienNghi" EntitySet="CauHoiKienNghis" />
           </AssociationSet>
-          <EntitySet Name="CauHoi9" EntityType="ThanhTraLaoDongModel.CauHoi9" />
-          <AssociationSet Name="FK_CauHoi9_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi9_PhieuNhapHeader">
-            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
-            <End Role="CauHoi9" EntitySet="CauHoi9" />
-          </AssociationSet>
           <FunctionImport Name="uspDMKienNghi" ReturnType="Collection(ThanhTraLaoDongModel.uspDMKienNghi_Result)">
             <Parameter Name="PhieuId" Mode="In" Type="Int32" />
             <Parameter Name="PageNum" Mode="In" Type="Int32" />
             <Parameter Name="PageSize" Mode="In" Type="Int32" />
           </FunctionImport>
-          <EntitySet Name="CauHoi6" EntityType="ThanhTraLaoDongModel.CauHoi6" />
-          <AssociationSet Name="FK_CauHoi6_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi6_PhieuNhapHeader">
-            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
-            <End Role="CauHoi6" EntitySet="CauHoi6" />
-          </AssociationSet>
           <FunctionImport Name="uspTraCuuDSKienNghiCuaDoanhNghiepNam" ReturnType="Collection(ThanhTraLaoDongModel.uspTraCuuDSKienNghiCuaDoanhNghiepNam_Result)">
             <Parameter Name="TinhId" Mode="In" Type="Int32" />
             <Parameter Name="Nam" Mode="In" Type="Int32" />
@@ -2503,11 +2438,6 @@
             <Parameter Name="DatabaseName" Mode="In" Type="String" />
             <Parameter Name="SQLBackupFolder" Mode="In" Type="String" />
           </FunctionImport>
-          <EntitySet Name="CauHoi10" EntityType="ThanhTraLaoDongModel.CauHoi10" />
-          <AssociationSet Name="FK_CauHoi10_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi10_PhieuNhapHeader">
-            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
-            <End Role="CauHoi10" EntitySet="CauHoi10" />
-          </AssociationSet>
           <FunctionImport Name="uspTraCuuDSDNChuaHuanLuyenAnToanLaoDong" ReturnType="Collection(ThanhTraLaoDongModel.uspTraCuuDSDNChuaHuanLuyenAnToanLaoDong_Result)">
             <Parameter Name="TinhId" Mode="In" Type="Int32" />
             <Parameter Name="FromDate" Mode="In" Type="DateTime" />
@@ -2535,16 +2465,6 @@
             <Parameter Name="PageNum" Mode="In" Type="Int32" />
             <Parameter Name="PageSize" Mode="In" Type="Int32" />
           </FunctionImport>
-          <EntitySet Name="CauHoi11" EntityType="ThanhTraLaoDongModel.CauHoi11" />
-          <AssociationSet Name="FK_CauHoi11_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi11_PhieuNhapHeader">
-            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
-            <End Role="CauHoi11" EntitySet="CauHoi11" />
-          </AssociationSet>
-          <EntitySet Name="CauHoi4" EntityType="ThanhTraLaoDongModel.CauHoi4" />
-          <AssociationSet Name="FK_CauHoi4_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi4_PhieuNhapHeader">
-            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
-            <End Role="CauHoi4" EntitySet="CauHoi4" />
-          </AssociationSet>
           <EntitySet Name="sysdiagrams" EntityType="ThanhTraLaoDongModel.sysdiagram" />
           <EntitySet Name="DanhGias" EntityType="ThanhTraLaoDongModel.DanhGia" />
           <AssociationSet Name="FK_DanhGia_Users" Association="ThanhTraLaoDongModel.FK_DanhGia_Users">
@@ -2569,41 +2489,6 @@
             <End Role="Tinh" EntitySet="Tinhs" />
             <End Role="UsersTinh" EntitySet="UsersTinhs" />
           </AssociationSet>
-          <EntitySet Name="CauHoi2" EntityType="ThanhTraLaoDongModel.CauHoi2" />
-          <EntitySet Name="CauHoi3" EntityType="ThanhTraLaoDongModel.CauHoi3" />
-          <EntitySet Name="CauHoi7" EntityType="ThanhTraLaoDongModel.CauHoi7" />
-          <EntitySet Name="CauHoi8" EntityType="ThanhTraLaoDongModel.CauHoi8" />
-          <AssociationSet Name="FK_CauHoi2_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi2_PhieuNhapHeader">
-            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
-            <End Role="CauHoi2" EntitySet="CauHoi2" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CauHoi3_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi3_PhieuNhapHeader">
-            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
-            <End Role="CauHoi3" EntitySet="CauHoi3" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CauHoi7_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi7_PhieuNhapHeader">
-            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
-            <End Role="CauHoi7" EntitySet="CauHoi7" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CauHoi8_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi8_PhieuNhapHeader">
-            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
-            <End Role="CauHoi8" EntitySet="CauHoi8" />
-          </AssociationSet>
-          <EntitySet Name="CauHoi5" EntityType="ThanhTraLaoDongModel.CauHoi5" />
-          <AssociationSet Name="FK_CauHoi5_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi5_PhieuNhapHeader">
-            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
-            <End Role="CauHoi5" EntitySet="CauHoi5" />
-          </AssociationSet>
-          <EntitySet Name="QuyetDinhThanhTras" EntityType="ThanhTraLaoDongModel.QuyetDinhThanhTra" />
-          <EntitySet Name="QuyetDinhTTDoanhNghieps" EntityType="ThanhTraLaoDongModel.QuyetDinhTTDoanhNghiep" />
-          <AssociationSet Name="FK_QuyetDinhThanhTra_Tinh" Association="ThanhTraLaoDongModel.FK_QuyetDinhThanhTra_Tinh">
-            <End Role="Tinh" EntitySet="Tinhs" />
-            <End Role="QuyetDinhThanhTra" EntitySet="QuyetDinhThanhTras" />
-          </AssociationSet>
-          <AssociationSet Name="FK_QuyetDinhThanhTra_Tinh1" Association="ThanhTraLaoDongModel.FK_QuyetDinhThanhTra_Tinh1">
-            <End Role="Tinh" EntitySet="Tinhs" />
-            <End Role="QuyetDinhThanhTra" EntitySet="QuyetDinhThanhTras" />
-          </AssociationSet>
           <FunctionImport Name="uspQuyetDinhThanhTraSelectAll" ReturnType="Collection(ThanhTraLaoDongModel.uspQuyetDinhThanhTraSelectAll_Result)">
             <Parameter Name="SoQD" Mode="In" Type="String" />
             <Parameter Name="Username" Mode="In" Type="String" />
@@ -2613,31 +2498,6 @@
             <Parameter Name="PageNum" Mode="In" Type="Int32" />
             <Parameter Name="PageSize" Mode="In" Type="Int32" />
           </FunctionImport>
-          <EntitySet Name="DoanhNghieps" EntityType="ThanhTraLaoDongModel.DoanhNghiep" />
-          <AssociationSet Name="FK_DoanhNghiep_Huyen" Association="ThanhTraLaoDongModel.FK_DoanhNghiep_Huyen">
-            <End Role="Huyen" EntitySet="Huyens" />
-            <End Role="DoanhNghiep" EntitySet="DoanhNghieps" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DoanhNghiep_LoaiHinhDoanhNghiep" Association="ThanhTraLaoDongModel.FK_DoanhNghiep_LoaiHinhDoanhNghiep">
-            <End Role="LoaiHinhDoanhNghiep" EntitySet="LoaiHinhDoanhNghieps" />
-            <End Role="DoanhNghiep" EntitySet="DoanhNghieps" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DoanhNghiep_LoaiHinhSanXuat1" Association="ThanhTraLaoDongModel.FK_DoanhNghiep_LoaiHinhSanXuat1">
-            <End Role="LoaiHinhSanXuat" EntitySet="LoaiHinhSanXuats" />
-            <End Role="DoanhNghiep" EntitySet="DoanhNghieps" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DoanhNghiep_Tinh" Association="ThanhTraLaoDongModel.FK_DoanhNghiep_Tinh">
-            <End Role="Tinh" EntitySet="Tinhs" />
-            <End Role="DoanhNghiep" EntitySet="DoanhNghieps" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PhieuNhapHeader_DoanhNghiep" Association="ThanhTraLaoDongModel.FK_PhieuNhapHeader_DoanhNghiep">
-            <End Role="DoanhNghiep" EntitySet="DoanhNghieps" />
-            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
-          </AssociationSet>
-          <AssociationSet Name="FK_QuyetDinhTTDoanhNghiep_DoanhNghiep" Association="ThanhTraLaoDongModel.FK_QuyetDinhTTDoanhNghiep_DoanhNghiep">
-            <End Role="DoanhNghiep" EntitySet="DoanhNghieps" />
-            <End Role="QuyetDinhTTDoanhNghiep" EntitySet="QuyetDinhTTDoanhNghieps" />
-          </AssociationSet>
           <FunctionImport Name="uspThongKeBBTT" ReturnType="Collection(ThanhTraLaoDongModel.uspThongKeBBTT_Result)">
             <Parameter Name="UserName" Mode="In" Type="String" />
             <Parameter Name="UserId" Mode="In" Type="Int32" />
@@ -2666,6 +2526,110 @@
             <Parameter Name="PageNum" Mode="In" Type="Int32" />
             <Parameter Name="PageSize" Mode="In" Type="Int32" />
           </FunctionImport>
+          <EntitySet Name="CauHoi1" EntityType="ThanhTraLaoDongModel.CauHoi1" />
+          <EntitySet Name="CauHoi10" EntityType="ThanhTraLaoDongModel.CauHoi10" />
+          <EntitySet Name="CauHoi11" EntityType="ThanhTraLaoDongModel.CauHoi11" />
+          <EntitySet Name="CauHoi12" EntityType="ThanhTraLaoDongModel.CauHoi12" />
+          <EntitySet Name="CauHoi2" EntityType="ThanhTraLaoDongModel.CauHoi2" />
+          <EntitySet Name="CauHoi3" EntityType="ThanhTraLaoDongModel.CauHoi3" />
+          <EntitySet Name="CauHoi4" EntityType="ThanhTraLaoDongModel.CauHoi4" />
+          <EntitySet Name="CauHoi5" EntityType="ThanhTraLaoDongModel.CauHoi5" />
+          <EntitySet Name="CauHoi6" EntityType="ThanhTraLaoDongModel.CauHoi6" />
+          <EntitySet Name="CauHoi7" EntityType="ThanhTraLaoDongModel.CauHoi7" />
+          <EntitySet Name="CauHoi8" EntityType="ThanhTraLaoDongModel.CauHoi8" />
+          <EntitySet Name="CauHoi9" EntityType="ThanhTraLaoDongModel.CauHoi9" />
+          <EntitySet Name="DoanhNghieps" EntityType="ThanhTraLaoDongModel.DoanhNghiep" />
+          <EntitySet Name="PhieuNhapHeaders" EntityType="ThanhTraLaoDongModel.PhieuNhapHeader" />
+          <EntitySet Name="QuyetDinhThanhTras" EntityType="ThanhTraLaoDongModel.QuyetDinhThanhTra" />
+          <EntitySet Name="QuyetDinhTTDoanhNghieps" EntityType="ThanhTraLaoDongModel.QuyetDinhTTDoanhNghiep" />
+          <AssociationSet Name="FK_CauHoi1_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi1_PhieuNhapHeader">
+            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
+            <End Role="CauHoi1" EntitySet="CauHoi1" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CauHoi10_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi10_PhieuNhapHeader">
+            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
+            <End Role="CauHoi10" EntitySet="CauHoi10" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CauHoi11_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi11_PhieuNhapHeader">
+            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
+            <End Role="CauHoi11" EntitySet="CauHoi11" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CauHoi12_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi12_PhieuNhapHeader">
+            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
+            <End Role="CauHoi12" EntitySet="CauHoi12" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CauHoi2_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi2_PhieuNhapHeader">
+            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
+            <End Role="CauHoi2" EntitySet="CauHoi2" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CauHoi3_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi3_PhieuNhapHeader">
+            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
+            <End Role="CauHoi3" EntitySet="CauHoi3" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CauHoi4_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi4_PhieuNhapHeader">
+            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
+            <End Role="CauHoi4" EntitySet="CauHoi4" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CauHoi5_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi5_PhieuNhapHeader">
+            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
+            <End Role="CauHoi5" EntitySet="CauHoi5" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CauHoi6_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi6_PhieuNhapHeader">
+            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
+            <End Role="CauHoi6" EntitySet="CauHoi6" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CauHoi7_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi7_PhieuNhapHeader">
+            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
+            <End Role="CauHoi7" EntitySet="CauHoi7" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CauHoi8_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi8_PhieuNhapHeader">
+            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
+            <End Role="CauHoi8" EntitySet="CauHoi8" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CauHoi9_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_CauHoi9_PhieuNhapHeader">
+            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
+            <End Role="CauHoi9" EntitySet="CauHoi9" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DoanhNghiep_Huyen" Association="ThanhTraLaoDongModel.FK_DoanhNghiep_Huyen">
+            <End Role="Huyen" EntitySet="Huyens" />
+            <End Role="DoanhNghiep" EntitySet="DoanhNghieps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DoanhNghiep_LoaiHinhDoanhNghiep" Association="ThanhTraLaoDongModel.FK_DoanhNghiep_LoaiHinhDoanhNghiep">
+            <End Role="LoaiHinhDoanhNghiep" EntitySet="LoaiHinhDoanhNghieps" />
+            <End Role="DoanhNghiep" EntitySet="DoanhNghieps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DoanhNghiep_LoaiHinhSanXuat1" Association="ThanhTraLaoDongModel.FK_DoanhNghiep_LoaiHinhSanXuat1">
+            <End Role="LoaiHinhSanXuat" EntitySet="LoaiHinhSanXuats" />
+            <End Role="DoanhNghiep" EntitySet="DoanhNghieps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DoanhNghiep_Tinh" Association="ThanhTraLaoDongModel.FK_DoanhNghiep_Tinh">
+            <End Role="Tinh" EntitySet="Tinhs" />
+            <End Role="DoanhNghiep" EntitySet="DoanhNghieps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhieuNhapHeader_DoanhNghiep" Association="ThanhTraLaoDongModel.FK_PhieuNhapHeader_DoanhNghiep">
+            <End Role="DoanhNghiep" EntitySet="DoanhNghieps" />
+            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuyetDinhTTDoanhNghiep_DoanhNghiep" Association="ThanhTraLaoDongModel.FK_QuyetDinhTTDoanhNghiep_DoanhNghiep">
+            <End Role="DoanhNghiep" EntitySet="DoanhNghieps" />
+            <End Role="QuyetDinhTTDoanhNghiep" EntitySet="QuyetDinhTTDoanhNghieps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HanhViDN_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_HanhViDN_PhieuNhapHeader">
+            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
+            <End Role="HanhViDN" EntitySet="HanhViDNs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KetLuan_PhieuNhapHeader" Association="ThanhTraLaoDongModel.FK_KetLuan_PhieuNhapHeader">
+            <End Role="PhieuNhapHeader" EntitySet="PhieuNhapHeaders" />
+            <End Role="KetLuan" EntitySet="KetLuans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuyetDinhThanhTra_Tinh" Association="ThanhTraLaoDongModel.FK_QuyetDinhThanhTra_Tinh">
+            <End Role="Tinh" EntitySet="Tinhs" />
+            <End Role="QuyetDinhThanhTra" EntitySet="QuyetDinhThanhTras" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuyetDinhThanhTra_Tinh1" Association="ThanhTraLaoDongModel.FK_QuyetDinhThanhTra_Tinh1">
+            <End Role="Tinh" EntitySet="Tinhs" />
+            <End Role="QuyetDinhThanhTra" EntitySet="QuyetDinhThanhTras" />
+          </AssociationSet>
           </EntityContainer>
         <EntityType Name="Event">
           <Key>
@@ -2957,23 +2921,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="CauHoi1">
-          <Key>
-            <PropertyRef Name="CauHoiId" />
-          </Key>
-          <Property Type="Int64" Name="CauHoiId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int64" Name="PhieuId" />
-          <Property Type="Boolean" Name="Q11" />
-          <Property Type="Boolean" Name="Q12" />
-          <Property Type="Boolean" Name="Q13" />
-          <Property Type="String" Name="NguoiTao" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="NgayTao" />
-          <Property Type="String" Name="NguoiSua" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="NgaySua" />
-          <Property Type="DateTime" Name="BDHieuLuc" />
-          <Property Type="DateTime" Name="KTHieuLuc" />
-          <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi1_PhieuNhapHeader" FromRole="CauHoi1" ToRole="PhieuNhapHeader" />
-          </EntityType>
         <EntityType Name="LoaiHinhDoanhNghiep">
           <Key>
             <PropertyRef Name="LoaiHinhDNId" />
@@ -3058,28 +3005,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="CauHoi12">
-          <Key>
-            <PropertyRef Name="CauHoiId" />
-          </Key>
-          <Property Type="Int64" Name="CauHoiId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int64" Name="PhieuId" />
-          <Property Type="Int32" Name="Q121" />
-          <Property Type="Boolean" Name="Q1211" />
-          <Property Type="Boolean" Name="Q1212" />
-          <Property Type="Boolean" Name="Q1213" />
-          <Property Type="Boolean" Name="Q122" />
-          <Property Type="Boolean" Name="Q123" />
-          <Property Type="Int32" Name="Q1241" />
-          <Property Type="Int32" Name="Q1242" />
-          <Property Type="String" Name="NguoiTao" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="NgayTao" />
-          <Property Type="String" Name="NguoiSua" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="NgaySua" />
-          <Property Type="DateTime" Name="BDHieuLuc" />
-          <Property Type="DateTime" Name="KTHieuLuc" />
-          <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi12_PhieuNhapHeader" FromRole="CauHoi12" ToRole="PhieuNhapHeader" />
-        </EntityType>
         <EntityType Name="Log">
           <Key>
             <PropertyRef Name="LogID" />
@@ -3454,110 +3379,6 @@
           <Property Type="Boolean" Name="IsSystem" />
           <Property Type="Boolean" Name="Activated" Nullable="false" />
         </EntityType>
-        <EntityType Name="PhieuNhapHeader">
-          <Key>
-            <PropertyRef Name="PhieuID" />
-          </Key>
-          <Property Type="Int64" Name="PhieuID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="TenPhieu" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Type="Int64" Name="DoanhNghiepId" />
-          <Property Type="Boolean" Name="LoaiPhieu" />
-          <Property Type="String" Name="CauHoiDaTraLoi" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Type="Boolean" Name="IsNopPhat" />
-          <Property Type="String" Name="KienNghiDNPhaiTH" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Type="Boolean" Name="IsThucHieKienNghi" />
-          <Property Type="String" Name="DinhChiHDThietBi" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Type="Decimal" Name="TienPhatDuKien" Precision="18" Scale="2" />
-          <Property Type="Int32" Name="SoKienNghiChuaThucHien" />
-          <Property Type="Int32" Name="SoKienNghiDaThucHien" />
-          <Property Type="Int32" Name="SoChiNhanh" />
-          <Property Type="Decimal" Name="TongSoNhanVien" Precision="18" Scale="2" />
-          <Property Type="Int32" Name="SoLaoDongNu" />
-          <Property Type="Int32" Name="SoNguoiLamNgheNguyHiem" />
-          <Property Type="Int32" Name="SoNguoiLamCongViecYeuCauNghiemNgat" />
-          <Property Type="Decimal" Name="TongGiaTriSP" Precision="18" Scale="2" />
-          <Property Type="Boolean" Name="IsCongDoan" />
-          <Property Type="String" Name="YKienCuaDN" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="SoQuyenDinh" MaxLength="300" FixedLength="false" Unicode="true" />
-          <Property Type="Decimal" Name="TienNopPhat" Precision="18" Scale="2" />
-          <Property Type="DateTime" Name="NgayNopPhat" />
-          <Property Type="DateTime" Name="NgayTao" />
-          <Property Type="String" Name="NguoiTao" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="NgaySua" />
-          <Property Type="String" Name="NguoiSua" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="BDHieuLuc" />
-          <Property Type="DateTime" Name="KTHieuLuc" />
-          <Property Type="Decimal" Name="TongLoiNhuanSauThue" Precision="18" Scale="2" />
-          <Property Type="String" Name="ThanhPhanThamGia" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="DaiDienDoanhNghiep" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="NgayKetThucPhieu" />
-          <NavigationProperty Name="CauHoi1" Relationship="ThanhTraLaoDongModel.FK_CauHoi1_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi1" />
-          <NavigationProperty Name="CauHoi12" Relationship="ThanhTraLaoDongModel.FK_CauHoi12_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi12" />
-          <NavigationProperty Name="HanhViDNs" Relationship="ThanhTraLaoDongModel.FK_HanhViDN_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="HanhViDN" />
-          <NavigationProperty Name="KetLuans" Relationship="ThanhTraLaoDongModel.FK_KetLuan_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="KetLuan" />
-          <NavigationProperty Name="CauHoi9" Relationship="ThanhTraLaoDongModel.FK_CauHoi9_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi9" />
-          <NavigationProperty Name="CauHoi6" Relationship="ThanhTraLaoDongModel.FK_CauHoi6_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi6" />
-          <Property Type="String" Name="DienThoaiLH" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="EmailLH" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="NguoiLienHe" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="CauHoi10" Relationship="ThanhTraLaoDongModel.FK_CauHoi10_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi10" />
-          <NavigationProperty Name="CauHoi11" Relationship="ThanhTraLaoDongModel.FK_CauHoi11_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi11" />
-          <NavigationProperty Name="CauHoi4" Relationship="ThanhTraLaoDongModel.FK_CauHoi4_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi4" />
-          <NavigationProperty Name="CauHoi2" Relationship="ThanhTraLaoDongModel.FK_CauHoi2_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi2" />
-          <NavigationProperty Name="CauHoi3" Relationship="ThanhTraLaoDongModel.FK_CauHoi3_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi3" />
-          <NavigationProperty Name="CauHoi7" Relationship="ThanhTraLaoDongModel.FK_CauHoi7_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi7" />
-          <NavigationProperty Name="CauHoi8" Relationship="ThanhTraLaoDongModel.FK_CauHoi8_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi8" />
-          <NavigationProperty Name="CauHoi5" Relationship="ThanhTraLaoDongModel.FK_CauHoi5_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi5" />
-          <NavigationProperty Name="DoanhNghiep" Relationship="ThanhTraLaoDongModel.FK_PhieuNhapHeader_DoanhNghiep" FromRole="PhieuNhapHeader" ToRole="DoanhNghiep" />
-        </EntityType>
-        <Association Name="FK_CauHoi1_PhieuNhapHeader">
-          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
-          <End Type="ThanhTraLaoDongModel.CauHoi1" Role="CauHoi1" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PhieuNhapHeader">
-              <PropertyRef Name="PhieuID" />
-            </Principal>
-            <Dependent Role="CauHoi1">
-              <PropertyRef Name="PhieuId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_CauHoi12_PhieuNhapHeader">
-          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
-          <End Type="ThanhTraLaoDongModel.CauHoi12" Role="CauHoi12" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PhieuNhapHeader">
-              <PropertyRef Name="PhieuID" />
-            </Principal>
-            <Dependent Role="CauHoi12">
-              <PropertyRef Name="PhieuId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_HanhViDN_PhieuNhapHeader">
-          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="1" />
-          <End Type="ThanhTraLaoDongModel.HanhViDN" Role="HanhViDN" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PhieuNhapHeader">
-              <PropertyRef Name="PhieuID" />
-            </Principal>
-            <Dependent Role="HanhViDN">
-              <PropertyRef Name="PhieuId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_KetLuan_PhieuNhapHeader">
-          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
-          <End Type="ThanhTraLaoDongModel.KetLuan" Role="KetLuan" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PhieuNhapHeader">
-              <PropertyRef Name="PhieuID" />
-            </Principal>
-            <Dependent Role="KetLuan">
-              <PropertyRef Name="PhieuId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <ComplexType Name="uspListKienNghiDNPhaiTHByPhieuId_Result">
           <Property Type="String" Name="DSKNDNPhaiTH" Nullable="true" MaxLength="50" />
         </ComplexType>
@@ -3626,85 +3447,6 @@
             </Principal>
             <Dependent Role="CauHoiKienNghi">
               <PropertyRef Name="CauHoiId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="CauHoi9">
-          <Key>
-            <PropertyRef Name="CauHoiId" />
-          </Key>
-          <Property Type="Int64" Name="CauHoiId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int64" Name="PhieuId" Nullable="false" />
-          <Property Type="Int32" Name="Q9111" />
-          <Property Type="Int32" Name="Q9112" />
-          <Property Type="Int32" Name="Q92" />
-          <Property Type="Int32" Name="Q921" />
-          <Property Type="String" Name="Q923" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Q924" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="Int32" Name="Q922" />
-          <Property Type="Int32" Name="Q93" />
-          <Property Type="Int32" Name="Q931" />
-          <Property Type="String" Name="Q932" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Q933" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="NguoiTao" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="NgayTao" />
-          <Property Type="String" Name="NguoiSua" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="NgaySua" />
-          <Property Type="DateTime" Name="BDHieuLuc" />
-          <Property Type="DateTime" Name="KTHieuLuc" />
-          <Property Type="Int32" Name="Q925" />
-          <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi9_PhieuNhapHeader" FromRole="CauHoi9" ToRole="PhieuNhapHeader" />
-        </EntityType>
-        <Association Name="FK_CauHoi9_PhieuNhapHeader">
-          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="1" />
-          <End Type="ThanhTraLaoDongModel.CauHoi9" Role="CauHoi9" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PhieuNhapHeader">
-              <PropertyRef Name="PhieuID" />
-            </Principal>
-            <Dependent Role="CauHoi9">
-              <PropertyRef Name="PhieuId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="CauHoi6">
-          <Key>
-            <PropertyRef Name="CauHoiId" />
-          </Key>
-          <Property Type="Int64" Name="CauHoiId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int64" Name="PhieuId" />
-          <Property Type="Int32" Name="Q611" />
-          <Property Type="Int32" Name="Q612" />
-          <Property Type="Int32" Name="Q621" />
-          <Property Type="Int32" Name="Q622" />
-          <Property Type="Int32" Name="Q63" />
-          <Property Type="Int32" Name="Q641" />
-          <Property Type="Int32" Name="Q642" />
-          <Property Type="Int32" Name="Q65" />
-          <Property Type="String" Name="Q651" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Type="Int32" Name="Q66" />
-          <Property Type="String" Name="NguoiTao" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="NgayTao" />
-          <Property Type="String" Name="NguoiSua" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="NgaySua" />
-          <Property Type="DateTime" Name="BDHieuLuc" />
-          <Property Type="DateTime" Name="KTHieuLuc" />
-          <Property Type="Int32" Name="Q67" />
-          <Property Type="String" Name="Q671" MaxLength="2000" FixedLength="false" Unicode="true" />
-          <Property Type="Boolean" Name="Q68" />
-          <Property Type="String" Name="Q681" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Type="Int32" Name="Q631" />
-          <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi6_PhieuNhapHeader" FromRole="CauHoi6" ToRole="PhieuNhapHeader" />
-        </EntityType>
-        <Association Name="FK_CauHoi6_PhieuNhapHeader">
-          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
-          <End Type="ThanhTraLaoDongModel.CauHoi6" Role="CauHoi6" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PhieuNhapHeader">
-              <PropertyRef Name="PhieuID" />
-            </Principal>
-            <Dependent Role="CauHoi6">
-              <PropertyRef Name="PhieuId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3864,38 +3606,6 @@
           <Property Type="String" Name="KiHieu" Nullable="true" MaxLength="30" />
           <Property Type="String" Name="Huyen" Nullable="true" MaxLength="50" />
         </ComplexType>
-        <EntityType Name="CauHoi10">
-          <Key>
-            <PropertyRef Name="CauHoiId" />
-          </Key>
-          <Property Type="Int64" Name="CauHoiId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int64" Name="PhieuId" />
-          <Property Type="Int32" Name="Q101" />
-          <Property Type="Int32" Name="Q102" />
-          <Property Type="Boolean" Name="Q103" />
-          <Property Type="Boolean" Name="Q104" />
-          <Property Type="String" Name="NguoiTao" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="NgayTao" />
-          <Property Type="String" Name="NguoiSua" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="NgaySua" />
-          <Property Type="DateTime" Name="BDHieuLuc" />
-          <Property Type="DateTime" Name="KTHieuLuc" />
-          <Property Type="Int32" Name="Q105" />
-          <Property Type="Int32" Name="Q106" />
-          <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi10_PhieuNhapHeader" FromRole="CauHoi10" ToRole="PhieuNhapHeader" />
-        </EntityType>
-        <Association Name="FK_CauHoi10_PhieuNhapHeader">
-          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
-          <End Type="ThanhTraLaoDongModel.CauHoi10" Role="CauHoi10" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PhieuNhapHeader">
-              <PropertyRef Name="PhieuID" />
-            </Principal>
-            <Dependent Role="CauHoi10">
-              <PropertyRef Name="PhieuId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <ComplexType Name="uspTraCuuDSDNChuaHuanLuyenAnToanLaoDong_Result">
           <Property Type="Int64" Name="RowNum" Nullable="true" />
           <Property Type="Int64" Name="DoanhNghiepId" Nullable="true" />
@@ -3968,109 +3678,6 @@
           <Property Type="DateTime" Name="NgayKetThucPhieu" Nullable="true" Precision="23" />
           <Property Type="Int32" Name="Total" Nullable="true" />
         </ComplexType>
-        <EntityType Name="CauHoi11">
-          <Key>
-            <PropertyRef Name="CauHoiId" />
-          </Key>
-          <Property Type="Int64" Name="CauHoiId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int64" Name="PhieuId" />
-          <Property Type="Int32" Name="Q1111" />
-          <Property Type="Int32" Name="Q1112" />
-          <Property Type="Boolean" Name="Q112" />
-          <Property Type="Boolean" Name="Q113" />
-          <Property Type="Boolean" Name="Q114" />
-          <Property Type="Boolean" Name="Q115" />
-          <Property Type="Boolean" Name="Q116" />
-          <Property Type="Boolean" Name="Q117" />
-          <Property Type="String" Name="NguoiTao" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="NgayTao" />
-          <Property Type="String" Name="NguoiSua" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="NgaySua" />
-          <Property Type="DateTime" Name="BDHieuLuc" />
-          <Property Type="DateTime" Name="KTHieuLuc" />
-          <Property Type="Boolean" Name="Q11" />
-          <Property Type="Int32" Name="Q1121" />
-          <Property Type="Int32" Name="Q1131" />
-          <Property Type="Boolean" Name="Q118" />
-          <Property Type="Boolean" Name="Q119" />
-          <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi11_PhieuNhapHeader" FromRole="CauHoi11" ToRole="PhieuNhapHeader" />
-        </EntityType>
-        <Association Name="FK_CauHoi11_PhieuNhapHeader">
-          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
-          <End Type="ThanhTraLaoDongModel.CauHoi11" Role="CauHoi11" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PhieuNhapHeader">
-              <PropertyRef Name="PhieuID" />
-            </Principal>
-            <Dependent Role="CauHoi11">
-              <PropertyRef Name="PhieuId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="CauHoi4">
-          <Key>
-            <PropertyRef Name="CauHoiId" />
-          </Key>
-          <Property Type="Int64" Name="CauHoiId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int64" Name="PhieuId" />
-          <Property Type="Int32" Name="Q4111" />
-          <Property Type="Int32" Name="Q4112" />
-          <Property Type="Boolean" Name="Q4113" />
-          <Property Type="Int32" Name="Q4104" />
-          <Property Type="Int32" Name="Q41131" />
-          <Property Type="Boolean" Name="Q421" />
-          <Property Type="Boolean" Name="Q422" />
-          <Property Type="Boolean" Name="Q423" />
-          <Property Type="Boolean" Name="Q43" />
-          <Property Type="Int32" Name="Q44" />
-          <Property Type="Boolean" Name="Q45" />
-          <Property Type="Int32" Name="Q461" />
-          <Property Type="Int32" Name="Q462" />
-          <Property Type="Int32" Name="Q463" />
-          <Property Type="Int32" Name="Q464" />
-          <Property Type="Int32" Name="Q47" />
-          <Property Type="Boolean" Name="Q48" />
-          <Property Type="Int32" Name="Q481" />
-          <Property Type="Int32" Name="Q482" />
-          <Property Type="Boolean" Name="Q49" />
-          <Property Type="Int32" Name="Q410" />
-          <Property Type="Int32" Name="Q4101" />
-          <Property Type="Boolean" Name="Q4102" />
-          <Property Type="Int32" Name="Q41021" />
-          <Property Type="Int32" Name="Q41022" />
-          <Property Type="Boolean" Name="Q4103" />
-          <Property Type="Int32" Name="Q410311" />
-          <Property Type="Int32" Name="Q410312" />
-          <Property Type="Boolean" Name="Q41032" />
-          <Property Type="String" Name="Q41033" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="NguoiTao" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="NgayTao" />
-          <Property Type="String" Name="NguoiSua" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="NgaySua" />
-          <Property Type="DateTime" Name="BDHieuLuc" />
-          <Property Type="DateTime" Name="KTHieuLuc" />
-          <Property Type="Boolean" Name="Q46a" />
-          <Property Type="Boolean" Name="Q46b" />
-          <Property Type="Int32" Name="Q4114" />
-          <Property Type="Int32" Name="Q41011" />
-          <Property Type="Int32" Name="Q424" />
-          <Property Type="Int32" Name="Q4105" />
-          <Property Type="String" Name="Q41041" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Type="Int32" Name="Q4116" />
-          <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi4_PhieuNhapHeader" FromRole="CauHoi4" ToRole="PhieuNhapHeader" />
-        </EntityType>
-        <Association Name="FK_CauHoi4_PhieuNhapHeader">
-          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
-          <End Type="ThanhTraLaoDongModel.CauHoi4" Role="CauHoi4" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PhieuNhapHeader">
-              <PropertyRef Name="PhieuID" />
-            </Principal>
-            <Dependent Role="CauHoi4">
-              <PropertyRef Name="PhieuId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="sysdiagram">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -4157,9 +3764,9 @@
           <Property Type="Boolean" Name="IsTinh" />
           <NavigationProperty Name="Huyens" Relationship="ThanhTraLaoDongModel.FK_Huyen_Tinh" FromRole="Tinh" ToRole="Huyen" />
           <NavigationProperty Name="UsersTinhs" Relationship="ThanhTraLaoDongModel.FK_UsersTinh_Tinh" FromRole="Tinh" ToRole="UsersTinh" />
+          <NavigationProperty Name="DoanhNghieps" Relationship="ThanhTraLaoDongModel.FK_DoanhNghiep_Tinh" FromRole="Tinh" ToRole="DoanhNghiep" />
           <NavigationProperty Name="QuyetDinhThanhTras" Relationship="ThanhTraLaoDongModel.FK_QuyetDinhThanhTra_Tinh" FromRole="Tinh" ToRole="QuyetDinhThanhTra" />
           <NavigationProperty Name="QuyetDinhThanhTras1" Relationship="ThanhTraLaoDongModel.FK_QuyetDinhThanhTra_Tinh1" FromRole="Tinh" ToRole="QuyetDinhThanhTra" />
-          <NavigationProperty Name="DoanhNghieps" Relationship="ThanhTraLaoDongModel.FK_DoanhNghiep_Tinh" FromRole="Tinh" ToRole="DoanhNghiep" />
           </EntityType>
         <Association Name="FK_Huyen_Tinh">
           <End Type="ThanhTraLaoDongModel.Tinh" Role="Tinh" Multiplicity="0..1" />
@@ -4185,6 +3792,137 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="uspQuyetDinhThanhTraSelectAll_Result">
+          <Property Type="Int64" Name="RowNum" Nullable="true" />
+          <Property Type="String" Name="SoQuyetDinh" Nullable="false" MaxLength="200" />
+          <Property Type="Int32" Name="SoDN" Nullable="true" />
+          <Property Type="String" Name="TenTinh" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="NgayTao" Nullable="true" Precision="23" />
+          <Property Type="String" Name="NguoiTao" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="IsEdited" Nullable="true" />
+          <Property Type="Int32" Name="Total" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="uspThongKeBBTT_Result" >
+          <Property Type="Int32" Name="CountBBTTChuaHT" Nullable="false" />
+          <Property Type="Int32" Name="CountBBTTDaHT" />
+          <Property Type="Int32" Name="CountDNBiXLVP" />
+          <Property Type="Int32" Name="SumMucPhatDN" />
+        </ComplexType>
+        <ComplexType Name="uspThongKePTKT_Result" >
+          <Property Type="Int32" Name="CountPTKTKHT" />
+          <Property Type="Int32" Name="CountPTKTHT" />
+          <Property Type="Int32" Name="CountKNDNPTKT" />
+        </ComplexType>
+        <ComplexType Name="uspDoanhNghiepSelectAll_Result">
+          <Property Type="Int64" Name="RowNum" Nullable="true" />
+          <Property Type="Int64" Name="DoanhNghiepId" Nullable="false" />
+          <Property Type="String" Name="MaDN" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="TenDN" Nullable="true" />
+          <Property Type="String" Name="TenTinh" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="TenHuyen" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="NamTLDN" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Address" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="DT" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="LHDN" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="LHSX" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="CDCS" Nullable="false" MaxLength="8" />
+          <Property Type="Int32" Name="HasPermission" Nullable="false" />
+          <Property Type="Decimal" Name="TongSoNhanVien" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="SoNguoiLamNgheNguyHiem" Nullable="true" />
+          <Property Type="Int32" Name="SoNguoiLamCongViecYeuCauNghiemNgat" Nullable="true" />
+          <Property Type="DateTime" Name="NgayTao" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Total" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="CauHoi1">
+          <Key>
+            <PropertyRef Name="CauHoiId" />
+          </Key>
+          <Property Type="Int64" Name="CauHoiId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="PhieuId" />
+          <Property Type="Boolean" Name="Q11" />
+          <Property Type="Boolean" Name="Q12" />
+          <Property Type="Boolean" Name="Q13" />
+          <Property Type="String" Name="NguoiTao" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgayTao" />
+          <Property Type="String" Name="NguoiSua" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgaySua" />
+          <Property Type="DateTime" Name="BDHieuLuc" />
+          <Property Type="DateTime" Name="KTHieuLuc" />
+          <Property Type="String" Name="IdNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi1_PhieuNhapHeader" FromRole="CauHoi1" ToRole="PhieuNhapHeader" />
+        </EntityType>
+        <EntityType Name="CauHoi10">
+          <Key>
+            <PropertyRef Name="CauHoiId" />
+          </Key>
+          <Property Type="Int64" Name="CauHoiId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="PhieuId" />
+          <Property Type="Int32" Name="Q101" />
+          <Property Type="Int32" Name="Q102" />
+          <Property Type="Boolean" Name="Q103" />
+          <Property Type="Boolean" Name="Q104" />
+          <Property Type="String" Name="NguoiTao" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgayTao" />
+          <Property Type="String" Name="NguoiSua" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgaySua" />
+          <Property Type="DateTime" Name="BDHieuLuc" />
+          <Property Type="DateTime" Name="KTHieuLuc" />
+          <Property Type="Int32" Name="Q105" />
+          <Property Type="Int32" Name="Q106" />
+          <Property Type="String" Name="IdNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi10_PhieuNhapHeader" FromRole="CauHoi10" ToRole="PhieuNhapHeader" />
+        </EntityType>
+        <EntityType Name="CauHoi11">
+          <Key>
+            <PropertyRef Name="CauHoiId" />
+          </Key>
+          <Property Type="Int64" Name="CauHoiId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="PhieuId" />
+          <Property Type="Int32" Name="Q1111" />
+          <Property Type="Int32" Name="Q1112" />
+          <Property Type="Boolean" Name="Q112" />
+          <Property Type="Boolean" Name="Q113" />
+          <Property Type="Boolean" Name="Q114" />
+          <Property Type="Boolean" Name="Q115" />
+          <Property Type="Boolean" Name="Q116" />
+          <Property Type="Boolean" Name="Q117" />
+          <Property Type="String" Name="NguoiTao" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgayTao" />
+          <Property Type="String" Name="NguoiSua" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgaySua" />
+          <Property Type="DateTime" Name="BDHieuLuc" />
+          <Property Type="DateTime" Name="KTHieuLuc" />
+          <Property Type="Boolean" Name="Q11" />
+          <Property Type="Int32" Name="Q1121" />
+          <Property Type="Int32" Name="Q1131" />
+          <Property Type="Boolean" Name="Q118" />
+          <Property Type="Boolean" Name="Q119" />
+          <Property Type="String" Name="IdNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi11_PhieuNhapHeader" FromRole="CauHoi11" ToRole="PhieuNhapHeader" />
+        </EntityType>
+        <EntityType Name="CauHoi12">
+          <Key>
+            <PropertyRef Name="CauHoiId" />
+          </Key>
+          <Property Type="Int64" Name="CauHoiId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="PhieuId" />
+          <Property Type="Int32" Name="Q121" />
+          <Property Type="Boolean" Name="Q1211" />
+          <Property Type="Boolean" Name="Q1212" />
+          <Property Type="Boolean" Name="Q1213" />
+          <Property Type="Boolean" Name="Q122" />
+          <Property Type="Boolean" Name="Q123" />
+          <Property Type="Int32" Name="Q1241" />
+          <Property Type="Int32" Name="Q1242" />
+          <Property Type="String" Name="NguoiTao" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgayTao" />
+          <Property Type="String" Name="NguoiSua" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgaySua" />
+          <Property Type="DateTime" Name="BDHieuLuc" />
+          <Property Type="DateTime" Name="KTHieuLuc" />
+          <Property Type="String" Name="IdNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi12_PhieuNhapHeader" FromRole="CauHoi12" ToRole="PhieuNhapHeader" />
+        </EntityType>
         <EntityType Name="CauHoi2">
           <Key>
             <PropertyRef Name="CauHoiId" />
@@ -4234,6 +3972,7 @@
           <Property Type="Boolean" Name="Q236" />
           <Property Type="Boolean" Name="Q237" />
           <Property Type="Int32" Name="Q238" />
+          <Property Type="String" Name="IdNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi2_PhieuNhapHeader" FromRole="CauHoi2" ToRole="PhieuNhapHeader" />
         </EntityType>
         <EntityType Name="CauHoi3">
@@ -4255,7 +3994,121 @@
           <Property Type="String" Name="Q341" MaxLength="4000" FixedLength="false" Unicode="true" />
           <Property Type="Boolean" Name="Q35" />
           <Property Type="String" Name="Q351" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi3_PhieuNhapHeader" FromRole="CauHoi3" ToRole="PhieuNhapHeader" />
+        </EntityType>
+        <EntityType Name="CauHoi4">
+          <Key>
+            <PropertyRef Name="CauHoiId" />
+          </Key>
+          <Property Type="Int64" Name="CauHoiId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="PhieuId" />
+          <Property Type="Int32" Name="Q4111" />
+          <Property Type="Int32" Name="Q4112" />
+          <Property Type="Boolean" Name="Q4113" />
+          <Property Type="Int32" Name="Q4104" />
+          <Property Type="Int32" Name="Q41131" />
+          <Property Type="Boolean" Name="Q421" />
+          <Property Type="Boolean" Name="Q422" />
+          <Property Type="Boolean" Name="Q423" />
+          <Property Type="Boolean" Name="Q43" />
+          <Property Type="Int32" Name="Q44" />
+          <Property Type="Boolean" Name="Q45" />
+          <Property Type="Int32" Name="Q461" />
+          <Property Type="Int32" Name="Q462" />
+          <Property Type="Int32" Name="Q463" />
+          <Property Type="Int32" Name="Q464" />
+          <Property Type="Int32" Name="Q47" />
+          <Property Type="Boolean" Name="Q48" />
+          <Property Type="Int32" Name="Q481" />
+          <Property Type="Int32" Name="Q482" />
+          <Property Type="Boolean" Name="Q49" />
+          <Property Type="Int32" Name="Q410" />
+          <Property Type="Int32" Name="Q4101" />
+          <Property Type="Boolean" Name="Q4102" />
+          <Property Type="Int32" Name="Q41021" />
+          <Property Type="Int32" Name="Q41022" />
+          <Property Type="Boolean" Name="Q4103" />
+          <Property Type="Int32" Name="Q410311" />
+          <Property Type="Int32" Name="Q410312" />
+          <Property Type="Boolean" Name="Q41032" />
+          <Property Type="String" Name="Q41033" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NguoiTao" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgayTao" />
+          <Property Type="String" Name="NguoiSua" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgaySua" />
+          <Property Type="DateTime" Name="BDHieuLuc" />
+          <Property Type="DateTime" Name="KTHieuLuc" />
+          <Property Type="Boolean" Name="Q46a" />
+          <Property Type="Boolean" Name="Q46b" />
+          <Property Type="Int32" Name="Q4114" />
+          <Property Type="Int32" Name="Q41011" />
+          <Property Type="Int32" Name="Q424" />
+          <Property Type="Int32" Name="Q4105" />
+          <Property Type="String" Name="Q41041" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Q4116" />
+          <Property Type="String" Name="IdNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi4_PhieuNhapHeader" FromRole="CauHoi4" ToRole="PhieuNhapHeader" />
+        </EntityType>
+        <EntityType Name="CauHoi5">
+          <Key>
+            <PropertyRef Name="CauHoiId" />
+          </Key>
+          <Property Type="Int64" Name="CauHoiId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="PhieuId" />
+          <Property Type="Decimal" Name="Q511" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Q512" Precision="18" Scale="2" />
+          <Property Type="Boolean" Name="Q52" />
+          <Property Type="Int32" Name="Q521" />
+          <Property Type="Int32" Name="Q522" />
+          <Property Type="Boolean" Name="Q53" />
+          <Property Type="Int32" Name="Q531" />
+          <Property Type="Int32" Name="Q532" />
+          <Property Type="Int32" Name="Q533" />
+          <Property Type="Boolean" Name="Q54" />
+          <Property Type="String" Name="NguoiTao" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgayTao" />
+          <Property Type="String" Name="NguoiSua" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgaySua" />
+          <Property Type="DateTime" Name="BDHieuLuc" />
+          <Property Type="DateTime" Name="KTHieuLuc" />
+          <Property Type="Decimal" Name="Q513" Precision="18" Scale="2" />
+          <Property Type="String" Name="Q541" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Q55" />
+          <Property Type="Decimal" Name="Q514" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Q515" Precision="18" Scale="2" />
+          <Property Type="String" Name="IdNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi5_PhieuNhapHeader" FromRole="CauHoi5" ToRole="PhieuNhapHeader" />
+        </EntityType>
+        <EntityType Name="CauHoi6">
+          <Key>
+            <PropertyRef Name="CauHoiId" />
+          </Key>
+          <Property Type="Int64" Name="CauHoiId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="PhieuId" />
+          <Property Type="Int32" Name="Q611" />
+          <Property Type="Int32" Name="Q612" />
+          <Property Type="Int32" Name="Q621" />
+          <Property Type="Int32" Name="Q622" />
+          <Property Type="Int32" Name="Q63" />
+          <Property Type="Int32" Name="Q641" />
+          <Property Type="Int32" Name="Q642" />
+          <Property Type="Int32" Name="Q65" />
+          <Property Type="String" Name="Q651" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Q66" />
+          <Property Type="String" Name="NguoiTao" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgayTao" />
+          <Property Type="String" Name="NguoiSua" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgaySua" />
+          <Property Type="DateTime" Name="BDHieuLuc" />
+          <Property Type="DateTime" Name="KTHieuLuc" />
+          <Property Type="Int32" Name="Q67" />
+          <Property Type="String" Name="Q671" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Q68" />
+          <Property Type="String" Name="Q681" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Q631" />
+          <Property Type="String" Name="IdNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi6_PhieuNhapHeader" FromRole="CauHoi6" ToRole="PhieuNhapHeader" />
         </EntityType>
         <EntityType Name="CauHoi7">
           <Key>
@@ -4368,6 +4221,7 @@
           <Property Type="Int32" Name="Q7059" />
           <Property Type="Int32" Name="Q71118" />
           <Property Type="Boolean" Name="Q706" />
+          <Property Type="String" Name="IdNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi7_PhieuNhapHeader" FromRole="CauHoi7" ToRole="PhieuNhapHeader" />
         </EntityType>
         <EntityType Name="CauHoi8">
@@ -4400,165 +4254,36 @@
           <Property Type="DateTime" Name="KTHieuLuc" />
           <Property Type="Boolean" Name="Q81" />
           <Property Type="String" Name="Q8241" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi8_PhieuNhapHeader" FromRole="CauHoi8" ToRole="PhieuNhapHeader" />
         </EntityType>
-        <Association Name="FK_CauHoi2_PhieuNhapHeader">
-          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
-          <End Type="ThanhTraLaoDongModel.CauHoi2" Role="CauHoi2" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PhieuNhapHeader">
-              <PropertyRef Name="PhieuID" />
-            </Principal>
-            <Dependent Role="CauHoi2">
-              <PropertyRef Name="PhieuId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_CauHoi3_PhieuNhapHeader">
-          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
-          <End Type="ThanhTraLaoDongModel.CauHoi3" Role="CauHoi3" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PhieuNhapHeader">
-              <PropertyRef Name="PhieuID" />
-            </Principal>
-            <Dependent Role="CauHoi3">
-              <PropertyRef Name="PhieuId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_CauHoi7_PhieuNhapHeader">
-          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
-          <End Type="ThanhTraLaoDongModel.CauHoi7" Role="CauHoi7" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PhieuNhapHeader">
-              <PropertyRef Name="PhieuID" />
-            </Principal>
-            <Dependent Role="CauHoi7">
-              <PropertyRef Name="PhieuId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_CauHoi8_PhieuNhapHeader">
-          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
-          <End Type="ThanhTraLaoDongModel.CauHoi8" Role="CauHoi8" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PhieuNhapHeader">
-              <PropertyRef Name="PhieuID" />
-            </Principal>
-            <Dependent Role="CauHoi8">
-              <PropertyRef Name="PhieuId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="CauHoi5">
+        <EntityType Name="CauHoi9">
           <Key>
             <PropertyRef Name="CauHoiId" />
           </Key>
           <Property Type="Int64" Name="CauHoiId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int64" Name="PhieuId" />
-          <Property Type="Decimal" Name="Q511" Precision="18" Scale="2" />
-          <Property Type="Decimal" Name="Q512" Precision="18" Scale="2" />
-          <Property Type="Boolean" Name="Q52" />
-          <Property Type="Int32" Name="Q521" />
-          <Property Type="Int32" Name="Q522" />
-          <Property Type="Boolean" Name="Q53" />
-          <Property Type="Int32" Name="Q531" />
-          <Property Type="Int32" Name="Q532" />
-          <Property Type="Int32" Name="Q533" />
-          <Property Type="Boolean" Name="Q54" />
+          <Property Type="Int64" Name="PhieuId" Nullable="false" />
+          <Property Type="Int32" Name="Q9111" />
+          <Property Type="Int32" Name="Q9112" />
+          <Property Type="Int32" Name="Q92" />
+          <Property Type="Int32" Name="Q921" />
+          <Property Type="String" Name="Q923" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Q924" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Q922" />
+          <Property Type="Int32" Name="Q93" />
+          <Property Type="Int32" Name="Q931" />
+          <Property Type="String" Name="Q932" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Q933" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="NguoiTao" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="NgayTao" />
           <Property Type="String" Name="NguoiSua" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="NgaySua" />
           <Property Type="DateTime" Name="BDHieuLuc" />
           <Property Type="DateTime" Name="KTHieuLuc" />
-          <Property Type="Decimal" Name="Q513" Precision="18" Scale="2" />
-          <Property Type="String" Name="Q541" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Type="Boolean" Name="Q55" />
-          <Property Type="Decimal" Name="Q514" Precision="18" Scale="2" />
-          <Property Type="Decimal" Name="Q515" Precision="18" Scale="2" />
-          <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi5_PhieuNhapHeader" FromRole="CauHoi5" ToRole="PhieuNhapHeader" />
+          <Property Type="Int32" Name="Q925" />
+          <Property Type="String" Name="IdNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PhieuNhapHeader" Relationship="ThanhTraLaoDongModel.FK_CauHoi9_PhieuNhapHeader" FromRole="CauHoi9" ToRole="PhieuNhapHeader" />
         </EntityType>
-        <Association Name="FK_CauHoi5_PhieuNhapHeader">
-          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
-          <End Type="ThanhTraLaoDongModel.CauHoi5" Role="CauHoi5" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PhieuNhapHeader">
-              <PropertyRef Name="PhieuID" />
-            </Principal>
-            <Dependent Role="CauHoi5">
-              <PropertyRef Name="PhieuId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="QuyetDinhThanhTra">
-          <Key>
-            <PropertyRef Name="SoQuyetDinh" />
-          </Key>
-          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="SoQuyetDinh" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Type="Int32" Name="LoaiQuyetDinh" />
-          <Property Type="String" Name="PhamVi" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="CanCuLuat" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="CanCuQuyetDinh" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="Int32" Name="DiaBanTTKT" />
-          <Property Type="String" Name="ThanhVienDoan" MaxLength="2000" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="TrachNhiemThiHanh" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Type="Int32" Name="ChucDanhNguoiKy" />
-          <Property Type="String" Name="NoiNhan" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="NguoiKyQuyetDinh" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="NgayTao" />
-          <Property Type="String" Name="NguoiTao" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="NgaySua" />
-          <Property Type="String" Name="NguoiSua" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="Boolean" Name="IsEdited" />
-          <NavigationProperty Name="Tinh" Relationship="ThanhTraLaoDongModel.FK_QuyetDinhThanhTra_Tinh" FromRole="QuyetDinhThanhTra" ToRole="Tinh" />
-          <NavigationProperty Name="Tinh1" Relationship="ThanhTraLaoDongModel.FK_QuyetDinhThanhTra_Tinh1" FromRole="QuyetDinhThanhTra" ToRole="Tinh" />
-        </EntityType>
-        <EntityType Name="QuyetDinhTTDoanhNghiep">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="QuyetDinhTT" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Type="Int64" Name="DoanhNghiepId" />
-          <Property Type="Boolean" Name="IsMoi" />
-          <NavigationProperty Name="DoanhNghiep" Relationship="ThanhTraLaoDongModel.FK_QuyetDinhTTDoanhNghiep_DoanhNghiep" FromRole="QuyetDinhTTDoanhNghiep" ToRole="DoanhNghiep" />
-        </EntityType>
-        <Association Name="FK_QuyetDinhThanhTra_Tinh">
-          <End Type="ThanhTraLaoDongModel.Tinh" Role="Tinh" Multiplicity="0..1" />
-          <End Type="ThanhTraLaoDongModel.QuyetDinhThanhTra" Role="QuyetDinhThanhTra" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Tinh">
-              <PropertyRef Name="TinhId" />
-            </Principal>
-            <Dependent Role="QuyetDinhThanhTra">
-              <PropertyRef Name="DiaBanTTKT" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_QuyetDinhThanhTra_Tinh1">
-          <End Type="ThanhTraLaoDongModel.Tinh" Role="Tinh" Multiplicity="0..1" />
-          <End Type="ThanhTraLaoDongModel.QuyetDinhThanhTra" Role="QuyetDinhThanhTra" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Tinh">
-              <PropertyRef Name="TinhId" />
-            </Principal>
-            <Dependent Role="QuyetDinhThanhTra">
-              <PropertyRef Name="DiaBanTTKT" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <ComplexType Name="uspQuyetDinhThanhTraSelectAll_Result">
-          <Property Type="Int64" Name="RowNum" Nullable="true" />
-          <Property Type="String" Name="SoQuyetDinh" Nullable="false" MaxLength="200" />
-          <Property Type="Int32" Name="SoDN" Nullable="true" />
-          <Property Type="String" Name="TenTinh" Nullable="true" MaxLength="100" />
-          <Property Type="DateTime" Name="NgayTao" Nullable="true" Precision="23" />
-          <Property Type="String" Name="NguoiTao" Nullable="true" MaxLength="50" />
-          <Property Type="Boolean" Name="IsEdited" Nullable="true" />
-          <Property Type="Int32" Name="Total" Nullable="true" />
-        </ComplexType>
         <EntityType Name="DoanhNghiep">
           <Key>
             <PropertyRef Name="DoanhNghiepId" />
@@ -4604,6 +4329,7 @@
           <Property Type="String" Name="NguoiLienHe" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="ThoiGianLamViec" />
           <Property Type="Boolean" Name="IsHoanThanh" />
+          <Property Type="String" Name="IdNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Huyen" Relationship="ThanhTraLaoDongModel.FK_DoanhNghiep_Huyen" FromRole="DoanhNghiep" ToRole="Huyen" />
           <NavigationProperty Name="LoaiHinhDoanhNghiep" Relationship="ThanhTraLaoDongModel.FK_DoanhNghiep_LoaiHinhDoanhNghiep" FromRole="DoanhNghiep" ToRole="LoaiHinhDoanhNghiep" />
           <NavigationProperty Name="LoaiHinhSanXuat" Relationship="ThanhTraLaoDongModel.FK_DoanhNghiep_LoaiHinhSanXuat1" FromRole="DoanhNghiep" ToRole="LoaiHinhSanXuat" />
@@ -4611,6 +4337,243 @@
           <NavigationProperty Name="PhieuNhapHeaders" Relationship="ThanhTraLaoDongModel.FK_PhieuNhapHeader_DoanhNghiep" FromRole="DoanhNghiep" ToRole="PhieuNhapHeader" />
           <NavigationProperty Name="QuyetDinhTTDoanhNghieps" Relationship="ThanhTraLaoDongModel.FK_QuyetDinhTTDoanhNghiep_DoanhNghiep" FromRole="DoanhNghiep" ToRole="QuyetDinhTTDoanhNghiep" />
         </EntityType>
+        <EntityType Name="PhieuNhapHeader">
+          <Key>
+            <PropertyRef Name="PhieuID" />
+          </Key>
+          <Property Type="Int64" Name="PhieuID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="TenPhieu" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="DoanhNghiepId" />
+          <Property Type="Boolean" Name="LoaiPhieu" />
+          <Property Type="String" Name="CauHoiDaTraLoi" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsNopPhat" />
+          <Property Type="String" Name="KienNghiDNPhaiTH" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsThucHieKienNghi" />
+          <Property Type="String" Name="DinhChiHDThietBi" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="TienPhatDuKien" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="SoKienNghiChuaThucHien" />
+          <Property Type="Int32" Name="SoKienNghiDaThucHien" />
+          <Property Type="Int32" Name="SoChiNhanh" />
+          <Property Type="Decimal" Name="TongSoNhanVien" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="SoLaoDongNu" />
+          <Property Type="Int32" Name="SoNguoiLamNgheNguyHiem" />
+          <Property Type="Decimal" Name="TongGiaTriSP" Precision="18" Scale="2" />
+          <Property Type="Boolean" Name="IsCongDoan" />
+          <Property Type="String" Name="YKienCuaDN" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SoQuyenDinh" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="TienNopPhat" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="NgayNopPhat" />
+          <Property Type="DateTime" Name="NgayTao" />
+          <Property Type="String" Name="NguoiTao" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgaySua" />
+          <Property Type="String" Name="NguoiSua" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BDHieuLuc" />
+          <Property Type="DateTime" Name="KTHieuLuc" />
+          <Property Type="Int32" Name="SoNguoiLamCongViecYeuCauNghiemNgat" />
+          <Property Type="Decimal" Name="TongLoiNhuanSauThue" Precision="18" Scale="2" />
+          <Property Type="String" Name="DaiDienDoanhNghiep" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ThanhPhanThamGia" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgayKetThucPhieu" />
+          <Property Type="String" Name="DienThoaiLH" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EmailLH" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NguoiLienHe" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CauHoi1" Relationship="ThanhTraLaoDongModel.FK_CauHoi1_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi1" />
+          <NavigationProperty Name="CauHoi10" Relationship="ThanhTraLaoDongModel.FK_CauHoi10_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi10" />
+          <NavigationProperty Name="CauHoi11" Relationship="ThanhTraLaoDongModel.FK_CauHoi11_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi11" />
+          <NavigationProperty Name="CauHoi12" Relationship="ThanhTraLaoDongModel.FK_CauHoi12_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi12" />
+          <NavigationProperty Name="CauHoi2" Relationship="ThanhTraLaoDongModel.FK_CauHoi2_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi2" />
+          <NavigationProperty Name="CauHoi3" Relationship="ThanhTraLaoDongModel.FK_CauHoi3_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi3" />
+          <NavigationProperty Name="CauHoi4" Relationship="ThanhTraLaoDongModel.FK_CauHoi4_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi4" />
+          <NavigationProperty Name="CauHoi5" Relationship="ThanhTraLaoDongModel.FK_CauHoi5_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi5" />
+          <NavigationProperty Name="CauHoi6" Relationship="ThanhTraLaoDongModel.FK_CauHoi6_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi6" />
+          <NavigationProperty Name="CauHoi7" Relationship="ThanhTraLaoDongModel.FK_CauHoi7_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi7" />
+          <NavigationProperty Name="CauHoi8" Relationship="ThanhTraLaoDongModel.FK_CauHoi8_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi8" />
+          <NavigationProperty Name="CauHoi9" Relationship="ThanhTraLaoDongModel.FK_CauHoi9_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="CauHoi9" />
+          <NavigationProperty Name="DoanhNghiep" Relationship="ThanhTraLaoDongModel.FK_PhieuNhapHeader_DoanhNghiep" FromRole="PhieuNhapHeader" ToRole="DoanhNghiep" />
+          <NavigationProperty Name="HanhViDNs" Relationship="ThanhTraLaoDongModel.FK_HanhViDN_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="HanhViDN" />
+          <NavigationProperty Name="KetLuans" Relationship="ThanhTraLaoDongModel.FK_KetLuan_PhieuNhapHeader" FromRole="PhieuNhapHeader" ToRole="KetLuan" />
+        </EntityType>
+        <EntityType Name="QuyetDinhThanhTra">
+          <Key>
+            <PropertyRef Name="SoQuyetDinh" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="SoQuyetDinh" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="LoaiQuyetDinh" />
+          <Property Type="String" Name="PhamVi" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CanCuLuat" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CanCuQuyetDinh" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DiaBanTTKT" />
+          <Property Type="String" Name="ThanhVienDoan" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TrachNhiemThiHanh" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ChucDanhNguoiKy" />
+          <Property Type="String" Name="NoiNhan" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NguoiKyQuyetDinh" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgayTao" />
+          <Property Type="String" Name="NguoiTao" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="NgaySua" />
+          <Property Type="String" Name="NguoiSua" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsEdited" />
+          <Property Type="String" Name="IdNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tinh" Relationship="ThanhTraLaoDongModel.FK_QuyetDinhThanhTra_Tinh" FromRole="QuyetDinhThanhTra" ToRole="Tinh" />
+          <NavigationProperty Name="Tinh1" Relationship="ThanhTraLaoDongModel.FK_QuyetDinhThanhTra_Tinh1" FromRole="QuyetDinhThanhTra" ToRole="Tinh" />
+        </EntityType>
+        <EntityType Name="QuyetDinhTTDoanhNghiep">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="QuyetDinhTT" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="DoanhNghiepId" />
+          <Property Type="Boolean" Name="IsMoi" />
+          <Property Type="String" Name="IdNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DoanhNghiep" Relationship="ThanhTraLaoDongModel.FK_QuyetDinhTTDoanhNghiep_DoanhNghiep" FromRole="QuyetDinhTTDoanhNghiep" ToRole="DoanhNghiep" />
+        </EntityType>
+        <Association Name="FK_CauHoi1_PhieuNhapHeader">
+          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
+          <End Type="ThanhTraLaoDongModel.CauHoi1" Role="CauHoi1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuNhapHeader">
+              <PropertyRef Name="PhieuID" />
+            </Principal>
+            <Dependent Role="CauHoi1">
+              <PropertyRef Name="PhieuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CauHoi10_PhieuNhapHeader">
+          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
+          <End Type="ThanhTraLaoDongModel.CauHoi10" Role="CauHoi10" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuNhapHeader">
+              <PropertyRef Name="PhieuID" />
+            </Principal>
+            <Dependent Role="CauHoi10">
+              <PropertyRef Name="PhieuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CauHoi11_PhieuNhapHeader">
+          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
+          <End Type="ThanhTraLaoDongModel.CauHoi11" Role="CauHoi11" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuNhapHeader">
+              <PropertyRef Name="PhieuID" />
+            </Principal>
+            <Dependent Role="CauHoi11">
+              <PropertyRef Name="PhieuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CauHoi12_PhieuNhapHeader">
+          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
+          <End Type="ThanhTraLaoDongModel.CauHoi12" Role="CauHoi12" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuNhapHeader">
+              <PropertyRef Name="PhieuID" />
+            </Principal>
+            <Dependent Role="CauHoi12">
+              <PropertyRef Name="PhieuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CauHoi2_PhieuNhapHeader">
+          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
+          <End Type="ThanhTraLaoDongModel.CauHoi2" Role="CauHoi2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuNhapHeader">
+              <PropertyRef Name="PhieuID" />
+            </Principal>
+            <Dependent Role="CauHoi2">
+              <PropertyRef Name="PhieuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CauHoi3_PhieuNhapHeader">
+          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
+          <End Type="ThanhTraLaoDongModel.CauHoi3" Role="CauHoi3" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuNhapHeader">
+              <PropertyRef Name="PhieuID" />
+            </Principal>
+            <Dependent Role="CauHoi3">
+              <PropertyRef Name="PhieuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CauHoi4_PhieuNhapHeader">
+          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
+          <End Type="ThanhTraLaoDongModel.CauHoi4" Role="CauHoi4" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuNhapHeader">
+              <PropertyRef Name="PhieuID" />
+            </Principal>
+            <Dependent Role="CauHoi4">
+              <PropertyRef Name="PhieuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CauHoi5_PhieuNhapHeader">
+          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
+          <End Type="ThanhTraLaoDongModel.CauHoi5" Role="CauHoi5" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuNhapHeader">
+              <PropertyRef Name="PhieuID" />
+            </Principal>
+            <Dependent Role="CauHoi5">
+              <PropertyRef Name="PhieuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CauHoi6_PhieuNhapHeader">
+          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
+          <End Type="ThanhTraLaoDongModel.CauHoi6" Role="CauHoi6" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuNhapHeader">
+              <PropertyRef Name="PhieuID" />
+            </Principal>
+            <Dependent Role="CauHoi6">
+              <PropertyRef Name="PhieuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CauHoi7_PhieuNhapHeader">
+          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
+          <End Type="ThanhTraLaoDongModel.CauHoi7" Role="CauHoi7" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuNhapHeader">
+              <PropertyRef Name="PhieuID" />
+            </Principal>
+            <Dependent Role="CauHoi7">
+              <PropertyRef Name="PhieuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CauHoi8_PhieuNhapHeader">
+          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
+          <End Type="ThanhTraLaoDongModel.CauHoi8" Role="CauHoi8" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuNhapHeader">
+              <PropertyRef Name="PhieuID" />
+            </Principal>
+            <Dependent Role="CauHoi8">
+              <PropertyRef Name="PhieuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CauHoi9_PhieuNhapHeader">
+          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="1" />
+          <End Type="ThanhTraLaoDongModel.CauHoi9" Role="CauHoi9" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuNhapHeader">
+              <PropertyRef Name="PhieuID" />
+            </Principal>
+            <Dependent Role="CauHoi9">
+              <PropertyRef Name="PhieuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_DoanhNghiep_Huyen">
           <End Type="ThanhTraLaoDongModel.Huyen" Role="Huyen" Multiplicity="0..1" />
           <End Type="ThanhTraLaoDongModel.DoanhNghiep" Role="DoanhNghiep" Multiplicity="*" />
@@ -4683,37 +4646,54 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <ComplexType Name="uspThongKeBBTT_Result" >
-          <Property Type="Int32" Name="CountBBTTChuaHT" Nullable="false" />
-          <Property Type="Int32" Name="CountBBTTDaHT" />
-          <Property Type="Int32" Name="CountDNBiXLVP" />
-          <Property Type="Int32" Name="SumMucPhatDN" />
-        </ComplexType>
-        <ComplexType Name="uspThongKePTKT_Result" >
-          <Property Type="Int32" Name="CountPTKTKHT" />
-          <Property Type="Int32" Name="CountPTKTHT" />
-          <Property Type="Int32" Name="CountKNDNPTKT" />
-        </ComplexType>
-        <ComplexType Name="uspDoanhNghiepSelectAll_Result">
-          <Property Type="Int64" Name="RowNum" Nullable="true" />
-          <Property Type="Int64" Name="DoanhNghiepId" Nullable="false" />
-          <Property Type="String" Name="MaDN" Nullable="true" MaxLength="100" />
-          <Property Type="String" Name="TenDN" Nullable="true" />
-          <Property Type="String" Name="TenTinh" Nullable="true" MaxLength="100" />
-          <Property Type="String" Name="TenHuyen" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="NamTLDN" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="Address" Nullable="true" MaxLength="1000" />
-          <Property Type="String" Name="DT" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="LHDN" Nullable="true" MaxLength="100" />
-          <Property Type="String" Name="LHSX" Nullable="true" MaxLength="500" />
-          <Property Type="String" Name="CDCS" Nullable="false" MaxLength="8" />
-          <Property Type="Int32" Name="HasPermission" Nullable="false" />
-          <Property Type="Decimal" Name="TongSoNhanVien" Nullable="true" Precision="18" Scale="2" />
-          <Property Type="Int32" Name="SoNguoiLamNgheNguyHiem" Nullable="true" />
-          <Property Type="Int32" Name="SoNguoiLamCongViecYeuCauNghiemNgat" Nullable="true" />
-          <Property Type="DateTime" Name="NgayTao" Nullable="true" Precision="23" />
-          <Property Type="Int32" Name="Total" Nullable="true" />
-        </ComplexType>
+        <Association Name="FK_HanhViDN_PhieuNhapHeader">
+          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="1" />
+          <End Type="ThanhTraLaoDongModel.HanhViDN" Role="HanhViDN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuNhapHeader">
+              <PropertyRef Name="PhieuID" />
+            </Principal>
+            <Dependent Role="HanhViDN">
+              <PropertyRef Name="PhieuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KetLuan_PhieuNhapHeader">
+          <End Type="ThanhTraLaoDongModel.PhieuNhapHeader" Role="PhieuNhapHeader" Multiplicity="0..1" />
+          <End Type="ThanhTraLaoDongModel.KetLuan" Role="KetLuan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuNhapHeader">
+              <PropertyRef Name="PhieuID" />
+            </Principal>
+            <Dependent Role="KetLuan">
+              <PropertyRef Name="PhieuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QuyetDinhThanhTra_Tinh">
+          <End Type="ThanhTraLaoDongModel.Tinh" Role="Tinh" Multiplicity="0..1" />
+          <End Type="ThanhTraLaoDongModel.QuyetDinhThanhTra" Role="QuyetDinhThanhTra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tinh">
+              <PropertyRef Name="TinhId" />
+            </Principal>
+            <Dependent Role="QuyetDinhThanhTra">
+              <PropertyRef Name="DiaBanTTKT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QuyetDinhThanhTra_Tinh1">
+          <End Type="ThanhTraLaoDongModel.Tinh" Role="Tinh" Multiplicity="0..1" />
+          <End Type="ThanhTraLaoDongModel.QuyetDinhThanhTra" Role="QuyetDinhThanhTra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tinh">
+              <PropertyRef Name="TinhId" />
+            </Principal>
+            <Dependent Role="QuyetDinhThanhTra">
+              <PropertyRef Name="DiaBanTTKT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -4871,23 +4851,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="CauHoi1">
-            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi1">
-              <MappingFragment StoreEntitySet="CauHoi1">
-                <ScalarProperty Name="KTHieuLuc" ColumnName="KTHieuLuc" />
-                <ScalarProperty Name="BDHieuLuc" ColumnName="BDHieuLuc" />
-                <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
-                <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
-                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
-                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
-                <ScalarProperty Name="Q13" ColumnName="Q13" />
-                <ScalarProperty Name="Q12" ColumnName="Q12" />
-                <ScalarProperty Name="Q11" ColumnName="Q11" />
-                <ScalarProperty Name="PhieuId" ColumnName="PhieuId" />
-                <ScalarProperty Name="CauHoiId" ColumnName="CauHoiId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="LoaiHinhDoanhNghieps">
             <EntityTypeMapping TypeName="ThanhTraLaoDongModel.LoaiHinhDoanhNghiep">
               <MappingFragment StoreEntitySet="LoaiHinhDoanhNghiep">
@@ -4915,28 +4878,6 @@
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="CauHoi12">
-            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi12">
-              <MappingFragment StoreEntitySet="CauHoi12">
-                <ScalarProperty Name="KTHieuLuc" ColumnName="KTHieuLuc" />
-                <ScalarProperty Name="BDHieuLuc" ColumnName="BDHieuLuc" />
-                <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
-                <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
-                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
-                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
-                <ScalarProperty Name="Q1242" ColumnName="Q1242" />
-                <ScalarProperty Name="Q1241" ColumnName="Q1241" />
-                <ScalarProperty Name="Q123" ColumnName="Q123" />
-                <ScalarProperty Name="Q122" ColumnName="Q122" />
-                <ScalarProperty Name="Q1213" ColumnName="Q1213" />
-                <ScalarProperty Name="Q1212" ColumnName="Q1212" />
-                <ScalarProperty Name="Q1211" ColumnName="Q1211" />
-                <ScalarProperty Name="Q121" ColumnName="Q121" />
-                <ScalarProperty Name="PhieuId" ColumnName="PhieuId" />
-                <ScalarProperty Name="CauHoiId" ColumnName="CauHoiId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -5436,48 +5377,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="PhieuNhapHeaders">
-            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.PhieuNhapHeader">
-              <MappingFragment StoreEntitySet="PhieuNhapHeader">
-                <ScalarProperty Name="NguoiLienHe" ColumnName="NguoiLienHe" />
-                <ScalarProperty Name="EmailLH" ColumnName="EmailLH" />
-                <ScalarProperty Name="DienThoaiLH" ColumnName="DienThoaiLH" />
-                <ScalarProperty Name="NgayKetThucPhieu" ColumnName="NgayKetThucPhieu" />
-                <ScalarProperty Name="DaiDienDoanhNghiep" ColumnName="DaiDienDoanhNghiep" />
-                <ScalarProperty Name="ThanhPhanThamGia" ColumnName="ThanhPhanThamGia" />
-                <ScalarProperty Name="TongLoiNhuanSauThue" ColumnName="TongLoiNhuanSauThue" />
-                <ScalarProperty Name="KTHieuLuc" ColumnName="KTHieuLuc" />
-                <ScalarProperty Name="BDHieuLuc" ColumnName="BDHieuLuc" />
-                <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
-                <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
-                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
-                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
-                <ScalarProperty Name="NgayNopPhat" ColumnName="NgayNopPhat" />
-                <ScalarProperty Name="TienNopPhat" ColumnName="TienNopPhat" />
-                <ScalarProperty Name="SoQuyenDinh" ColumnName="SoQuyenDinh" />
-                <ScalarProperty Name="YKienCuaDN" ColumnName="YKienCuaDN" />
-                <ScalarProperty Name="IsCongDoan" ColumnName="IsCongDoan" />
-                <ScalarProperty Name="TongGiaTriSP" ColumnName="TongGiaTriSP" />
-                <ScalarProperty Name="SoNguoiLamCongViecYeuCauNghiemNgat" ColumnName="SoNguoiLamCongViecYeuCauNghiemNgat" />
-                <ScalarProperty Name="SoNguoiLamNgheNguyHiem" ColumnName="SoNguoiLamNgheNguyHiem" />
-                <ScalarProperty Name="SoLaoDongNu" ColumnName="SoLaoDongNu" />
-                <ScalarProperty Name="TongSoNhanVien" ColumnName="TongSoNhanVien" />
-                <ScalarProperty Name="SoChiNhanh" ColumnName="SoChiNhanh" />
-                <ScalarProperty Name="SoKienNghiDaThucHien" ColumnName="SoKienNghiDaThucHien" />
-                <ScalarProperty Name="SoKienNghiChuaThucHien" ColumnName="SoKienNghiChuaThucHien" />
-                <ScalarProperty Name="TienPhatDuKien" ColumnName="TienPhatDuKien" />
-                <ScalarProperty Name="DinhChiHDThietBi" ColumnName="DinhChiHDThietBi" />
-                <ScalarProperty Name="IsThucHieKienNghi" ColumnName="IsThucHieKienNghi" />
-                <ScalarProperty Name="KienNghiDNPhaiTH" ColumnName="KienNghiDNPhaiTH" />
-                <ScalarProperty Name="IsNopPhat" ColumnName="IsNopPhat" />
-                <ScalarProperty Name="CauHoiDaTraLoi" ColumnName="CauHoiDaTraLoi" />
-                <ScalarProperty Name="LoaiPhieu" ColumnName="LoaiPhieu" />
-                <ScalarProperty Name="DoanhNghiepId" ColumnName="DoanhNghiepId" />
-                <ScalarProperty Name="TenPhieu" ColumnName="TenPhieu" />
-                <ScalarProperty Name="PhieuID" ColumnName="PhieuID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="uspListKienNghiDNPhaiTHByPhieuId" FunctionName="ThanhTraLaoDongModel.Store.uspListKienNghiDNPhaiTHByPhieuId">
             <ResultMapping>
               <ComplexTypeMapping TypeName="ThanhTraLaoDongModel.uspListKienNghiDNPhaiTHByPhieuId_Result">
@@ -5551,32 +5450,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="CauHoi9">
-            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi9">
-              <MappingFragment StoreEntitySet="CauHoi9">
-                <ScalarProperty Name="Q925" ColumnName="Q925" />
-                <ScalarProperty Name="KTHieuLuc" ColumnName="KTHieuLuc" />
-                <ScalarProperty Name="BDHieuLuc" ColumnName="BDHieuLuc" />
-                <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
-                <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
-                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
-                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
-                <ScalarProperty Name="Q933" ColumnName="Q933" />
-                <ScalarProperty Name="Q932" ColumnName="Q932" />
-                <ScalarProperty Name="Q931" ColumnName="Q931" />
-                <ScalarProperty Name="Q93" ColumnName="Q93" />
-                <ScalarProperty Name="Q922" ColumnName="Q922" />
-                <ScalarProperty Name="Q924" ColumnName="Q924" />
-                <ScalarProperty Name="Q923" ColumnName="Q923" />
-                <ScalarProperty Name="Q921" ColumnName="Q921" />
-                <ScalarProperty Name="Q92" ColumnName="Q92" />
-                <ScalarProperty Name="Q9112" ColumnName="Q9112" />
-                <ScalarProperty Name="Q9111" ColumnName="Q9111" />
-                <ScalarProperty Name="PhieuId" ColumnName="PhieuId" />
-                <ScalarProperty Name="CauHoiId" ColumnName="CauHoiId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="uspDMKienNghi" FunctionName="ThanhTraLaoDongModel.Store.uspDMKienNghi">
             <ResultMapping>
               <ComplexTypeMapping TypeName="ThanhTraLaoDongModel.uspDMKienNghi_Result">
@@ -5588,35 +5461,6 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <EntitySetMapping Name="CauHoi6">
-            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi6">
-              <MappingFragment StoreEntitySet="CauHoi6">
-                <ScalarProperty Name="Q631" ColumnName="Q631" />
-                <ScalarProperty Name="Q681" ColumnName="Q681" />
-                <ScalarProperty Name="Q68" ColumnName="Q68" />
-                <ScalarProperty Name="Q671" ColumnName="Q671" />
-                <ScalarProperty Name="Q67" ColumnName="Q67" />
-                <ScalarProperty Name="KTHieuLuc" ColumnName="KTHieuLuc" />
-                <ScalarProperty Name="BDHieuLuc" ColumnName="BDHieuLuc" />
-                <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
-                <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
-                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
-                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
-                <ScalarProperty Name="Q66" ColumnName="Q66" />
-                <ScalarProperty Name="Q651" ColumnName="Q651" />
-                <ScalarProperty Name="Q65" ColumnName="Q65" />
-                <ScalarProperty Name="Q642" ColumnName="Q642" />
-                <ScalarProperty Name="Q641" ColumnName="Q641" />
-                <ScalarProperty Name="Q63" ColumnName="Q63" />
-                <ScalarProperty Name="Q622" ColumnName="Q622" />
-                <ScalarProperty Name="Q621" ColumnName="Q621" />
-                <ScalarProperty Name="Q612" ColumnName="Q612" />
-                <ScalarProperty Name="Q611" ColumnName="Q611" />
-                <ScalarProperty Name="PhieuId" ColumnName="PhieuId" />
-                <ScalarProperty Name="CauHoiId" ColumnName="CauHoiId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="uspTraCuuDSKienNghiCuaDoanhNghiepNam" FunctionName="ThanhTraLaoDongModel.Store.uspTraCuuDSKienNghiCuaDoanhNghiepNam">
             <ResultMapping>
               <ComplexTypeMapping TypeName="ThanhTraLaoDongModel.uspTraCuuDSKienNghiCuaDoanhNghiepNam_Result">
@@ -5769,26 +5613,6 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="uspBackupDatabase" FunctionName="ThanhTraLaoDongModel.Store.uspBackupDatabase" />
-          <EntitySetMapping Name="CauHoi10">
-            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi10">
-              <MappingFragment StoreEntitySet="CauHoi10">
-                <ScalarProperty Name="Q106" ColumnName="Q106" />
-                <ScalarProperty Name="Q105" ColumnName="Q105" />
-                <ScalarProperty Name="KTHieuLuc" ColumnName="KTHieuLuc" />
-                <ScalarProperty Name="BDHieuLuc" ColumnName="BDHieuLuc" />
-                <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
-                <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
-                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
-                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
-                <ScalarProperty Name="Q104" ColumnName="Q104" />
-                <ScalarProperty Name="Q103" ColumnName="Q103" />
-                <ScalarProperty Name="Q102" ColumnName="Q102" />
-                <ScalarProperty Name="Q101" ColumnName="Q101" />
-                <ScalarProperty Name="PhieuId" ColumnName="PhieuId" />
-                <ScalarProperty Name="CauHoiId" ColumnName="CauHoiId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="uspTraCuuDSDNChuaHuanLuyenAnToanLaoDong" FunctionName="ThanhTraLaoDongModel.Store.uspTraCuuDSDNChuaHuanLuyenAnToanLaoDong">
             <ResultMapping>
               <ComplexTypeMapping TypeName="ThanhTraLaoDongModel.uspTraCuuDSDNChuaHuanLuyenAnToanLaoDong_Result">
@@ -5877,85 +5701,6 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <EntitySetMapping Name="CauHoi11">
-            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi11">
-              <MappingFragment StoreEntitySet="CauHoi11">
-                <ScalarProperty Name="Q119" ColumnName="Q119" />
-                <ScalarProperty Name="Q118" ColumnName="Q118" />
-                <ScalarProperty Name="Q1131" ColumnName="Q1131" />
-                <ScalarProperty Name="Q1121" ColumnName="Q1121" />
-                <ScalarProperty Name="Q11" ColumnName="Q11" />
-                <ScalarProperty Name="KTHieuLuc" ColumnName="KTHieuLuc" />
-                <ScalarProperty Name="BDHieuLuc" ColumnName="BDHieuLuc" />
-                <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
-                <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
-                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
-                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
-                <ScalarProperty Name="Q117" ColumnName="Q117" />
-                <ScalarProperty Name="Q116" ColumnName="Q116" />
-                <ScalarProperty Name="Q115" ColumnName="Q115" />
-                <ScalarProperty Name="Q114" ColumnName="Q114" />
-                <ScalarProperty Name="Q113" ColumnName="Q113" />
-                <ScalarProperty Name="Q112" ColumnName="Q112" />
-                <ScalarProperty Name="Q1112" ColumnName="Q1112" />
-                <ScalarProperty Name="Q1111" ColumnName="Q1111" />
-                <ScalarProperty Name="PhieuId" ColumnName="PhieuId" />
-                <ScalarProperty Name="CauHoiId" ColumnName="CauHoiId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="CauHoi4">
-            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi4">
-              <MappingFragment StoreEntitySet="CauHoi4">
-                <ScalarProperty Name="Q4116" ColumnName="Q4116" />
-                <ScalarProperty Name="Q41041" ColumnName="Q41041" />
-                <ScalarProperty Name="Q4105" ColumnName="Q4105" />
-                <ScalarProperty Name="Q424" ColumnName="Q424" />
-                <ScalarProperty Name="Q41011" ColumnName="Q41011" />
-                <ScalarProperty Name="Q4114" ColumnName="Q4114" />
-                <ScalarProperty Name="Q46b" ColumnName="Q46b" />
-                <ScalarProperty Name="Q46a" ColumnName="Q46a" />
-                <ScalarProperty Name="KTHieuLuc" ColumnName="KTHieuLuc" />
-                <ScalarProperty Name="BDHieuLuc" ColumnName="BDHieuLuc" />
-                <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
-                <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
-                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
-                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
-                <ScalarProperty Name="Q41033" ColumnName="Q41033" />
-                <ScalarProperty Name="Q41032" ColumnName="Q41032" />
-                <ScalarProperty Name="Q410312" ColumnName="Q410312" />
-                <ScalarProperty Name="Q410311" ColumnName="Q410311" />
-                <ScalarProperty Name="Q4103" ColumnName="Q4103" />
-                <ScalarProperty Name="Q41022" ColumnName="Q41022" />
-                <ScalarProperty Name="Q41021" ColumnName="Q41021" />
-                <ScalarProperty Name="Q4102" ColumnName="Q4102" />
-                <ScalarProperty Name="Q4101" ColumnName="Q4101" />
-                <ScalarProperty Name="Q410" ColumnName="Q410" />
-                <ScalarProperty Name="Q49" ColumnName="Q49" />
-                <ScalarProperty Name="Q482" ColumnName="Q482" />
-                <ScalarProperty Name="Q481" ColumnName="Q481" />
-                <ScalarProperty Name="Q48" ColumnName="Q48" />
-                <ScalarProperty Name="Q47" ColumnName="Q47" />
-                <ScalarProperty Name="Q464" ColumnName="Q464" />
-                <ScalarProperty Name="Q463" ColumnName="Q463" />
-                <ScalarProperty Name="Q462" ColumnName="Q462" />
-                <ScalarProperty Name="Q461" ColumnName="Q461" />
-                <ScalarProperty Name="Q45" ColumnName="Q45" />
-                <ScalarProperty Name="Q44" ColumnName="Q44" />
-                <ScalarProperty Name="Q43" ColumnName="Q43" />
-                <ScalarProperty Name="Q423" ColumnName="Q423" />
-                <ScalarProperty Name="Q422" ColumnName="Q422" />
-                <ScalarProperty Name="Q421" ColumnName="Q421" />
-                <ScalarProperty Name="Q41131" ColumnName="Q41131" />
-                <ScalarProperty Name="Q4104" ColumnName="Q4104" />
-                <ScalarProperty Name="Q4113" ColumnName="Q4113" />
-                <ScalarProperty Name="Q4112" ColumnName="Q4112" />
-                <ScalarProperty Name="Q4111" ColumnName="Q4111" />
-                <ScalarProperty Name="PhieuId" ColumnName="PhieuId" />
-                <ScalarProperty Name="CauHoiId" ColumnName="CauHoiId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="ThanhTraLaoDongModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
@@ -6023,9 +5768,157 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="uspQuyetDinhThanhTraSelectAll" FunctionName="ThanhTraLaoDongModel.Store.uspQuyetDinhThanhTraSelectAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ThanhTraLaoDongModel.uspQuyetDinhThanhTraSelectAll_Result">
+                <ScalarProperty Name="RowNum" ColumnName="RowNum" />
+                <ScalarProperty Name="SoQuyetDinh" ColumnName="SoQuyetDinh" />
+                <ScalarProperty Name="SoDN" ColumnName="SoDN" />
+                <ScalarProperty Name="TenTinh" ColumnName="TenTinh" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
+                <ScalarProperty Name="IsEdited" ColumnName="IsEdited" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspThongKeBBTT" FunctionName="ThanhTraLaoDongModel.Store.uspThongKeBBTT" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ThanhTraLaoDongModel.uspThongKeBBTT_Result">
+                <ScalarProperty Name="CountBBTTChuaHT" ColumnName="CountBBTTChuaHT" />
+                <ScalarProperty Name="CountBBTTDaHT" ColumnName="CountBBTTDaHT" />
+                <ScalarProperty Name="CountDNBiXLVP" ColumnName="CountDNBiXLVP" />
+                <ScalarProperty Name="SumMucPhatDN" ColumnName="SumMucPhatDN" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspThongKePTKT" FunctionName="ThanhTraLaoDongModel.Store.uspThongKePTKT">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ThanhTraLaoDongModel.uspThongKePTKT_Result">
+                <ScalarProperty Name="CountPTKTKHT" ColumnName="CountPTKTKHT" />
+                <ScalarProperty Name="CountPTKTHT" ColumnName="CountPTKTHT" />
+                <ScalarProperty Name="CountKNDNPTKT" ColumnName="CountKNDNPTKT" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspDoanhNghiepSelectAll" FunctionName="ThanhTraLaoDongModel.Store.uspDoanhNghiepSelectAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ThanhTraLaoDongModel.uspDoanhNghiepSelectAll_Result">
+                <ScalarProperty Name="RowNum" ColumnName="RowNum" />
+                <ScalarProperty Name="DoanhNghiepId" ColumnName="DoanhNghiepId" />
+                <ScalarProperty Name="MaDN" ColumnName="MaDN" />
+                <ScalarProperty Name="TenDN" ColumnName="TenDN" />
+                <ScalarProperty Name="TenTinh" ColumnName="TenTinh" />
+                <ScalarProperty Name="TenHuyen" ColumnName="TenHuyen" />
+                <ScalarProperty Name="NamTLDN" ColumnName="NamTLDN" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="DT" ColumnName="DT" />
+                <ScalarProperty Name="LHDN" ColumnName="LHDN" />
+                <ScalarProperty Name="LHSX" ColumnName="LHSX" />
+                <ScalarProperty Name="CDCS" ColumnName="CDCS" />
+                <ScalarProperty Name="HasPermission" ColumnName="HasPermission" />
+                <ScalarProperty Name="TongSoNhanVien" ColumnName="TongSoNhanVien" />
+                <ScalarProperty Name="SoNguoiLamNgheNguyHiem" ColumnName="SoNguoiLamNgheNguyHiem" />
+                <ScalarProperty Name="SoNguoiLamCongViecYeuCauNghiemNgat" ColumnName="SoNguoiLamCongViecYeuCauNghiemNgat" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="CauHoi1">
+            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi1">
+              <MappingFragment StoreEntitySet="CauHoi1">
+                <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
+                <ScalarProperty Name="KTHieuLuc" ColumnName="KTHieuLuc" />
+                <ScalarProperty Name="BDHieuLuc" ColumnName="BDHieuLuc" />
+                <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
+                <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
+                <ScalarProperty Name="Q13" ColumnName="Q13" />
+                <ScalarProperty Name="Q12" ColumnName="Q12" />
+                <ScalarProperty Name="Q11" ColumnName="Q11" />
+                <ScalarProperty Name="PhieuId" ColumnName="PhieuId" />
+                <ScalarProperty Name="CauHoiId" ColumnName="CauHoiId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CauHoi10">
+            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi10">
+              <MappingFragment StoreEntitySet="CauHoi10">
+                <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
+                <ScalarProperty Name="Q106" ColumnName="Q106" />
+                <ScalarProperty Name="Q105" ColumnName="Q105" />
+                <ScalarProperty Name="KTHieuLuc" ColumnName="KTHieuLuc" />
+                <ScalarProperty Name="BDHieuLuc" ColumnName="BDHieuLuc" />
+                <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
+                <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
+                <ScalarProperty Name="Q104" ColumnName="Q104" />
+                <ScalarProperty Name="Q103" ColumnName="Q103" />
+                <ScalarProperty Name="Q102" ColumnName="Q102" />
+                <ScalarProperty Name="Q101" ColumnName="Q101" />
+                <ScalarProperty Name="PhieuId" ColumnName="PhieuId" />
+                <ScalarProperty Name="CauHoiId" ColumnName="CauHoiId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CauHoi11">
+            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi11">
+              <MappingFragment StoreEntitySet="CauHoi11">
+                <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
+                <ScalarProperty Name="Q119" ColumnName="Q119" />
+                <ScalarProperty Name="Q118" ColumnName="Q118" />
+                <ScalarProperty Name="Q1131" ColumnName="Q1131" />
+                <ScalarProperty Name="Q1121" ColumnName="Q1121" />
+                <ScalarProperty Name="Q11" ColumnName="Q11" />
+                <ScalarProperty Name="KTHieuLuc" ColumnName="KTHieuLuc" />
+                <ScalarProperty Name="BDHieuLuc" ColumnName="BDHieuLuc" />
+                <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
+                <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
+                <ScalarProperty Name="Q117" ColumnName="Q117" />
+                <ScalarProperty Name="Q116" ColumnName="Q116" />
+                <ScalarProperty Name="Q115" ColumnName="Q115" />
+                <ScalarProperty Name="Q114" ColumnName="Q114" />
+                <ScalarProperty Name="Q113" ColumnName="Q113" />
+                <ScalarProperty Name="Q112" ColumnName="Q112" />
+                <ScalarProperty Name="Q1112" ColumnName="Q1112" />
+                <ScalarProperty Name="Q1111" ColumnName="Q1111" />
+                <ScalarProperty Name="PhieuId" ColumnName="PhieuId" />
+                <ScalarProperty Name="CauHoiId" ColumnName="CauHoiId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CauHoi12">
+            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi12">
+              <MappingFragment StoreEntitySet="CauHoi12">
+                <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
+                <ScalarProperty Name="KTHieuLuc" ColumnName="KTHieuLuc" />
+                <ScalarProperty Name="BDHieuLuc" ColumnName="BDHieuLuc" />
+                <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
+                <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
+                <ScalarProperty Name="Q1242" ColumnName="Q1242" />
+                <ScalarProperty Name="Q1241" ColumnName="Q1241" />
+                <ScalarProperty Name="Q123" ColumnName="Q123" />
+                <ScalarProperty Name="Q122" ColumnName="Q122" />
+                <ScalarProperty Name="Q1213" ColumnName="Q1213" />
+                <ScalarProperty Name="Q1212" ColumnName="Q1212" />
+                <ScalarProperty Name="Q1211" ColumnName="Q1211" />
+                <ScalarProperty Name="Q121" ColumnName="Q121" />
+                <ScalarProperty Name="PhieuId" ColumnName="PhieuId" />
+                <ScalarProperty Name="CauHoiId" ColumnName="CauHoiId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="CauHoi2">
             <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi2">
               <MappingFragment StoreEntitySet="CauHoi2">
+                <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
                 <ScalarProperty Name="Q238" ColumnName="Q238" />
                 <ScalarProperty Name="Q237" ColumnName="Q237" />
                 <ScalarProperty Name="Q236" ColumnName="Q236" />
@@ -6077,6 +5970,7 @@
           <EntitySetMapping Name="CauHoi3">
             <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi3">
               <MappingFragment StoreEntitySet="CauHoi3">
+                <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
                 <ScalarProperty Name="Q351" ColumnName="Q351" />
                 <ScalarProperty Name="Q35" ColumnName="Q35" />
                 <ScalarProperty Name="Q341" ColumnName="Q341" />
@@ -6095,9 +5989,123 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="CauHoi4">
+            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi4">
+              <MappingFragment StoreEntitySet="CauHoi4">
+                <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
+                <ScalarProperty Name="Q4116" ColumnName="Q4116" />
+                <ScalarProperty Name="Q41041" ColumnName="Q41041" />
+                <ScalarProperty Name="Q4105" ColumnName="Q4105" />
+                <ScalarProperty Name="Q424" ColumnName="Q424" />
+                <ScalarProperty Name="Q41011" ColumnName="Q41011" />
+                <ScalarProperty Name="Q4114" ColumnName="Q4114" />
+                <ScalarProperty Name="Q46b" ColumnName="Q46b" />
+                <ScalarProperty Name="Q46a" ColumnName="Q46a" />
+                <ScalarProperty Name="KTHieuLuc" ColumnName="KTHieuLuc" />
+                <ScalarProperty Name="BDHieuLuc" ColumnName="BDHieuLuc" />
+                <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
+                <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
+                <ScalarProperty Name="Q41033" ColumnName="Q41033" />
+                <ScalarProperty Name="Q41032" ColumnName="Q41032" />
+                <ScalarProperty Name="Q410312" ColumnName="Q410312" />
+                <ScalarProperty Name="Q410311" ColumnName="Q410311" />
+                <ScalarProperty Name="Q4103" ColumnName="Q4103" />
+                <ScalarProperty Name="Q41022" ColumnName="Q41022" />
+                <ScalarProperty Name="Q41021" ColumnName="Q41021" />
+                <ScalarProperty Name="Q4102" ColumnName="Q4102" />
+                <ScalarProperty Name="Q4101" ColumnName="Q4101" />
+                <ScalarProperty Name="Q410" ColumnName="Q410" />
+                <ScalarProperty Name="Q49" ColumnName="Q49" />
+                <ScalarProperty Name="Q482" ColumnName="Q482" />
+                <ScalarProperty Name="Q481" ColumnName="Q481" />
+                <ScalarProperty Name="Q48" ColumnName="Q48" />
+                <ScalarProperty Name="Q47" ColumnName="Q47" />
+                <ScalarProperty Name="Q464" ColumnName="Q464" />
+                <ScalarProperty Name="Q463" ColumnName="Q463" />
+                <ScalarProperty Name="Q462" ColumnName="Q462" />
+                <ScalarProperty Name="Q461" ColumnName="Q461" />
+                <ScalarProperty Name="Q45" ColumnName="Q45" />
+                <ScalarProperty Name="Q44" ColumnName="Q44" />
+                <ScalarProperty Name="Q43" ColumnName="Q43" />
+                <ScalarProperty Name="Q423" ColumnName="Q423" />
+                <ScalarProperty Name="Q422" ColumnName="Q422" />
+                <ScalarProperty Name="Q421" ColumnName="Q421" />
+                <ScalarProperty Name="Q41131" ColumnName="Q41131" />
+                <ScalarProperty Name="Q4104" ColumnName="Q4104" />
+                <ScalarProperty Name="Q4113" ColumnName="Q4113" />
+                <ScalarProperty Name="Q4112" ColumnName="Q4112" />
+                <ScalarProperty Name="Q4111" ColumnName="Q4111" />
+                <ScalarProperty Name="PhieuId" ColumnName="PhieuId" />
+                <ScalarProperty Name="CauHoiId" ColumnName="CauHoiId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CauHoi5">
+            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi5">
+              <MappingFragment StoreEntitySet="CauHoi5">
+                <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
+                <ScalarProperty Name="Q515" ColumnName="Q515" />
+                <ScalarProperty Name="Q514" ColumnName="Q514" />
+                <ScalarProperty Name="Q55" ColumnName="Q55" />
+                <ScalarProperty Name="Q541" ColumnName="Q541" />
+                <ScalarProperty Name="Q513" ColumnName="Q513" />
+                <ScalarProperty Name="KTHieuLuc" ColumnName="KTHieuLuc" />
+                <ScalarProperty Name="BDHieuLuc" ColumnName="BDHieuLuc" />
+                <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
+                <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
+                <ScalarProperty Name="Q54" ColumnName="Q54" />
+                <ScalarProperty Name="Q533" ColumnName="Q533" />
+                <ScalarProperty Name="Q532" ColumnName="Q532" />
+                <ScalarProperty Name="Q531" ColumnName="Q531" />
+                <ScalarProperty Name="Q53" ColumnName="Q53" />
+                <ScalarProperty Name="Q522" ColumnName="Q522" />
+                <ScalarProperty Name="Q521" ColumnName="Q521" />
+                <ScalarProperty Name="Q52" ColumnName="Q52" />
+                <ScalarProperty Name="Q512" ColumnName="Q512" />
+                <ScalarProperty Name="Q511" ColumnName="Q511" />
+                <ScalarProperty Name="PhieuId" ColumnName="PhieuId" />
+                <ScalarProperty Name="CauHoiId" ColumnName="CauHoiId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CauHoi6">
+            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi6">
+              <MappingFragment StoreEntitySet="CauHoi6">
+                <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
+                <ScalarProperty Name="Q631" ColumnName="Q631" />
+                <ScalarProperty Name="Q681" ColumnName="Q681" />
+                <ScalarProperty Name="Q68" ColumnName="Q68" />
+                <ScalarProperty Name="Q671" ColumnName="Q671" />
+                <ScalarProperty Name="Q67" ColumnName="Q67" />
+                <ScalarProperty Name="KTHieuLuc" ColumnName="KTHieuLuc" />
+                <ScalarProperty Name="BDHieuLuc" ColumnName="BDHieuLuc" />
+                <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
+                <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
+                <ScalarProperty Name="Q66" ColumnName="Q66" />
+                <ScalarProperty Name="Q651" ColumnName="Q651" />
+                <ScalarProperty Name="Q65" ColumnName="Q65" />
+                <ScalarProperty Name="Q642" ColumnName="Q642" />
+                <ScalarProperty Name="Q641" ColumnName="Q641" />
+                <ScalarProperty Name="Q63" ColumnName="Q63" />
+                <ScalarProperty Name="Q622" ColumnName="Q622" />
+                <ScalarProperty Name="Q621" ColumnName="Q621" />
+                <ScalarProperty Name="Q612" ColumnName="Q612" />
+                <ScalarProperty Name="Q611" ColumnName="Q611" />
+                <ScalarProperty Name="PhieuId" ColumnName="PhieuId" />
+                <ScalarProperty Name="CauHoiId" ColumnName="CauHoiId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="CauHoi7">
             <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi7">
               <MappingFragment StoreEntitySet="CauHoi7">
+                <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
                 <ScalarProperty Name="Q706" ColumnName="Q706" />
                 <ScalarProperty Name="Q71118" ColumnName="Q71118" />
                 <ScalarProperty Name="Q7059" ColumnName="Q7059" />
@@ -6211,6 +6219,7 @@
           <EntitySetMapping Name="CauHoi8">
             <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi8">
               <MappingFragment StoreEntitySet="CauHoi8">
+                <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
                 <ScalarProperty Name="Q8241" ColumnName="Q8241" />
                 <ScalarProperty Name="Q81" ColumnName="Q81" />
                 <ScalarProperty Name="KTHieuLuc" ColumnName="KTHieuLuc" />
@@ -6240,85 +6249,37 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="CauHoi5">
-            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi5">
-              <MappingFragment StoreEntitySet="CauHoi5">
-                <ScalarProperty Name="Q515" ColumnName="Q515" />
-                <ScalarProperty Name="Q514" ColumnName="Q514" />
-                <ScalarProperty Name="Q55" ColumnName="Q55" />
-                <ScalarProperty Name="Q541" ColumnName="Q541" />
-                <ScalarProperty Name="Q513" ColumnName="Q513" />
+          <EntitySetMapping Name="CauHoi9">
+            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.CauHoi9">
+              <MappingFragment StoreEntitySet="CauHoi9">
+                <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
+                <ScalarProperty Name="Q925" ColumnName="Q925" />
                 <ScalarProperty Name="KTHieuLuc" ColumnName="KTHieuLuc" />
                 <ScalarProperty Name="BDHieuLuc" ColumnName="BDHieuLuc" />
                 <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
                 <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
                 <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
                 <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
-                <ScalarProperty Name="Q54" ColumnName="Q54" />
-                <ScalarProperty Name="Q533" ColumnName="Q533" />
-                <ScalarProperty Name="Q532" ColumnName="Q532" />
-                <ScalarProperty Name="Q531" ColumnName="Q531" />
-                <ScalarProperty Name="Q53" ColumnName="Q53" />
-                <ScalarProperty Name="Q522" ColumnName="Q522" />
-                <ScalarProperty Name="Q521" ColumnName="Q521" />
-                <ScalarProperty Name="Q52" ColumnName="Q52" />
-                <ScalarProperty Name="Q512" ColumnName="Q512" />
-                <ScalarProperty Name="Q511" ColumnName="Q511" />
+                <ScalarProperty Name="Q933" ColumnName="Q933" />
+                <ScalarProperty Name="Q932" ColumnName="Q932" />
+                <ScalarProperty Name="Q931" ColumnName="Q931" />
+                <ScalarProperty Name="Q93" ColumnName="Q93" />
+                <ScalarProperty Name="Q922" ColumnName="Q922" />
+                <ScalarProperty Name="Q924" ColumnName="Q924" />
+                <ScalarProperty Name="Q923" ColumnName="Q923" />
+                <ScalarProperty Name="Q921" ColumnName="Q921" />
+                <ScalarProperty Name="Q92" ColumnName="Q92" />
+                <ScalarProperty Name="Q9112" ColumnName="Q9112" />
+                <ScalarProperty Name="Q9111" ColumnName="Q9111" />
                 <ScalarProperty Name="PhieuId" ColumnName="PhieuId" />
                 <ScalarProperty Name="CauHoiId" ColumnName="CauHoiId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="QuyetDinhThanhTras">
-            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.QuyetDinhThanhTra">
-              <MappingFragment StoreEntitySet="QuyetDinhThanhTra">
-                <ScalarProperty Name="IsEdited" ColumnName="IsEdited" />
-                <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
-                <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
-                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
-                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
-                <ScalarProperty Name="NguoiKyQuyetDinh" ColumnName="NguoiKyQuyetDinh" />
-                <ScalarProperty Name="NoiNhan" ColumnName="NoiNhan" />
-                <ScalarProperty Name="ChucDanhNguoiKy" ColumnName="ChucDanhNguoiKy" />
-                <ScalarProperty Name="TrachNhiemThiHanh" ColumnName="TrachNhiemThiHanh" />
-                <ScalarProperty Name="ThanhVienDoan" ColumnName="ThanhVienDoan" />
-                <ScalarProperty Name="DiaBanTTKT" ColumnName="DiaBanTTKT" />
-                <ScalarProperty Name="CanCuQuyetDinh" ColumnName="CanCuQuyetDinh" />
-                <ScalarProperty Name="CanCuLuat" ColumnName="CanCuLuat" />
-                <ScalarProperty Name="PhamVi" ColumnName="PhamVi" />
-                <ScalarProperty Name="LoaiQuyetDinh" ColumnName="LoaiQuyetDinh" />
-                <ScalarProperty Name="SoQuyetDinh" ColumnName="SoQuyetDinh" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="QuyetDinhTTDoanhNghieps">
-            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.QuyetDinhTTDoanhNghiep">
-              <MappingFragment StoreEntitySet="QuyetDinhTTDoanhNghiep">
-                <ScalarProperty Name="IsMoi" ColumnName="IsMoi" />
-                <ScalarProperty Name="DoanhNghiepId" ColumnName="DoanhNghiepId" />
-                <ScalarProperty Name="QuyetDinhTT" ColumnName="QuyetDinhTT" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="uspQuyetDinhThanhTraSelectAll" FunctionName="ThanhTraLaoDongModel.Store.uspQuyetDinhThanhTraSelectAll">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="ThanhTraLaoDongModel.uspQuyetDinhThanhTraSelectAll_Result">
-                <ScalarProperty Name="RowNum" ColumnName="RowNum" />
-                <ScalarProperty Name="SoQuyetDinh" ColumnName="SoQuyetDinh" />
-                <ScalarProperty Name="SoDN" ColumnName="SoDN" />
-                <ScalarProperty Name="TenTinh" ColumnName="TenTinh" />
-                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
-                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
-                <ScalarProperty Name="IsEdited" ColumnName="IsEdited" />
-                <ScalarProperty Name="Total" ColumnName="Total" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <EntitySetMapping Name="DoanhNghieps">
             <EntityTypeMapping TypeName="ThanhTraLaoDongModel.DoanhNghiep">
               <MappingFragment StoreEntitySet="DoanhNghiep">
+                <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
                 <ScalarProperty Name="IsHoanThanh" ColumnName="IsHoanThanh" />
                 <ScalarProperty Name="ThoiGianLamViec" ColumnName="ThoiGianLamViec" />
                 <ScalarProperty Name="NguoiLienHe" ColumnName="NguoiLienHe" />
@@ -6363,49 +6324,84 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="uspThongKeBBTT" FunctionName="ThanhTraLaoDongModel.Store.uspThongKeBBTT" >
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="ThanhTraLaoDongModel.uspThongKeBBTT_Result">
-                <ScalarProperty Name="CountBBTTChuaHT" ColumnName="CountBBTTChuaHT" />
-                <ScalarProperty Name="CountBBTTDaHT" ColumnName="CountBBTTDaHT" />
-                <ScalarProperty Name="CountDNBiXLVP" ColumnName="CountDNBiXLVP" />
-                <ScalarProperty Name="SumMucPhatDN" ColumnName="SumMucPhatDN" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="uspThongKePTKT" FunctionName="ThanhTraLaoDongModel.Store.uspThongKePTKT">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="ThanhTraLaoDongModel.uspThongKePTKT_Result">
-                <ScalarProperty Name="CountPTKTKHT" ColumnName="CountPTKTKHT" />
-                <ScalarProperty Name="CountPTKTHT" ColumnName="CountPTKTHT" />
-                <ScalarProperty Name="CountKNDNPTKT" ColumnName="CountKNDNPTKT" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="uspDoanhNghiepSelectAll" FunctionName="ThanhTraLaoDongModel.Store.uspDoanhNghiepSelectAll">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="ThanhTraLaoDongModel.uspDoanhNghiepSelectAll_Result">
-                <ScalarProperty Name="RowNum" ColumnName="RowNum" />
-                <ScalarProperty Name="DoanhNghiepId" ColumnName="DoanhNghiepId" />
-                <ScalarProperty Name="MaDN" ColumnName="MaDN" />
-                <ScalarProperty Name="TenDN" ColumnName="TenDN" />
-                <ScalarProperty Name="TenTinh" ColumnName="TenTinh" />
-                <ScalarProperty Name="TenHuyen" ColumnName="TenHuyen" />
-                <ScalarProperty Name="NamTLDN" ColumnName="NamTLDN" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="DT" ColumnName="DT" />
-                <ScalarProperty Name="LHDN" ColumnName="LHDN" />
-                <ScalarProperty Name="LHSX" ColumnName="LHSX" />
-                <ScalarProperty Name="CDCS" ColumnName="CDCS" />
-                <ScalarProperty Name="HasPermission" ColumnName="HasPermission" />
-                <ScalarProperty Name="TongSoNhanVien" ColumnName="TongSoNhanVien" />
-                <ScalarProperty Name="SoNguoiLamNgheNguyHiem" ColumnName="SoNguoiLamNgheNguyHiem" />
+          <EntitySetMapping Name="PhieuNhapHeaders">
+            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.PhieuNhapHeader">
+              <MappingFragment StoreEntitySet="PhieuNhapHeader">
+                <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
+                <ScalarProperty Name="NguoiLienHe" ColumnName="NguoiLienHe" />
+                <ScalarProperty Name="EmailLH" ColumnName="EmailLH" />
+                <ScalarProperty Name="DienThoaiLH" ColumnName="DienThoaiLH" />
+                <ScalarProperty Name="NgayKetThucPhieu" ColumnName="NgayKetThucPhieu" />
+                <ScalarProperty Name="ThanhPhanThamGia" ColumnName="ThanhPhanThamGia" />
+                <ScalarProperty Name="DaiDienDoanhNghiep" ColumnName="DaiDienDoanhNghiep" />
+                <ScalarProperty Name="TongLoiNhuanSauThue" ColumnName="TongLoiNhuanSauThue" />
                 <ScalarProperty Name="SoNguoiLamCongViecYeuCauNghiemNgat" ColumnName="SoNguoiLamCongViecYeuCauNghiemNgat" />
+                <ScalarProperty Name="KTHieuLuc" ColumnName="KTHieuLuc" />
+                <ScalarProperty Name="BDHieuLuc" ColumnName="BDHieuLuc" />
+                <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
+                <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
+                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
                 <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
-                <ScalarProperty Name="Total" ColumnName="Total" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
+                <ScalarProperty Name="NgayNopPhat" ColumnName="NgayNopPhat" />
+                <ScalarProperty Name="TienNopPhat" ColumnName="TienNopPhat" />
+                <ScalarProperty Name="SoQuyenDinh" ColumnName="SoQuyenDinh" />
+                <ScalarProperty Name="YKienCuaDN" ColumnName="YKienCuaDN" />
+                <ScalarProperty Name="IsCongDoan" ColumnName="IsCongDoan" />
+                <ScalarProperty Name="TongGiaTriSP" ColumnName="TongGiaTriSP" />
+                <ScalarProperty Name="SoNguoiLamNgheNguyHiem" ColumnName="SoNguoiLamNgheNguyHiem" />
+                <ScalarProperty Name="SoLaoDongNu" ColumnName="SoLaoDongNu" />
+                <ScalarProperty Name="TongSoNhanVien" ColumnName="TongSoNhanVien" />
+                <ScalarProperty Name="SoChiNhanh" ColumnName="SoChiNhanh" />
+                <ScalarProperty Name="SoKienNghiDaThucHien" ColumnName="SoKienNghiDaThucHien" />
+                <ScalarProperty Name="SoKienNghiChuaThucHien" ColumnName="SoKienNghiChuaThucHien" />
+                <ScalarProperty Name="TienPhatDuKien" ColumnName="TienPhatDuKien" />
+                <ScalarProperty Name="DinhChiHDThietBi" ColumnName="DinhChiHDThietBi" />
+                <ScalarProperty Name="IsThucHieKienNghi" ColumnName="IsThucHieKienNghi" />
+                <ScalarProperty Name="KienNghiDNPhaiTH" ColumnName="KienNghiDNPhaiTH" />
+                <ScalarProperty Name="IsNopPhat" ColumnName="IsNopPhat" />
+                <ScalarProperty Name="CauHoiDaTraLoi" ColumnName="CauHoiDaTraLoi" />
+                <ScalarProperty Name="LoaiPhieu" ColumnName="LoaiPhieu" />
+                <ScalarProperty Name="DoanhNghiepId" ColumnName="DoanhNghiepId" />
+                <ScalarProperty Name="TenPhieu" ColumnName="TenPhieu" />
+                <ScalarProperty Name="PhieuID" ColumnName="PhieuID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QuyetDinhThanhTras">
+            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.QuyetDinhThanhTra">
+              <MappingFragment StoreEntitySet="QuyetDinhThanhTra">
+                <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
+                <ScalarProperty Name="IsEdited" ColumnName="IsEdited" />
+                <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
+                <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
+                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="NguoiKyQuyetDinh" ColumnName="NguoiKyQuyetDinh" />
+                <ScalarProperty Name="NoiNhan" ColumnName="NoiNhan" />
+                <ScalarProperty Name="ChucDanhNguoiKy" ColumnName="ChucDanhNguoiKy" />
+                <ScalarProperty Name="TrachNhiemThiHanh" ColumnName="TrachNhiemThiHanh" />
+                <ScalarProperty Name="ThanhVienDoan" ColumnName="ThanhVienDoan" />
+                <ScalarProperty Name="DiaBanTTKT" ColumnName="DiaBanTTKT" />
+                <ScalarProperty Name="CanCuQuyetDinh" ColumnName="CanCuQuyetDinh" />
+                <ScalarProperty Name="CanCuLuat" ColumnName="CanCuLuat" />
+                <ScalarProperty Name="PhamVi" ColumnName="PhamVi" />
+                <ScalarProperty Name="LoaiQuyetDinh" ColumnName="LoaiQuyetDinh" />
+                <ScalarProperty Name="SoQuyetDinh" ColumnName="SoQuyetDinh" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QuyetDinhTTDoanhNghieps">
+            <EntityTypeMapping TypeName="ThanhTraLaoDongModel.QuyetDinhTTDoanhNghiep">
+              <MappingFragment StoreEntitySet="QuyetDinhTTDoanhNghiep">
+                <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
+                <ScalarProperty Name="IsMoi" ColumnName="IsMoi" />
+                <ScalarProperty Name="DoanhNghiepId" ColumnName="DoanhNghiepId" />
+                <ScalarProperty Name="QuyetDinhTT" ColumnName="QuyetDinhTT" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -6477,7 +6473,6 @@
           <ConnectorPoint PointX="10" PointY="11.309924935414211" />
           <ConnectorPoint PointX="8.75" PointY="11.309924935414211" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi1" Width="1.5" PointX="25.375" PointY="0.5" Height="2.9070849609374996" />
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.LoaiHinhDoanhNghiep" Width="1.5" PointX="16.25" PointY="11" Height="1.427958984374996" />
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.User" Width="1.5" PointX="2.75" PointY="10.25" Height="3.5644742838541656" />
         <AssociationConnector Association="ThanhTraLaoDongModel.FK_UserRole_Users" >
@@ -6514,7 +6509,6 @@
           <ConnectorPoint PointX="5.958333333333333" PointY="7.46875" />
           <ConnectorPoint PointX="7.375" PointY="7.46875" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi12" Width="1.5" PointX="16.875" PointY="3" Height="3.7288216145833388" />
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.Log" Width="1.5" PointX="7.125" PointY="14.25" Height="2.557190755208353" />
         <AssociationConnector Association="ThanhTraLaoDongModel.FK_Log_Event" >
           <ConnectorPoint PointX="4.96875" PointY="4.4129850260416665" />
@@ -6543,10 +6537,8 @@
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.LuongToiThieu" Width="1.5" PointX="11.375" PointY="3.75" Height="1.7879850260416674" />
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoiKienNghi" Width="1.5" PointX="12" PointY="18.375" Height="1.9802864583333246" />
         <AssociationConnector Association="ThanhTraLaoDongModel.FK_Huyen_LuongToiThieu" >
-          <ConnectorPoint PointX="12.875" PointY="4.7187505000000005" />
-          <ConnectorPoint PointX="16" PointY="4.7187505000000005" />
-          <ConnectorPoint PointX="16" PointY="7.5379036458333317" />
-          <ConnectorPoint PointX="17" PointY="7.5379036458333317" />
+          <ConnectorPoint PointX="12.875" PointY="4.9324446614583337" />
+          <ConnectorPoint PointX="17" PointY="4.9324446614583337" />
           <ConnectorPoint PointX="17" PointY="7.75" />
         </AssociationConnector>
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.HanhViDN" Width="1.5" PointX="28.375" PointY="14.75" Height="1.9802864583333246" />
@@ -6560,10 +6552,10 @@
         </AssociationConnector>
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.DanhMucHanhVi" Width="1.5" PointX="5.375" PointY="18" Height="2.3648893229166674" />
         <AssociationConnector Association="ThanhTraLaoDongModel.FK_HanhViDN_HanhVi" >
-          <ConnectorPoint PointX="6.875" PointY="18.785096152540333" />
-          <ConnectorPoint PointX="10.041666666666666" PointY="18.785096152540333" />
-          <ConnectorPoint PointX="10.208333333333334" PointY="18.785096152540333" />
-          <ConnectorPoint PointX="11.75" PointY="18.785096152540333" />
+          <ConnectorPoint PointX="6.875" PointY="18.785096152718417" />
+          <ConnectorPoint PointX="10.041666666666666" PointY="18.785096152718417" />
+          <ConnectorPoint PointX="10.208333333333334" PointY="18.785096152718417" />
+          <ConnectorPoint PointX="11.75" PointY="18.785096152718417" />
           <ConnectorPoint PointX="11.75" PointY="17.75" />
           <ConnectorPoint PointX="14.260414166666665" PointY="17.75" />
           <ConnectorPoint PointX="14.427080833333333" PointY="17.75" />
@@ -6576,49 +6568,23 @@
           <ConnectorPoint PointX="20.010416666666668" PointY="17.75" />
           <ConnectorPoint PointX="20.177083333333332" PointY="17.75" />
           <ConnectorPoint PointX="20.375" PointY="17.75" />
-          <ConnectorPoint PointX="20.375" PointY="19.306946614583325" />
-          <ConnectorPoint PointX="21.291666666666668" PointY="19.306946614583325" />
-          <ConnectorPoint PointX="21.458333333333332" PointY="19.306946614583325" />
-          <ConnectorPoint PointX="22.682291666666668" PointY="19.306946614583325" />
-          <ConnectorPoint PointX="22.880208333333332" PointY="19.306946614583325" />
-          <ConnectorPoint PointX="23.216735300997218" PointY="19.306946614583325" />
-          <ConnectorPoint PointX="23.383401967663882" PointY="19.306946614583325" />
-          <ConnectorPoint PointX="24.75" PointY="19.306946614583325" />
-          <ConnectorPoint PointX="24.75" PointY="18.25" />
-          <ConnectorPoint PointX="29.125" PointY="18.25" />
+          <ConnectorPoint PointX="20.375" PointY="19.374248046874982" />
+          <ConnectorPoint PointX="21.291666666666668" PointY="19.374248046874982" />
+          <ConnectorPoint PointX="21.458333333333332" PointY="19.374248046874982" />
+          <ConnectorPoint PointX="28.635414166666667" PointY="19.374248046874982" />
+          <ConnectorPoint PointX="28.802080833333331" PointY="19.374248046874982" />
+          <ConnectorPoint PointX="29.125" PointY="19.374248046874982" />
           <ConnectorPoint PointX="29.125" PointY="17.114889322916667" />
         </AssociationConnector>
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.vLoaiHanhVi" Width="1.5" PointX="11.375" PointY="6.75" Height="1.4033821614583246" />
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.DanhMucKienNghi" Width="1.5" PointX="9.375" PointY="15.125" Height="1.9802864583333246" />
         <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoiKienNghi_DanhMucKienNghi" >
           <ConnectorPoint PointX="10.125" PointY="16.912985026041671" />
-          <ConnectorPoint PointX="10.125" PointY="19.570191305080662" />
-          <ConnectorPoint PointX="12" PointY="19.570191305080662" />
+          <ConnectorPoint PointX="10.125" PointY="19.570191305436829" />
+          <ConnectorPoint PointX="12" PointY="19.570191305436829" />
         </AssociationConnector>
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.KetLuan" Width="1.5" PointX="25" PointY="33.625" Height="2.0853483072916674" />
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.SYS_PARAMETERS" Width="1.5" PointX="7.375" PointY="20.75" Height="2.2496956380208246" />
-        <EntityTypeShape EntityType="ThanhTraLaoDongModel.PhieuNhapHeader" Width="1.5" PointX="22.75" PointY="25.125" Height="8.9879361979166674" />
-        <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi1_PhieuNhapHeader" >
-          <ConnectorPoint PointX="22.78125" PointY="25.125" />
-          <ConnectorPoint PointX="22.78125" PointY="2.1631982421875" />
-          <ConnectorPoint PointX="25.375" PointY="2.1631982421875" />
-        </AssociationConnector>
-        <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi12_PhieuNhapHeader" >
-          <ConnectorPoint PointX="22.765625" PointY="25.125" />
-          <ConnectorPoint PointX="22.765625" PointY="4.0574446614583337" />
-          <ConnectorPoint PointX="18.375" PointY="4.0574446614583337" />
-        </AssociationConnector>
-        <AssociationConnector Association="ThanhTraLaoDongModel.FK_HanhViDN_PhieuNhapHeader" >
-          <ConnectorPoint PointX="22.796875" PointY="25.125" />
-          <ConnectorPoint PointX="22.796875" PointY="16.641337890625003" />
-          <ConnectorPoint PointX="23.216735300997218" PointY="16.641337890625003" />
-          <ConnectorPoint PointX="23.383401967663882" PointY="16.641337890625003" />
-          <ConnectorPoint PointX="28.375" PointY="16.641337890625003" />
-        </AssociationConnector>
-        <AssociationConnector Association="ThanhTraLaoDongModel.FK_KetLuan_PhieuNhapHeader" >
-          <ConnectorPoint PointX="24.25" PointY="34.788076171875005" />
-          <ConnectorPoint PointX="25" PointY="34.788076171875005" />
-        </AssociationConnector>
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.DanhMucTrichDan" Width="1.5" PointX="0.75" PointY="19.75" Height="2.0853483072916674" />
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.KienNghiDN" Width="1.5" PointX="19.375" PointY="0.75" Height="2.0853483072916674" />
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoiHierarchy" Width="1.5" PointX="19.375" PointY="5" Height="3.134095052083353" />
@@ -6631,46 +6597,8 @@
           <ConnectorPoint PointX="14.260414166666665" PointY="20.199036458333332" />
           <ConnectorPoint PointX="13.5" PointY="20.199036458333332" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi9" Width="1.5" PointX="25" PointY="103.875" Height="5.0571093749999818" />
-        <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi9_PhieuNhapHeader" >
-          <ConnectorPoint PointX="23.108119679804524" PointY="35.95115234375" />
-          <ConnectorPoint PointX="23.108119679804524" PointY="106.40355468749999" />
-          <ConnectorPoint PointX="23.431087370694936" PointY="106.40355468749999" />
-          <ConnectorPoint PointX="23.5977540373616" PointY="106.40355468749999" />
-          <ConnectorPoint PointX="25" PointY="106.40355468749999" />
-        </AssociationConnector>
-        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi6" Width="1.5" PointX="25" PointY="110.5" Height="5.6340136718749818" />
-        <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi6_PhieuNhapHeader" >
-          <ConnectorPoint PointX="23.514420704028268" PointY="35.95115234375" />
-          <ConnectorPoint PointX="23.514420704028268" PointY="113.31700683593749" />
-          <ConnectorPoint PointX="25" PointY="113.31700683593749" />
-        </AssociationConnector>
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.TB_ThongKe" Width="1.5" PointX="7.375" PointY="2.75" Height="1.5956835937499818" />
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.LoaiHinhSanXuat" Width="1.5" PointX="16.375" PointY="14" Height="2.3648893229166692" />
-        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi10" Width="1.5" PointX="25" PointY="37.625" Height="3.9033007812499818" />
-        <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi10_PhieuNhapHeader" >
-          <ConnectorPoint PointX="23.911832589009023" PointY="35.95115234375" />
-          <ConnectorPoint PointX="23.911832589009023" PointY="39.576650390624991" />
-          <ConnectorPoint PointX="24.02883546117118" PointY="39.576650390624991" />
-          <ConnectorPoint PointX="24.195502127837845" PointY="39.576650390624991" />
-          <ConnectorPoint PointX="25" PointY="39.576650390624991" />
-        </AssociationConnector>
-        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi11" Width="1.5" PointX="25" PointY="18.5" Height="5.2494108072916674" />
-        <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi11_PhieuNhapHeader" >
-          <ConnectorPoint PointX="23.803262268661104" PointY="25.125" />
-          <ConnectorPoint PointX="23.803262268661104" PointY="21.528178710937496" />
-          <ConnectorPoint PointX="25" PointY="21.528178710937496" />
-        </AssociationConnector>
-        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi4" Width="1.5" PointX="25" PointY="83.625" Height="10.056946614583353" />
-        <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi4_PhieuNhapHeader" >
-          <ConnectorPoint PointX="22.897807339902261" PointY="35.95115234375" />
-          <ConnectorPoint PointX="22.897807339902261" PointY="88.653473307291677" />
-          <ConnectorPoint PointX="23.024786346471192" PointY="88.653473307291677" />
-          <ConnectorPoint PointX="23.191453013137856" PointY="88.653473307291677" />
-          <ConnectorPoint PointX="23.431087370694936" PointY="88.653473307291677" />
-          <ConnectorPoint PointX="23.5977540373616" PointY="88.653473307291677" />
-          <ConnectorPoint PointX="25" PointY="88.653473307291677" />
-        </AssociationConnector>
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.sysdiagram" Width="1.5" PointX="13.375" PointY="0.75" Height="1.9802864583333246" />
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.DanhGia" Width="1.5" PointX="5" PointY="21.75" Height="2.557190755208353" />
         <AssociationConnector Association="ThanhTraLaoDongModel.FK_DanhGia_Users" >
@@ -6687,9 +6615,8 @@
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.vChucDanh" Width="1.5" PointX="15.375" PointY="0.75" Height="1.4033821614583246" />
         <EntityTypeShape EntityType="ThanhTraLaoDongModel.Tinh" Width="1.5" PointX="14" PointY="12.125" Height="3.5186979166666674" />
         <AssociationConnector Association="ThanhTraLaoDongModel.FK_Huyen_Tinh" >
-          <ConnectorPoint PointX="15.5" PointY="12.125" />
-          <ConnectorPoint PointX="15.875" PointY="11.75" />
-          <ConnectorPoint PointX="15.875" PointY="9.0285953776041659" />
+          <ConnectorPoint PointX="14.75" PointY="12.125" />
+          <ConnectorPoint PointX="14.75" PointY="9.0285953776041659" />
           <ConnectorPoint PointX="16.25" PointY="9.0285953776041659" />
         </AssociationConnector>
         <AssociationConnector Association="ThanhTraLaoDongModel.FK_UsersTinh_Tinh" >
@@ -6699,61 +6626,128 @@
           <ConnectorPoint PointX="15.239585833333335" PointY="18.990143229166669" />
           <ConnectorPoint PointX="18.25" PointY="18.990143229166669" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi2" Width="1.5" PointX="25" PointY="49.25" Height="9.8646451822916674" />
-        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi3" Width="1.5" PointX="25" PointY="8.375" Height="4.0956022135416674" />
-        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi7" Width="1.5" PointX="25" PointY="60.875" Height="21.787333984374982" />
-        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi8" Width="1.5" PointX="25" PointY="24.875" Height="6.2109179687499818" />
+        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi1" Width="1.5" PointX="25.125" PointY="36.875" Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi10" Width="1.5" PointX="25.125" PointY="41.125" Height="4.0956022135416674" />
+        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi11" Width="1.5" PointX="25.125" PointY="46" Height="5.441712239583353" />
+        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi12" Width="1.5" PointX="25.125" PointY="52.25" Height="4.4802050781249818" />
+        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi2" Width="1.5" PointX="25.125" PointY="62.5" Height="10.056946614583353" />
+        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi3" Width="1.5" PointX="25.125" PointY="57.5" Height="4.287903645833353" />
+        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi4" Width="1.5" PointX="25.125" PointY="79.875" Height="10.249248046874982" />
+        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi5" Width="1.5" PointX="25.125" PointY="73.25" Height="5.8263151041666674" />
+        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi6" Width="1.5" PointX="25.125" PointY="90.875" Height="5.8263151041666674" />
+        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi7" Width="1.5" PointX="25.125" PointY="110.625" Height="21.979635416666667" />
+        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi8" Width="1.5" PointX="25.125" PointY="97.375" Height="6.4032194010416674" />
+        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi9" Width="1.5" PointX="25.125" PointY="104.625" Height="5.2494108072916674" />
+        <EntityTypeShape EntityType="ThanhTraLaoDongModel.DoanhNghiep" Width="1.5" PointX="20.625" PointY="8.875" Height="10.249248046874982" />
+        <EntityTypeShape EntityType="ThanhTraLaoDongModel.PhieuNhapHeader" Width="1.5" PointX="22.875" PointY="79.25" Height="11.018453776041667" />
+        <EntityTypeShape EntityType="ThanhTraLaoDongModel.QuyetDinhThanhTra" Width="1.5" PointX="16.25" PointY="21.5" Height="4.8648079427083246" />
+        <EntityTypeShape EntityType="ThanhTraLaoDongModel.QuyetDinhTTDoanhNghiep" Width="1.5" PointX="22.875" PointY="17" Height="2.1725878906249818" />
+        <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi1_PhieuNhapHeader" >
+          <ConnectorPoint PointX="23.625" PointY="79.25" />
+          <ConnectorPoint PointX="23.625" PointY="38.634348958333334" />
+          <ConnectorPoint PointX="24.252608541666671" PointY="38.634348958333334" />
+          <ConnectorPoint PointX="24.419275208333335" PointY="38.634348958333334" />
+          <ConnectorPoint PointX="25.125" PointY="38.634348958333334" />
+        </AssociationConnector>
+        <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi10_PhieuNhapHeader" >
+          <ConnectorPoint PointX="24.0312525" PointY="79.25" />
+          <ConnectorPoint PointX="24.0312525" PointY="43.172801106770834" />
+          <ConnectorPoint PointX="24.252608541666671" PointY="43.172801106770834" />
+          <ConnectorPoint PointX="24.419275208333335" PointY="43.172801106770834" />
+          <ConnectorPoint PointX="25.125" PointY="43.172801106770834" />
+        </AssociationConnector>
+        <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi11_PhieuNhapHeader" >
+          <ConnectorPoint PointX="23.2187475" PointY="79.25" />
+          <ConnectorPoint PointX="23.2187475" PointY="48.720856119791677" />
+          <ConnectorPoint PointX="23.541666666666668" PointY="48.720856119791677" />
+          <ConnectorPoint PointX="23.708333333333332" PointY="48.720856119791677" />
+          <ConnectorPoint PointX="23.947919166666669" PointY="48.720856119791677" />
+          <ConnectorPoint PointX="24.114585833333333" PointY="48.720856119791677" />
+          <ConnectorPoint PointX="24.252608541666671" PointY="48.720856119791677" />
+          <ConnectorPoint PointX="24.419275208333335" PointY="48.720856119791677" />
+          <ConnectorPoint PointX="25.125" PointY="48.720856119791677" />
+        </AssociationConnector>
+        <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi12_PhieuNhapHeader" >
+          <ConnectorPoint PointX="24.23437875" PointY="79.25" />
+          <ConnectorPoint PointX="24.23437875" PointY="54.490102539062491" />
+          <ConnectorPoint PointX="24.252608541666671" PointY="54.490102539062491" />
+          <ConnectorPoint PointX="24.419275208333335" PointY="54.490102539062491" />
+          <ConnectorPoint PointX="25.125" PointY="54.490102539062491" />
+        </AssociationConnector>
         <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi2_PhieuNhapHeader" >
-          <ConnectorPoint PointX="24.112168794504512" PointY="35.95115234375" />
-          <ConnectorPoint PointX="24.112168794504512" PointY="54.182322591145834" />
-          <ConnectorPoint PointX="25" PointY="54.182322591145834" />
+          <ConnectorPoint PointX="23.82812625" PointY="79.25" />
+          <ConnectorPoint PointX="23.82812625" PointY="67.528473307291677" />
+          <ConnectorPoint PointX="23.947919166666669" PointY="67.528473307291677" />
+          <ConnectorPoint PointX="24.114585833333333" PointY="67.528473307291677" />
+          <ConnectorPoint PointX="24.151045416666669" PointY="67.528473307291677" />
+          <ConnectorPoint PointX="24.419275208333339" PointY="67.528473307291677" />
+          <ConnectorPoint PointX="25.125" PointY="67.528473307291677" />
         </AssociationConnector>
         <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi3_PhieuNhapHeader" >
-          <ConnectorPoint PointX="23.30006863433055" PointY="25.125" />
-          <ConnectorPoint PointX="23.30006863433055" PointY="16.355286458333335" />
-          <ConnectorPoint PointX="24.625" PointY="16.355286458333335" />
-          <ConnectorPoint PointX="24.625" PointY="10.422801106770834" />
-          <ConnectorPoint PointX="25" PointY="10.422801106770834" />
+          <ConnectorPoint PointX="23.42187375" PointY="79.25" />
+          <ConnectorPoint PointX="23.42187375" PointY="59.643951822916677" />
+          <ConnectorPoint PointX="23.541666666666668" PointY="59.643951822916677" />
+          <ConnectorPoint PointX="23.708333333333332" PointY="59.643951822916677" />
+          <ConnectorPoint PointX="23.947919166666669" PointY="59.643951822916677" />
+          <ConnectorPoint PointX="24.114585833333333" PointY="59.643951822916677" />
+          <ConnectorPoint PointX="24.151045416666669" PointY="59.643951822916677" />
+          <ConnectorPoint PointX="24.419275208333339" PointY="59.643951822916677" />
+          <ConnectorPoint PointX="25.125" PointY="59.643951822916677" />
+        </AssociationConnector>
+        <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi4_PhieuNhapHeader" >
+          <ConnectorPoint PointX="24.375" PointY="84.999624023437491" />
+          <ConnectorPoint PointX="25.125" PointY="84.999624023437491" />
+        </AssociationConnector>
+        <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi5_PhieuNhapHeader" >
+          <ConnectorPoint PointX="23.01562125" PointY="79.25" />
+          <ConnectorPoint PointX="23.01562125" PointY="76.163157552083334" />
+          <ConnectorPoint PointX="23.135414166666667" PointY="76.163157552083334" />
+          <ConnectorPoint PointX="23.302080833333331" PointY="76.163157552083334" />
+          <ConnectorPoint PointX="23.338540416666667" PointY="76.163157552083334" />
+          <ConnectorPoint PointX="23.505207083333332" PointY="76.163157552083334" />
+          <ConnectorPoint PointX="23.541666666666668" PointY="76.163157552083334" />
+          <ConnectorPoint PointX="23.708333333333332" PointY="76.163157552083334" />
+          <ConnectorPoint PointX="23.744792916666668" PointY="76.163157552083334" />
+          <ConnectorPoint PointX="23.911459583333333" PointY="76.163157552083334" />
+          <ConnectorPoint PointX="23.947919166666669" PointY="76.163157552083334" />
+          <ConnectorPoint PointX="24.114585833333333" PointY="76.163157552083334" />
+          <ConnectorPoint PointX="24.151045416666669" PointY="76.163157552083334" />
+          <ConnectorPoint PointX="24.419275208333339" PointY="76.163157552083334" />
+          <ConnectorPoint PointX="25.125" PointY="76.163157552083334" />
+        </AssociationConnector>
+        <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi6_PhieuNhapHeader" >
+          <ConnectorPoint PointX="23.625" PointY="90.268453776041667" />
+          <ConnectorPoint PointX="23.625" PointY="93.788157552083334" />
+          <ConnectorPoint PointX="23.947919166666669" PointY="93.788157552083334" />
+          <ConnectorPoint PointX="24.114585833333333" PointY="93.788157552083334" />
+          <ConnectorPoint PointX="24.151045416666669" PointY="93.788157552083334" />
+          <ConnectorPoint PointX="24.317712083333333" PointY="93.788157552083334" />
+          <ConnectorPoint PointX="25.125" PointY="93.788157552083334" />
         </AssociationConnector>
         <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi7_PhieuNhapHeader" >
-          <ConnectorPoint PointX="23.311270191916396" PointY="35.95115234375" />
-          <ConnectorPoint PointX="23.311270191916396" PointY="71.768666992187491" />
-          <ConnectorPoint PointX="23.431087370694936" PointY="71.768666992187491" />
-          <ConnectorPoint PointX="23.5977540373616" PointY="71.768666992187491" />
-          <ConnectorPoint PointX="25" PointY="71.768666992187491" />
+          <ConnectorPoint PointX="24.0312525" PointY="90.268453776041667" />
+          <ConnectorPoint PointX="24.0312525" PointY="121.61481770833333" />
+          <ConnectorPoint PointX="25.125" PointY="121.61481770833333" />
         </AssociationConnector>
         <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi8_PhieuNhapHeader" >
-          <ConnectorPoint PointX="24.25" PointY="28.105458984374991" />
-          <ConnectorPoint PointX="25" PointY="28.105458984374991" />
+          <ConnectorPoint PointX="23.2187475" PointY="90.268453776041667" />
+          <ConnectorPoint PointX="23.2187475" PointY="100.57660970052083" />
+          <ConnectorPoint PointX="23.947919166666669" PointY="100.57660970052083" />
+          <ConnectorPoint PointX="24.114585833333333" PointY="100.57660970052083" />
+          <ConnectorPoint PointX="24.151045416666669" PointY="100.57660970052083" />
+          <ConnectorPoint PointX="24.317712083333333" PointY="100.57660970052083" />
+          <ConnectorPoint PointX="25.125" PointY="100.57660970052083" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="ThanhTraLaoDongModel.CauHoi5" Width="1.5" PointX="25" PointY="42.75" Height="5.6340136718749818" />
-        <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi5_PhieuNhapHeader" >
-          <ConnectorPoint PointX="23.713126646518646" PointY="35.95115234375" />
-          <ConnectorPoint PointX="23.713126646518646" PointY="45.567006835937491" />
-          <ConnectorPoint PointX="24.02883546117118" PointY="45.567006835937491" />
-          <ConnectorPoint PointX="24.195502127837845" PointY="45.567006835937491" />
-          <ConnectorPoint PointX="25" PointY="45.567006835937491" />
+        <AssociationConnector Association="ThanhTraLaoDongModel.FK_CauHoi9_PhieuNhapHeader" >
+          <ConnectorPoint PointX="24.23437875" PointY="90.268453776041667" />
+          <ConnectorPoint PointX="24.23437875" PointY="107.24970540364583" />
+          <ConnectorPoint PointX="25.125" PointY="107.24970540364583" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="ThanhTraLaoDongModel.QuyetDinhThanhTra" Width="1.5" PointX="16.25" PointY="21.5" Height="4.6725065104166674" />
-        <EntityTypeShape EntityType="ThanhTraLaoDongModel.QuyetDinhTTDoanhNghiep" Width="1.5" PointX="22.875" PointY="14.125" Height="1.980286458333353" />
-        <AssociationConnector Association="ThanhTraLaoDongModel.FK_QuyetDinhThanhTra_Tinh" >
-          <ConnectorPoint PointX="15.1562525" PointY="15.643697916666666" />
-          <ConnectorPoint PointX="15.1562525" PointY="24.585865209960936" />
-          <ConnectorPoint PointX="16.25" PointY="24.585865209960936" />
-        </AssociationConnector>
-        <AssociationConnector Association="ThanhTraLaoDongModel.FK_QuyetDinhThanhTra_Tinh1" >
-          <ConnectorPoint PointX="14.3437475" PointY="15.643697916666666" />
-          <ConnectorPoint PointX="14.3437475" PointY="23.011680104980474" />
-          <ConnectorPoint PointX="15.072919166666667" PointY="23.011680104980474" />
-          <ConnectorPoint PointX="15.239585833333335" PointY="23.011680104980474" />
-          <ConnectorPoint PointX="16.25" PointY="23.011680104980474" />
-        </AssociationConnector>
-        <EntityTypeShape EntityType="ThanhTraLaoDongModel.DoanhNghiep" Width="1.5" PointX="20.625" PointY="9" Height="10.056946614583325" />
         <AssociationConnector Association="ThanhTraLaoDongModel.FK_DoanhNghiep_Huyen" >
-          <ConnectorPoint PointX="17.75" PointY="9.6535953776041659" />
-          <ConnectorPoint PointX="20.010416666666668" PointY="9.6535953776041659" />
-          <ConnectorPoint PointX="20.177083333333332" PointY="9.6535953776041659" />
-          <ConnectorPoint PointX="20.625" PointY="9.6535953776041659" />
+          <ConnectorPoint PointX="17.75" PointY="9.5910953776041659" />
+          <ConnectorPoint PointX="20.010416666666668" PointY="9.5910953776041659" />
+          <ConnectorPoint PointX="20.177083333333332" PointY="9.5910953776041659" />
+          <ConnectorPoint PointX="20.625" PointY="9.5910953776041659" />
         </AssociationConnector>
         <AssociationConnector Association="ThanhTraLaoDongModel.FK_DoanhNghiep_LoaiHinhDoanhNghiep" >
           <ConnectorPoint PointX="17.75" PointY="11.797841796875" />
@@ -6774,15 +6768,35 @@
           <ConnectorPoint PointX="20.625" PointY="13.297841796875" />
         </AssociationConnector>
         <AssociationConnector Association="ThanhTraLaoDongModel.FK_PhieuNhapHeader_DoanhNghiep" >
-          <ConnectorPoint PointX="21.375" PointY="19.056946614583325" />
-          <ConnectorPoint PointX="21.375" PointY="30.538076171875" />
-          <ConnectorPoint PointX="22.75" PointY="30.538076171875" />
+          <ConnectorPoint PointX="21.375" PointY="19.124248046874982" />
+          <ConnectorPoint PointX="21.375" PointY="84.759226888020834" />
+          <ConnectorPoint PointX="22.875" PointY="84.759226888020834" />
         </AssociationConnector>
         <AssociationConnector Association="ThanhTraLaoDongModel.FK_QuyetDinhTTDoanhNghiep_DoanhNghiep" >
-          <ConnectorPoint PointX="22.125" PointY="15.115143229166668" />
-          <ConnectorPoint PointX="22.682291666666668" PointY="15.115143229166668" />
-          <ConnectorPoint PointX="22.864583333333332" PointY="15.115143229166668" />
-          <ConnectorPoint PointX="22.875" PointY="15.115143229166668" />
+          <ConnectorPoint PointX="22.125" PointY="18.062124023437491" />
+          <ConnectorPoint PointX="22.875" PointY="18.062124023437491" />
+        </AssociationConnector>
+        <AssociationConnector Association="ThanhTraLaoDongModel.FK_HanhViDN_PhieuNhapHeader" >
+          <ConnectorPoint PointX="24.375" PointY="79.53125" />
+          <ConnectorPoint PointX="28.7187475" PointY="79.53125" />
+          <ConnectorPoint PointX="28.7187475" PointY="17.114889322916667" />
+        </AssociationConnector>
+        <AssociationConnector Association="ThanhTraLaoDongModel.FK_KetLuan_PhieuNhapHeader" >
+          <ConnectorPoint PointX="24.335941875000003" PointY="79.25" />
+          <ConnectorPoint PointX="24.335941875000003" PointY="34.807444661458334" />
+          <ConnectorPoint PointX="25" PointY="34.807444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="ThanhTraLaoDongModel.FK_QuyetDinhThanhTra_Tinh" >
+          <ConnectorPoint PointX="15.1562525" PointY="15.643697916666666" />
+          <ConnectorPoint PointX="15.1562525" PointY="23.932403971354162" />
+          <ConnectorPoint PointX="16.25" PointY="23.932403971354162" />
+        </AssociationConnector>
+        <AssociationConnector Association="ThanhTraLaoDongModel.FK_QuyetDinhThanhTra_Tinh1" >
+          <ConnectorPoint PointX="14.3437475" PointY="15.643697916666666" />
+          <ConnectorPoint PointX="14.3437475" PointY="22.684949485677031" />
+          <ConnectorPoint PointX="15.072919166666667" PointY="22.684949485677031" />
+          <ConnectorPoint PointX="15.239585833333335" PointY="22.684949485677031" />
+          <ConnectorPoint PointX="16.25" PointY="22.684949485677031" />
         </AssociationConnector>
         </Diagram>
     </Diagrams>

@@ -280,10 +280,18 @@ Partial Class Control_Quyetdinhthanhtra_Edit
                 p.NgaySua = Now()
                 p.NguoiSua = Session("UserName")
                 data.SaveChanges()
-                'Lưu query Quyết định thanh tra vừa cập nhật
+                'create script update QuyetDinhThanhTra
                 Dim strInsert = "update QuyetDinhThanhTra set "
-                strInsert = strInsert & "SoQuyetDinh = '" & p.SoQuyetDinh & "',LoaiQuyetDinh =" & p.LoaiQuyetDinh & ", PhamVi = '" & p.PhamVi & "', CanCuLuat = '" & p.CanCuLuat & "',CanCuQuyetDinh = '" & p.CanCuQuyetDinh & "',DiaBanTTKT = " & p.DiaBanTTKT
-                strInsert = strInsert & ",ThanhVienDoan = '" & p.ThanhVienDoan & "', TrachNhiemThiHanh = '" & p.TrachNhiemThiHanh & "', ChucDanhNguoiKy = " & p.ChucDanhNguoiKy & ", NoiNhan = '" & p.NoiNhan & "', NguoiKyQuyetDinh = '" & p.NguoiKyQuyetDinh & "', NgayTao = '" & p.NgayTao & "', NguoiTao = '" & p.NguoiTao & "' where SoQuyetDinh = ;"
+                strInsert = strInsert & "SoQuyetDinh = '" & p.SoQuyetDinh & "',LoaiQuyetDinh =" & p.LoaiQuyetDinh & ", PhamVi = '" & p.PhamVi & "', "
+                strInsert = strInsert & "CanCuLuat = '" & p.CanCuLuat & "',CanCuQuyetDinh = '" & p.CanCuQuyetDinh & "',DiaBanTTKT = " & p.DiaBanTTKT
+                strInsert = strInsert & ",ThanhVienDoan = '" & p.ThanhVienDoan & "', TrachNhiemThiHanh = '" & p.TrachNhiemThiHanh & "', ChucDanhNguoiKy = " & p.ChucDanhNguoiKy & ", "
+                strInsert = strInsert & "NoiNhan = '" & p.NoiNhan & "', NguoiKyQuyetDinh = '" & p.NguoiKyQuyetDinh & "', NgaySua = '" & p.NgaySua & "', "
+                strInsert = strInsert & "NguoiSua = '" & p.NguoiSua & "' where SoQuyetDinh = '" & p.SoQuyetDinh & "' and IdNumber='" & p.IdNumber & "';"
+                Dim s As Stream = New FileStream("c:\test.txt", FileMode.Append)
+                Using sr As New StreamWriter(s, Encoding.UTF8)
+                    sr.WriteLine(strInsert.Trim)
+                End Using
+
                 'Save danh sách doanh nghiệp
                 Dim lstDoanhNghiepId() As String = hidlstDoanhNghiepId.Value.Split(Str_Symbol_Group)
                 Dim lstDoanhNghiep() As String = hidlstDoanhNghiep.Value.Split(Str_Symbol_Group)
@@ -308,6 +316,16 @@ Partial Class Control_Quyetdinhthanhtra_Edit
                             .NguoiSua = Session("UserName")
                         End With
                         data.SaveChanges()
+                        'create script update DoanhNghiep
+                        strInsert = "update DoanhNghiep set "
+                        strInsert = strInsert & "TenDoanhNghiep = '" & dn.TenDoanhNghiep & "',TruSoChinh ='" & dn.TruSoChinh & "', TinhId = " & dn.TinhId & ", "
+                        strInsert = strInsert & "HuyenId = " & dn.HuyenId & ",ThoiGianLamViec = '" & dn.ThoiGianLamViec & "',NgaySua = '" & dn.NgaySua & "', "
+                        strInsert = strInsert & "NguoiSua = '" & dn.NguoiSua & "'"
+                        strInsert = strInsert & " where IdNumber='" & dn.IdNumber & "';"
+                        Dim s As Stream = New FileStream("c:\test.txt", FileMode.Append)
+                        Using sr As New StreamWriter(s, Encoding.UTF8)
+                            sr.WriteLine(strInsert.Trim)
+                        End Using
                     Else
                         dn = New DoanhNghiep
                         With dn
@@ -318,18 +336,32 @@ Partial Class Control_Quyetdinhthanhtra_Edit
                             .ThoiGianLamViec = StringToDate(lstThoiGian(i))
                             .NgayTao = Now()
                             .NguoiTao = Session("UserName")
+                            .IdNumber = p.IdNumber
                         End With
                         data.DoanhNghieps.AddObject(dn)
                         data.SaveChanges()
-
+                        'Create script insert table DoanhNghieps
+                        strInsert = "insert into DoanhNghiep(TenDoanhNghiep, TruSoChinh, TinhId, HuyenId, ThoiGianLamViec, NgayTao, NguoiTao, IdNumber) values("
+                        strInsert = strInsert & "'" & dn.TenDoanhNghiep & "', '" & dn.TruSoChinh & "', " & dn.TinhId & ", " & dn.HuyenId & ", " & dn.ThoiGianLamViec
+                        strInsert = strInsert & ", '" & dn.NgayTao & "', '" & dn.NguoiTao & "', '" & dn.IdNumber & "'"
+                        Using sr As New StreamWriter(s, Encoding.UTF8)
+                            sr.WriteLine(strInsert.Trim)
+                        End Using
                         Dim qdtt_dn As New QuyetDinhTTDoanhNghiep
                         With qdtt_dn
                             .QuyetDinhTT = p.SoQuyetDinh
                             .DoanhNghiepId = dn.DoanhNghiepId
                             .IsMoi = True
+                            .IdNumber = p.IdNumber
                         End With
                         data.QuyetDinhTTDoanhNghieps.AddObject(qdtt_dn)
                         data.SaveChanges()
+                        'Create script insert table QuyetDinhTTDoanhNghieps
+                        strInsert = "insert into QuyetDinhTTDoanhNghiep(QuyetDinhTT, DoanhNghiepId, IsMoi, IdNumber) values("
+                        strInsert = strInsert & "'" & qdtt_dn.QuyetDinhTT & "', " & qdtt_dn.DoanhNghiepId & ", " & qdtt_dn.IsMoi & ", '" & dn.IdNumber & "'"
+                        Using sr As New StreamWriter(s, Encoding.UTF8)
+                            sr.WriteLine(strInsert.Trim)
+                        End Using
                     End If
                 Next
                 'Xóa những doanh nghiệp xóa trên lưới load từ database
@@ -341,6 +373,12 @@ Partial Class Control_Quyetdinhthanhtra_Edit
                         Dim qdttdn As QuyetDinhTTDoanhNghiep = (From a In data.QuyetDinhTTDoanhNghieps Where a.QuyetDinhTT.Equals(p.SoQuyetDinh) And a.DoanhNghiepId = dnid).SingleOrDefault
                         data.QuyetDinhTTDoanhNghieps.DeleteObject(qdttdn)
                         data.SaveChanges()
+                        'Create script insert table QuyetDinhTTDoanhNghieps
+                        strInsert = "delete from QuyetDinhTTDoanhNghiep where QuyetDinhTT='" & p.SoQuyetDinh & "' and IdNumber='" & p.IdNumber & "'"
+                         Using sr As New StreamWriter(s, Encoding.UTF8)
+                            sr.WriteLine(strInsert.Trim)
+                        End Using
+
                         'Kiểm tra doanh nghiệp có trong PhieuNhapHeader?
                         'Nếu không có thì cho xóa
                         Dim pn = (From a In data.PhieuNhapHeaders Where a.DoanhNghiepId = dnid).ToList
