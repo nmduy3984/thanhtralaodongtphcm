@@ -22,6 +22,7 @@ Partial Class Control_Quyetdinhthanhtra_List
             btnDelete.Attributes.Add("onclick", "return confirmMultiDelete('" & btnDelete.ClientID & "');")
         End If
     End Sub
+    
     Private Sub LoadData()
         For i As Integer = 2013 To (Now.Year)
             Dim iTem As New ListItem(i.ToString(), i.ToString())
@@ -266,7 +267,7 @@ Partial Class Control_Quyetdinhthanhtra_List
 #Region "Search"
     Protected Sub btnFilter_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnFilter.Click
         Dim bStatus As Boolean = IIf(ddlTrangThai.SelectedValue.Equals(""), Nothing, ddlTrangThai.SelectedValue)
-         BindToGrid(1, txtTitleFilter.Text.Trim(), CInt(ddlFromDate.SelectedValue), CInt(ddlToDate.SelectedValue), bStatus)
+        BindToGrid(1, txtTitleFilter.Text.Trim(), CInt(ddlFromDate.SelectedValue), CInt(ddlToDate.SelectedValue), bStatus)
     End Sub
 #End Region
 
