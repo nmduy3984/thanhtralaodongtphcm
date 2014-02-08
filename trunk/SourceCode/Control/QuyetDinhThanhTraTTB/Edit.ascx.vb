@@ -322,7 +322,7 @@ Partial Class Control_Quyetdinhthanhtra_Edit
                         strInsert = strInsert & "HuyenId = " & dn.HuyenId & ",ThoiGianLamViec = '" & dn.ThoiGianLamViec & "',NgaySua = '" & dn.NgaySua & "', "
                         strInsert = strInsert & "NguoiSua = '" & dn.NguoiSua & "'"
                         strInsert = strInsert & " where IdNumber='" & dn.IdNumber & "';"
-                        Dim s As Stream = New FileStream("c:\test.txt", FileMode.Append)
+                        'Dim s As Stream = New FileStream("c:\test.txt", FileMode.Append)
                         Using sr As New StreamWriter(s, Encoding.UTF8)
                             sr.WriteLine(strInsert.Trim)
                         End Using

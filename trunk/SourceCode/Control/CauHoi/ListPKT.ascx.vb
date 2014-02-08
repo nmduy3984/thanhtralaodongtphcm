@@ -172,7 +172,7 @@ Partial Class Control_CauHoi_ListPKT
 
                 data.ExecuteStoreCommand(strSQLExcute)
                 data.SaveChanges()
-                Insert_App_Log("Delete  Phieunhapheader:" & strTenPhieu & "", Function_Name.BienBanThanhTra, Audit_Type.Delete, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
+                Insert_App_Log("Delete  Phieunhapheader:" & strTenPhieu & "", Function_Name.PhieuKiemTra, Audit_Type.Delete, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
                 Return True
             Catch ex As Exception
                 log4net.Config.XmlConfigurator.Configure()
@@ -312,57 +312,7 @@ Partial Class Control_CauHoi_ListPKT
             Dim lnkTaoPhieu As LinkButton = CType(e.Row.FindControl("lnkTaoPhieu"), LinkButton)
             'lnkTaoPhieu.Attributes.Add("onclick", "setIndex(" + e.Row.RowIndex.ToString + ");")
             lnkTaoPhieu.Attributes.Add("onclick", "return ComfirmDialog('" + drpMessage.Items(3).Text + "', 0,'" + lnkTaoPhieu.ClientID + "','" + e.Row.RowIndex.ToString + "',1);")
-
-
-
-
-            'Dim lnkEdit As LinkButton = CType(e.Row.FindControl("lnkEdit"), LinkButton)
-            'Dim lnkTenphieu As LinkButton = CType(e.Row.FindControl("lnkTenphieu"), LinkButton)
-            'Dim lnkbtnDelete As LinkButton = CType(e.Row.FindControl("lnkbtnDelete"), LinkButton)
-
-            ''Permission
-            'lnkEdit.Enabled = HasPermission(Function_Name.PhieuKiemTra, Session("RoleId"), 0, Audit_Type.Edit)
-            'lnkEdit.Attributes.Add("onclick", "setIndex(" + e.Row.RowIndex.ToString + ");")
-
-            'Dim ScriptManager As System.Web.UI.ScriptManager = System.Web.UI.ScriptManager.GetCurrent(Me.Page)
-            'ScriptManager.RegisterAsyncPostBackControl(lnkbtnDelete)
-
-            'Dim chkItem As CheckBox = CType(e.Row.FindControl("chkItem"), CheckBox)
-            ''Permission
-            'If HasPermission(Function_Name.PhieuKiemTra, Session("RoleID"), 0, Audit_Type.Delete) = True Then
-            '    lnkbtnDelete.Attributes.Add("onclick", "return ComfirmDialog('" + drpMessage.Items(0).Text + "', 0,'" + lnkbtnDelete.ClientID + "','" + e.Row.RowIndex.ToString + "',1);")
-            'Else
-            '    lnkbtnDelete.Enabled = False
-            '    chkItem.Enabled = False
-            'End If
-
-            ''Permission
-            'lnkTenphieu.Enabled = HasPermission(Function_Name.PhieuKiemTra, Session("RoleID"), 0, Audit_Type.ViewContent)
-            ''Link tenphieu
-            'lnkTenphieu.Attributes.Add("onclick", "setIndex(" + e.Row.RowIndex.ToString + ");")
-            'lnkTenphieu.Text = grdShow.DataKeys(e.Row.RowIndex)("TenDoanhNghiep").ToString()
-
-            'Dim iVaiTro As Integer = grdShow.DataKeys(e.Row.RowIndex)("VaiTro")
-            'If iVaiTro = 1 Then
-            '    'Link sua
-            '    lnkEdit.Attributes.Add("onclick", "setIndex(" + e.Row.RowIndex.ToString + ");")
-            '    'Link tenphieu
-            '    lnkTenphieu.Attributes.Add("onclick", "setIndex(" + e.Row.RowIndex.ToString + ");")
-            '    lnkTenphieu.Text = grdShow.DataKeys(e.Row.RowIndex)("TenDoanhNghiep").ToString()
-            '    'Link xoa
-            '    lnkbtnDelete.Attributes.Add("onclick", "return ComfirmDialog('" + drpMessage.Items(0).Text + "', 0,'" + lnkbtnDelete.ClientID + "','" + e.Row.RowIndex.ToString + "',1);")
-            'ElseIf iVaiTro = 0 Then
-            '    'Check item
-            '    chkItem.Enabled = False
-            '    'Link sua
-            '    lnkEdit.Enabled = False
-            '    'Link tenphieu
-            '    lnkTenphieu.Attributes.Add("onclick", "setIndex(" + e.Row.RowIndex.ToString + ");")
-            '    lnkTenphieu.Text = grdShow.DataKeys(e.Row.RowIndex)("TenPhieu").ToString()
-            '    'Link xoa
-            '    lnkbtnDelete.Enabled = False
-            'End If
-        End If
+         End If
     End Sub
 
     Protected Sub drpPage_Size_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles drpPage_Size.SelectedIndexChanged
@@ -453,7 +403,7 @@ Partial Class Control_CauHoi_ListPKT
                 Session("phieuid") = pn.PhieuID 'Luu phieuid moi
                 hidPhieuIdNew.value = pn.PhieuID
                 Session("ModePhieu") = ModePhieu.Edit
-                Insert_App_Log("Insert  Phieunhapheader:" & pn.TenPhieu & "", Function_Name.BienBanThanhTra, Audit_Type.Create, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
+                Insert_App_Log("Insert  Phieunhapheader:" & pn.TenPhieu & "", Function_Name.PhieuKiemTra, Audit_Type.Create, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
 
             End If
         End Using

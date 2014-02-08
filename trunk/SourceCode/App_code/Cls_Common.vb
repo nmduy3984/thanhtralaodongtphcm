@@ -76,6 +76,8 @@ Public Class Cls_Common
         Ytgchanthuong = 6
         PhieuKiemTra = 12
         BienBanThanhTra = 14
+        PhieuKiemTra_XLP = 87
+        BienBanThanhTra_TT = 96
         DoanhNghiepBBTT = 113
         DoanhNghiepPTKT = 114
         DoanhNghiepTT = 95

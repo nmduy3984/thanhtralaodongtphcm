@@ -2290,3 +2290,12 @@ System.ArgumentException: URI formats are not supported.
    at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
    at System.IO.FileStream..ctor(String path, FileMode mode)
    at Control_QuyetDinhThanhTra_Create.Save() in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\QuyetDinhThanhTraTTB\Create.ascx.vb:line 206
+2014-01-12 09:14:45,446 [19] ERROR Control_CauHoi_ListBBTT_TT - Error error 	tphcm01	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListBBTT_TT.btnTenPhieu_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListBBTT_TT.ascx.vb:line 209
