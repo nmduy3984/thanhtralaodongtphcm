@@ -1,0 +1,278 @@
+body{
+	/*overflow-x:hidden*/
+}
+.nav {
+	Z-INDEX: 50;/*edit 26/3*/ 
+	font: normal 12px Arial, Helvetica, sans-serif;
+	POSITION: relative; HEIGHT: 35px;
+	top:4px;/*edit 27/3*/ 
+	/*left:24px;*/ 
+	width:100%/*edit 26/3*/;
+}
+.nav .table {
+	DISPLAY: inline; MARGIN: 0px auto
+}
+.nav .select {
+	PADDING: 0px;
+	MARGIN: 0px; 
+	WHITE-SPACE: nowrap; 
+	LIST-STYLE-TYPE: none;
+}
+.nav .current {
+	padding: 0 5px 0 5px;
+	MARGIN: 0px; 
+	WHITE-SPACE: nowrap; LIST-STYLE-TYPE: none;
+}
+
+.nav LI {FLOAT: left;
+	padding:0px;
+	MARGIN: 0px; HEIGHT: auto;
+}
+
+
+/*************************************************/
+.nav .current A {/*edit 27/3*/
+	DISPLAY: block; 
+	FLOAT: left; 
+	LINE-HEIGHT: 26px; 
+	WHITE-SPACE: nowrap; 
+	HEIGHT: 30px;
+	TEXT-DECORATION: none;
+	font-weight:bold;
+	padding: 0 0px 0 13px;
+	background: url(../images/menu-top.png) no-repeat 0 0;
+}
+	.nav .current A span{/*edit 27/3*/
+		FLOAT: left; LINE-HEIGHT: 26px; WHITE-SPACE: nowrap; HEIGHT: 27px; TEXT-DECORATION: none;
+		font-weight:bold;
+		line-height:26px; color:#15428B;
+		padding: 2px 13px 0 0px;
+		background: url(../images/menu-top.png) no-repeat right bottom;
+		font-size:13px;
+	}
+.nav .current A span:hover {
+	DISPLAY: block; 
+	FLOAT: left;
+	LINE-HEIGHT: 26px; 
+	WHITE-SPACE: nowrap;
+	TEXT-DECORATION: none;
+	font-weight:bold;
+}
+/*************************************************/
+.nav .current .li A {
+	DISPLAY: block; FLOAT: left; 
+	COLOR: #c9e2ff; 
+	LINE-HEIGHT: 26px; 
+	WHITE-SPACE: nowrap; 
+	HEIGHT: 25px; 
+	TEXT-DECORATION: none;
+	font-weight:bold;
+	padding: 0px 6px 0px 6px;
+}
+.nav .current A B {
+	DISPLAY: block; Z-INDEX: 2
+}
+/**********************doan********************************/
+.nav .select A {
+	DISPLAY: block;
+	FLOAT: left; 
+	line-height:26px; color:#15428B;
+	WHITE-SPACE: nowrap; 
+	HEIGHT: 27px; 
+	TEXT-DECORATION: none;
+	font-weight:bold;
+	padding: 2px 13px 0 13px;
+	font-size:13px;/*edit 27/3*/
+}
+.nav .select A:hover {
+	CURSOR: pointer;
+	padding: 0 0px 0 26px;
+	background: url(../images/menu-top.png) no-repeat 0 0;
+}
+.nav .select A:hover span{
+	FLOAT: left; color:#2f60af; LINE-HEIGHT: 26px; WHITE-SPACE: nowrap; HEIGHT: 25px; TEXT-DECORATION: none;
+		font-weight:bold;
+		padding: 2px 26px 0 0px;
+		background:url(../images/menu-top.png) no-repeat right bottom;
+		
+	
+	}
+.nav .select LI:hover A {
+	CURSOR: pointer;
+	background:url(../images/menu-top.png) no-repeat left top;
+	padding: 0 0px 0 13px;
+	height:30px/*edit 27/3*/
+}
+.nav .select LI:hover A span {/*edit 27/3*/
+	CURSOR: pointer;
+	background:url(../images/menu-top.png) no-repeat right bottom;
+	padding: 2px 13px 0 0px;HEIGHT: 27px;
+	 LINE-HEIGHT: 26px;
+	 float:left
+}
+/******************************************************/
+.nav .select A:hover B {
+	DISPLAY: block; FLOAT: left; CURSOR: pointer
+}
+.nav .select LI:hover A B {
+	DISPLAY: block; FLOAT: left; CURSOR: pointer
+}
+.nav .select_sub {
+	DISPLAY: none
+}
+.nav TABLE {
+	FONT-SIZE: 1em; 
+	MARGIN: 10px; 
+	WIDTH: 0px; 
+	BORDER-COLLAPSE: collapse; HEIGHT: 0px
+}
+.nav .sub {
+	PADDING-RIGHT: 0px; 
+	DISPLAY: inline; 
+	PADDING-LEFT: 0px; 
+	PADDING-BOTTOM: 0px; 
+	MARGIN: 0px auto; 
+	PADDING-TOP: 0px; 
+	LIST-STYLE-TYPE: none
+}
+.nav .sub_active .current_sub A {
+	COLOR: #ff0000;
+}
+.nav .sub_active A:hover {
+	COLOR: #f00
+}
+.nav .select :hover .select_sub {
+	PADDING-RIGHT: 0px;
+	DISPLAY: block; 
+	PADDING-LEFT: 0px; 
+	Z-INDEX: 10; 
+	LEFT: 0px; 
+	BACKGROUND:#F7FAFD  url(../images/sub_mn.png) repeat-x;
+	PADDING-BOTTOM: 0px;
+	WIDTH: 100%;
+	height:57px;
+	PADDING-TOP: 0px; 
+	color:#4100fb; 
+	POSITION: absolute; 
+	TOP: 27px; 
+	TEXT-ALIGN: left;
+}
+.nav .current .show 
+{
+	PADDING-RIGHT: 0px;
+	DISPLAY: block; 
+	PADDING-LEFT: 0px; 
+	Z-INDEX: 2; 
+	LEFT: 0px; 
+	BACKGROUND: #F7FAFD url(../images/sub_mn.png) repeat-x;
+	PADDING-BOTTOM: 4px;
+	WIDTH: 100%; /*edit 27/3*/ 
+	height:97px; /*edit 27/3*/ 
+	PADDING-TOP: 0px; 
+	BACKGROUND-REPEAT: repeat-x; 
+	POSITION: absolute; 
+	TOP: 27px; 
+	TEXT-ALIGN: left;
+	color:#F96;
+	font-weight:normal!important;
+}
+ 
+.nav .select :hover .sub LI A {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 8px; DISPLAY: block; PADDING-LEFT: 8px; BORDER-LEFT-WIDTH: 0px; FLOAT: left; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #4100fb; PADDING-TOP: 0px; WHITE-SPACE: nowrap; BORDER-RIGHT-WIDTH: 0px
+}
+.nav .current .show .sub LI A {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 8px; DISPLAY: block; PADDING-LEFT: 8px; BORDER-LEFT-WIDTH: 0px; FLOAT: left; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #4100fb; PADDING-TOP: 0px; WHITE-SPACE: nowrap; BORDER-RIGHT-WIDTH: 0px;
+	
+}
+.nav .current .sub LI.sub_show A {
+	CURSOR: default; COLOR: #088
+}
+.nav .select :hover .sub LI A:hover {
+	VISIBILITY: visible; COLOR: #ff0000;
+}
+.nav .current .sub LI A:hover {
+	VISIBILITY: visible; COLOR:#ff0000;
+}
+.undermenu
+{	height:27px;
+	width: 100%;
+	BACKGROUND:none;	}
+
+.MenuLine{
+	BACKGROUND:none;
+	width:0px;
+	height:25px!important;
+	float:left
+}
+.NormalSubMenu
+{	
+	background: url(../images/icon_submenu.png) no-repeat!important;
+	float:left;
+	margin-right:0px!important;
+}
+
+.select .select_sub .NormalSubMenu
+{	margin-right:10px!important;
+}
+.select .select_sub .NormalSubMenu:hover
+{	margin-right:10px!important;
+}
+.ActiveSubMenu a
+{
+	padding-left: 10px;	
+	text-decoration:underline !important;
+	}
+/**doan**/
+.sub_1,.sub_2,.sub_3,.sub_4,.sub_5,.sub_6,.sub_7,.sub_8,.sub_9{
+	list-style-type:none;
+	float:left;
+	width:100%!important;
+}
+
+.sub_5 {
+	padding-left:*380px;
+
+}
+/*
+.sub_6 {
+	padding-left:40%;
+	width: 60% !important
+}*/
+.sub_7 {
+	padding-left:*690px;
+	
+}
+.sub_8 {
+	/*padding-left:20%;*/
+	width: 100% !important
+}
+.sub_1 a,.sub_2 a,.sub_3 a,.sub_4 a,.sub_5 a,.sub_6 a,.sub_7 a,.sub_8 a,.sub_9 a
+{
+	background:none!important;
+	color:#0b449a!important;
+	font-weight:normal!important;
+	padding: 0 0 0 26px !important;
+}
+/*css bo sung ngay 7/3*/
+.sub_1 a:hover,.sub_2 a:hover,.sub_3 a:hover,.sub_4 a:hover,.sub_5 a:hover,.sub_6 a:hover,.sub_7 a:hover,.sub_8 a:hover,.sub_9 a:hover,
+.sub_1 a:active,.sub_2 a:active,.sub_3 a:active,.sub_4 a:active,.sub_5 a:active,.sub_6 a:active,.sub_7 a:active,.sub_8 a:active,.sub_9 a:active
+{
+	color:#002655!important;
+}
+.NormalSubMenu:hover
+{	
+	background: url(../images/icon_submenu_active.png) no-repeat!important;
+	float:left;
+	margin-right:10px!important;
+	color:#002655!important;
+}
+.ActiveSubMenu a
+{	
+	background: url(../images/icon_submenu_active.png) no-repeat!important;
+	float:left;
+	margin-right:10px!important;
+	text-decoration:none!important;
+	color:#002655!important;
+	margin-bottom:0px!important;
+}
+.ActiveSubMenu{ margin-right: 0 !important;}

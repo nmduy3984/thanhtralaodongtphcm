@@ -1,0 +1,86 @@
+﻿/**
+* Date: 20/05/2012
+* @version 2
+*
+**/
+// @Decalre Global Variable
+
+jQuery.fn.FreezingHeaderColumn = function () {
+    var args = arguments[0] || {};
+    //attributes 
+    var column = args.columnActive;
+    var height = args.columnHeight;
+    var leftWidth = args.leftWidth;
+    var rightWidth = args.rightWidth;
+    var bodyHeight = args.bodyHeight;
+    //
+    var _element = $(this[0]);
+    var _tr_element = _element.find("tr:first").clone();
+    var _tr_element_left = _element.find("tr:first").clone();
+    var _tr_element_right = _element.find("tr:first").clone();
+    $("#table-header-left").append(_tr_element_left);
+    $("#table-header-right").append(_tr_element_right);
+    $("#table-header-left").find("th").remove();
+    $("#table-header-right").find("th").remove();
+    _tr_element.find("th").each(function (index) {
+        if (index < column) {
+            $("#table-header-left").find("tr").append($(this));
+        }
+        else {
+            $("#table-header-right").find("tr").append($(this));
+        }
+    });
+    _element.find("tr:first").remove();
+    //
+    $(_element).find("tr").each(function (e) {
+        var _tr = $(this).clone();
+        _tr.find("td").remove();
+        $(this).find("td").each(function (index) {
+            if (index < column) {
+                _tr.append($(this));
+            }
+        });
+        $("#table-content-left").append(_tr);
+    });
+
+    // set height column , with table left-right
+    $("#table-content-left").find("td").height(height);
+    _element.find("td").height(height);
+    $("table#table-header-left").width(leftWidth);
+    $("table#table-content-left").width(leftWidth);
+    $("table#table-header-right").width(rightWidth);
+    $("div#scroll").css("max-height", bodyHeight);
+    $("div#container-left").css("max-height", bodyHeight);
+    $("div#y-scroll").css("max-height", bodyHeight);
+    $("div#y-fake-scroll").css("max-height", bodyHeight);
+
+    _element.width(rightWidth);
+    $.browser.chrome = /chrome/.test(navigator.userAgent.toLowerCase());
+    $.browser.msie = /msie/.test(navigator.userAgent.toLowerCase());
+    if ($.browser.chrome || $.browser.msie) {
+    }
+    else {
+        $("table.table-content-right").find("td").css("padding", "2px");
+        $("table#table-header-right").find("th").css("padding", "2px");
+    }
+    //funScroll
+    $("#y-table-emulator").height((_element.height() + 0) + "px");
+    $("#x-table-emulator").width((_element.width() + 1000) + "px");
+
+    var scrollablePanel = $("#scroll");
+    var headerContainerRight = $("#header-container-right");
+    var containerLeft = $("#container-left");
+    var YfakeScrollablePanel = $("#y-fake-scroll");
+    var XfakeScrollablePanel = $("#x-fake-scroll");
+    $("#scroll").scroll(function (e) {
+        $("#x-fake-scroll").scrollTop($("#scroll").scrollTop());
+        $("#container-left").scrollTop($("#scroll").scrollTop());
+    });
+    $("#y-fake-scroll").scroll(function (e) {
+        $("#scroll").scrollTop($("#y-fake-scroll").scrollTop());
+    });
+    $("#x-fake-scroll").scroll(function (e) {
+        $("#scroll").scrollLeft($("#x-fake-scroll").scrollLeft());
+        $("#header-container-right").scrollLeft($("#x-fake-scroll").scrollLeft());
+    });
+};

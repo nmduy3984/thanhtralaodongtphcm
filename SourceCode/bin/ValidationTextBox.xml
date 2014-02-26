@@ -1,0 +1,143 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ValidationTextBox
+</name>
+</assembly>
+<members>
+<member name="P:ValidationTextBox.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:ValidationTextBox.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:ValidationTextBox.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:ValidationTextBox.CustomControls.ValidationTextBox.#ctor">
+	<summary>
+ Summary description for ValidationTextBox
+ </summary>
+
+ TODO: Add constructor logic here
+
+
+</member><member name="T:ValidationTextBox.CustomControls.ValidationTextBox.RegularType">
+	<summary>
+ RegularType loai regular dung de so kiem tra.
+ </summary>
+	<remarks>Loại regular muốn kiểm tra khi nhập.</remarks>
+</member><member name="T:ValidationTextBox.CustomControls.ValidationTextBox.DataTypeCompare">
+	<summary>
+ DataType loai du lieu so sanh
+ </summary>
+	<remarks>:Loại dữ liệu dùng so sánh.</remarks>
+</member><member name="T:ValidationTextBox.CustomControls.ValidationTextBox.OperatorType">
+	<summary>
+ OperatorType loai toan tu so sanh
+ </summary>
+	<remarks>:Loại toán tử dùng để so sánh.</remarks>
+</member><member name="T:ValidationTextBox.CustomControls.ValidationTextBox.ValidationType">
+	<summary>
+ ValidationType loai validation
+ </summary>
+	<remarks>:Loại dữ liệu dùng để validation.</remarks>
+</member><member name="P:ValidationTextBox.CustomControls.ValidationTextBox.AssociatedLableText">
+	<summary>
+ Caption cua control muon validation
+ </summary>
+	<value>Thiet lap property: AssociatedLableText='...'</value>
+	<returns>:Caption của control muốn validation.</returns>
+	<remarks></remarks>
+</member><member name="P:ValidationTextBox.CustomControls.ValidationTextBox.LabelCSSClass">
+	<summary>
+ Class cua Label Error
+ </summary>
+	<value>Thiet lap property: LabelCSSClass='...'</value>
+	<returns>:CSS của label error.</returns>
+	<remarks></remarks>
+</member><member name="P:ValidationTextBox.CustomControls.ValidationTextBox.Group">
+	<summary>
+ GroupId cua Control
+ </summary>
+	<value>Thiet lap property: GroupId='...'</value>
+	<returns>:Group của control.</returns>
+	<remarks></remarks>
+</member><member name="P:ValidationTextBox.CustomControls.ValidationTextBox.DataType">
+	<summary>
+ Dinh nghia loai validation.
+ </summary>
+	<value>Thiet lap property: DataType=''</value>
+	<returns></returns>
+	<remarks>:Loại dữ liệu validation.</remarks>
+</member><member name="P:ValidationTextBox.CustomControls.ValidationTextBox.CustomPattern">
+	<summary>
+ Reg muon check cua control.
+ </summary>
+	<value>Thiet lap property: CustomPattern='...'</value>
+	<returns>:Loại custom.</returns>
+	<remarks></remarks>
+</member><member name="P:ValidationTextBox.CustomControls.ValidationTextBox.Range">
+	<summary>
+ Thiet lap khoang du lieu duoc nhap doi voi control hay khong.
+ </summary>
+	<value>Thiet lap property: Range='True/False'</value>
+	<returns>:Xác nhận range hay không.</returns>
+	<remarks></remarks>
+</member><member name="P:ValidationTextBox.CustomControls.ValidationTextBox.MinimumValue">
+	<summary>
+ MinimumValue gia tri lon nhat duoc gan cho control truong hop nhap so. 
+ </summary>
+	<value>Thiet lap property: MinimumValue='...'</value>
+	<returns>:Giá trị cận dưới.</returns>
+	<remarks></remarks>
+</member><member name="P:ValidationTextBox.CustomControls.ValidationTextBox.MaximumValue">
+	<summary>
+ MaximumValue gia tri lon nhat duoc gan cho control truong hop nhap so. 
+ </summary>
+	<value>Thiet lap property: MaximumValue='...'</value>
+	<returns>:Giá trị cận trên.</returns>
+	<remarks></remarks>
+</member><member name="P:ValidationTextBox.CustomControls.ValidationTextBox.CompareTo">
+	<summary>
+ Compare Id control can so sanh. 
+ </summary>
+	<value>Thiet lap property: MaximumValue='...'</value>
+	<returns>:Control muốn so sánh.</returns>
+	<remarks></remarks>
+</member><member name="P:ValidationTextBox.CustomControls.ValidationTextBox.CompareToLableText">
+	<summary>
+ CompareToLableText ten control can so sanh. 
+ </summary>
+	<value>Thiet lap property: CompareToLableText='...'</value>
+	<returns>:CompareToLableText Control muốn so sánh.</returns>
+	<remarks></remarks>
+</member><member name="P:ValidationTextBox.CustomControls.ValidationTextBox.CompareOperator">
+	<summary>
+ OperatorCompare toan tu so sanh. 
+ </summary>
+	<value>Thiet lap property: OperatorCompare='...'</value>
+	<returns>:Loại toán tử cần so sánh.</returns>
+	<remarks></remarks>
+</member><member name="P:ValidationTextBox.CustomControls.ValidationTextBox.CompareData">
+	<summary>
+ DataCompare loai du lieu so sanh. 
+ </summary>
+	<value>Thiet lap property: DataCompare='...'</value>
+	<returns>:Loại dữ liệu dùng để so sánh.</returns>
+	<remarks></remarks>
+</member><member name="P:ValidationTextBox.CustomControls.ValidationTextBox.Compage">
+	<summary>
+ Thiet lap co so sanh voi control khac khong
+ </summary>
+	<value>Thiet lap property: Compage='True/False'</value>
+	<returns>:Xác nhận Compage hay không.</returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>
