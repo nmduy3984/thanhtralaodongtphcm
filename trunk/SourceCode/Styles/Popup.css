@@ -1,0 +1,68 @@
+﻿  /* class popup */
+    
+  
+    .TitlePopup
+    {
+        font: bold 11px Arial, Tahoma, Verdana, Helvetica, sans-serif;
+        color: #066bb9;
+        text-transform: uppercase;
+        text-align: left;
+    }
+.btn {
+	background: url(../images/btn.png) no-repeat;
+	width:72px;
+	height:23px;
+	font:bold 11px Tahoma, Geneva, sans-serif;
+	text-align:center;
+	padding:0 0;
+	cursor:pointer;
+	color:#15428B;
+	text-transform:uppercase;
+}
+	/* Field requires alert */  
+span .fieldRequired {
+	color:#DD0000;
+}
+.fieldRequired {
+	background-attachment:scroll;
+	background-color:transparent;
+	background-image:url("../images/required.gif");
+	background-position:center;
+	background-repeat:no-repeat;
+	color:#DD0000;
+	padding-bottom:0px;
+	padding-left:8px;
+	padding-right:5px;
+	padding-top:0px;
+}
+/*  het class tab quan tri */
+.lblEdit {
+	font:bold 11px Tahoma,Verdana,Arial,Helvetica, sans-serif;
+	color:#4d5e6d;	
+	padding:3px 0px 3px 0px;	
+	}
+	
+.TextBox {
+	background:url(../images/bginputform.gif) bottom repeat-x ;
+    FONT-WEIGHT: normal; FONT-SIZE: 12px; background-color:#ffffff; height:17px;	
+	border-right: #d6dade 1px solid;font-size: 11px; 
+	border-top: #8a8b8d 1px solid; border-left: #8a8b8d 1px solid; 
+	border-bottom: #d6dade 1px solid; border-collapse: collapse ;
+	width: 250px;
+}	
+.TextArea {
+	background:url(../images/bginputform.gif) bottom repeat-x ;
+    FONT-WEIGHT: normal; FONT-SIZE: 12px; background-color:#ffffff; height:17px;	
+	border-right: #d6dade 1px solid;font-size: 11px; 
+	border-top: #8a8b8d 1px solid; border-left: #8a8b8d 1px solid; 
+	border-bottom: #d6dade 1px solid; border-collapse: collapse ;
+	width: 250px;
+	height:150px;
+}
+
+.Error
+{
+	color:Red;
+	list-style:none;
+	padding-left:20px;
+	}

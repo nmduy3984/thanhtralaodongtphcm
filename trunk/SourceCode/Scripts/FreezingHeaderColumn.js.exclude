@@ -1,0 +1,63 @@
+﻿var str = "";
+function funScroll(GridViewID) {
+    var YtableEmulator = document.getElementById('y-table-emulator');
+    var XtableEmulator = document.getElementById('x-table-emulator');
+    var table = document.getElementById(GridViewID);
+
+    if (table != null) {
+        YtableEmulator.style.height = table.clientHeight == 0 ? "330px" : table.clientHeight + "px";
+        XtableEmulator.style.width = (table.clientWidth + 320 ) + "px";
+     //   XtableEmulator.style.width = "1320px";
+    }
+    var scrollablePanel = $("#scroll");
+    var headerContainer = $("#header-container");
+    var FirstColumn = $("#div-firstColumn");
+    var YfakeScrollablePanel = $("#y-fake-scroll");
+    var XfakeScrollablePanel = $("#x-fake-scroll");
+
+    scrollablePanel.scroll(function (e) {
+        XfakeScrollablePanel.scrollTop(scrollablePanel.scrollTop());
+        FirstColumn.scrollTop(scrollablePanel.scrollTop());
+    });
+    YfakeScrollablePanel.scroll(function (e) {
+        scrollablePanel.scrollTop(YfakeScrollablePanel.scrollTop());
+
+    });
+    XfakeScrollablePanel.scroll(function (e) {
+        scrollablePanel.scrollLeft(XfakeScrollablePanel.scrollLeft());
+        headerContainer.scrollLeft(XfakeScrollablePanel.scrollLeft());
+    });
+
+}
+function FreezingHeaderColumn(GridViewID) {
+    var tr1 = $("#" + GridViewID).find("tr:first");
+    //Generate Header
+    $("#table-header").append(tr1);
+    var tr2 = $("#table-header").find("tr:first").clone();
+    var th1 = $("#table-header").find("tr:first .FreezingHeader");
+    tr2.find("th").remove();
+    $("#table-header-3").append(tr2);
+    $("#table-header-3").find("tr").append(th1);
+    funScroll(GridViewID);
+    GenerateColumn(GridViewID);
+}
+function GenerateColumn(GridViewID) {
+    var objCol = $("#" + GridViewID).find("tr");
+    objCol.each(function (e) {
+        var objTR = $(this).clone();
+        var objTD1 = $(this).find("td:first");
+        var objTD2 = $(this).find("td:nth-child(2)");
+        var objTD3 = $(this).find("td:nth-child(3)");
+        objTR.find("td").remove();
+        objTR.append(objTD1);
+        objTR.append(objTD2);
+        objTR.append(objTD3);
+        $("#table-firstColumn").append(objTR);
+    });
+    $("#table-firstColumn").find("tr:first").find("td:first").css({ "border-top": "1px solid #000" });
+    $.browser.chrome = /chrome/.test(navigator.userAgent.toLowerCase());
+    $.browser.msie = /msie/.test(navigator.userAgent.toLowerCase());
+    if ($.browser.chrome || $.browser.msie) {
+        $("#table-firstColumn").find("td").css({ "height": "80px" });
+    }
+}
