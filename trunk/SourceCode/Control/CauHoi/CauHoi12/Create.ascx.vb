@@ -2695,9 +2695,13 @@ Partial Class Control_CauHoi12_Create
                         If Not IsNothing(q7.Q706232) AndAlso q7.Q706232 > 0 Then
                             If Not IsNothing(pn) Then
                                 If Not IsNothing(pn.SoNguoiLamCongViecYeuCauNghiemNgat) AndAlso pn.SoNguoiLamCongViecYeuCauNghiemNgat > q7.Q706232 Then
-                                    strKL = "; chưa cấp thẻ an toàn vệ sinh lao động cho " & String.Format(info, "{0:n0}", pn.SoNguoiLamCongViecYeuCauNghiemNgat - q7.Q706232) & " người"
+                                    strKL = "; Chưa tổ chức huấn luyện " & String.Format(info, "{0:n0}", pn.SoNguoiLamCongViecYeuCauNghiemNgat - q7.Q706232) & " người làm công việc có yêu cầu nghiêm ngặt về an toàn theo quy định"
                                     strTenCotCauHoi += "Q706232;"
-                                    arrKN.Add(String.Format(info, "{0:n0}", q7.Q706232) & " người làm công việc yêu cầu nghiêm ngặt về an toàn lao động chưa cấp thẻ an toàn")
+                                    arrKN.Add("Thực hiện huấn luyện cho " & String.Format(info, "{0:n0}", q7.Q706232) & " người làm công việc về an toàn vệ sinh lao động theo đúng quy định.")
+
+                                    'strKL = "; chưa cấp thẻ an toàn vệ sinh lao động cho " & String.Format(info, "{0:n0}", pn.SoNguoiLamCongViecYeuCauNghiemNgat - q7.Q706232) & " người"
+                                    'strTenCotCauHoi += "Q706232;"
+                                    'arrKN.Add(String.Format(info, "{0:n0}", q7.Q706232) & " người làm công việc yêu cầu nghiêm ngặt về an toàn lao động chưa cấp thẻ an toàn")
                                 End If
                             End If
                         End If
