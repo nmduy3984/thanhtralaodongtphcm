@@ -510,7 +510,7 @@
                             </div>
                             <div class="DivRow width100 fl CapTheAT">
                                 <div class="fl fl1">
-                                    <asp:Label ID="Label71" CssClass="TextLabel fl1" runat="server" Text="Số người phải cấp thẻ an toàn:" />
+                                    <asp:Label ID="Label71" CssClass="TextLabel fl1" runat="server" Text="Số người làm công việc có yêu cầu nghiêm ngặt về an toàn:" />
                                 </div>
                                 <div class="fr fr1">
                                     <cc2:ValidationTextBox ID="txtSoNguoiPhaiCapTheAT" runat="server" CssClass='TextBox TextBox_short'
@@ -519,7 +519,7 @@
                             </div>
                             <div class="DivRow width100 fl EffectGroup">
                                 <div class="fl fl1">
-                                    <asp:Label ID="Label27" CssClass="TextLabel fl1" runat="server" Text="Số người đã được cấp thẻ an toàn:" />
+                                    <asp:Label ID="Label27" CssClass="TextLabel fl1" runat="server" Text="Số người được huấn luyện đúng quy định:" />
                                 </div>
                                 <div class="fr fr1">
                                     <cc2:ValidationTextBox ID="txtQ706232" runat="server" CssClass='TextBox TextBox_short'
