@@ -2570,3 +2570,21 @@ System.Threading.ThreadAbortException: Thread was being aborted.
    at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
    at System.Web.HttpResponse.Redirect(String url)
    at DoanhNghiep_Control_ListPheuTuKiemTra.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\Backup_Not_FTP_2\SourceCode\DoanhNghiep\Control\ListPheuTuKiemTra.ascx.vb:line 217
+2014-08-09 16:58:26,450 [25] ERROR Control_CauHoi_ListBBTT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListBBTT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListBBTT.ascx.vb:line 198
+2014-08-09 17:46:45,802 [21] ERROR Control_CauHoi_ListBBTT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListBBTT.btnTenPhieu_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListBBTT.ascx.vb:line 209
