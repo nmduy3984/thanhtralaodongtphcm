@@ -197,7 +197,7 @@ Public Class wsAutoComplete
                 obj.DoanhNghiepId = CInt(lstDN(i).DoanhNghiepId)
                 obj.TenDoanhNghiep = lstDN(i).TenDoanhNghiep
                 obj.DiaChi = lstDN(i).TruSoChinh + ", " + lstDN(i).Huyen.TenHuyen + ", " + lstDN(i).Tinh.TenTinh
-                obj.ThoiGianLamViec = CType(lstDN(i).ThoiGianLamViec, Date).ToString("dd/MM/yyyy")
+                obj.ThoiGianLamViec = If(lstDN(i).ThoiGianLamViec Is Nothing, "", CType(lstDN(i).ThoiGianLamViec, Date).ToString("dd/MM/yyyy"))
                 json.Add(obj)
             Next
             Return json

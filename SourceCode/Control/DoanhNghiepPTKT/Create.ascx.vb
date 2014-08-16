@@ -212,8 +212,45 @@ Partial Class Control_DoanhNghiep_Create
                 txtTongLoiNhuanSauThue.Text = IIf(IsNothing(d.TongLoiNhuanSauThue), 0, d.TongLoiNhuanSauThue)
                 txtSonguoilamnghenguyhiem.Text = IIf(IsNothing(d.SoNguoiLamNgheNguyHiem) OrElse d.SoNguoiLamNgheNguyHiem = 0, 0, FormatNumber(d.SoNguoiLamNgheNguyHiem))
                 txtNguoilamCVCoYCNN.Text = IIf(IsNothing(d.SoNguoiLamCongViecYeuCauNghiemNgat) OrElse d.SoNguoiLamCongViecYeuCauNghiemNgat = 0, 0, FormatNumber(d.SoNguoiLamCongViecYeuCauNghiemNgat))
+            Else
+                Reset()
             End If
         End Using
+    End Sub
+    Protected Sub Reset()
+        'txtTendoanhnghiep.Text = ""
+        'txtTenVietTat.Text = ""
+        'txtCodeNamtldn.Text = ""
+        ddlLoaiHinhDN.SelectedValue = 0
+
+        txtTrusochinh.Text = ""
+        ddlKhuCongNghiep.SelectedValue = 0
+        'ddlTinh.SelectedValue = CInt(ddlTinh.SelectedIndex)
+        ddlHuyen.SelectedValue = 0
+
+        txtSotknganhang.Text = ""
+        txtTennganhang.Text = ""
+        txtUrl.Text = ""
+        txtEmail.Text = ""
+
+        'ddlLinhVuc.SelectedValue = 0
+        chkIsCongDoan.SelectedValue = 0
+        txtCodeDienthoai.Text = ""
+        txtFax.Text = ""
+        'txtSochungnhandkkd.Text = ""
+        txtNgaychungnhandkkd.Text = ""
+        txtLanthaydoi.Text = ""
+
+        txtNgaythaydoi.Text = ""
+
+        txtTongsonhanvien.Text = ""
+        txtSochinhanh.Text = ""
+        txtSolaodongnu.Text = ""
+        txtTonggiatrisp.Text = ""
+        txtTongLoiNhuanSauThue.Text = ""
+        txtSonguoilamnghenguyhiem.Text = ""
+        txtNguoilamCVCoYCNN.Text = ""
+
     End Sub
     Protected Function Save() As Boolean
         Using data As New ThanhTraLaoDongEntities

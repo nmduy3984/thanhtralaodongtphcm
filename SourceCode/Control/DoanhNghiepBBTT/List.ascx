@@ -306,7 +306,7 @@
                 <%--Xem hồ sơ doanh nghiệp--%>
                 <asp:TemplateField HeaderText="Xem hồ sơ DN">
                     <ItemTemplate>
-                        <asp:HyperLink ID="hplHoSoDN" runat="server" Text="Xem hồ sơ" />
+                        <asp:HyperLink ID="hplHoSoDN" runat="server" Target="_blank" Text="Xem hồ sơ" />
                     </ItemTemplate>
                     <ItemStyle CssClass="GridTextLink" HorizontalAlign="Center" Width="" />
                 </asp:TemplateField>

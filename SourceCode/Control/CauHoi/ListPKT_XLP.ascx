@@ -44,7 +44,21 @@
             return false;
         }
     }
-
+    function confirmMultiKeThua(strID) {
+        var grdShow = document.getElementById("<%=grdShow.ClientID %>");
+        var count = 0;
+        for (i = 1; i < grdShow.children.item(0).children.length; i++) {
+            if (grdShow.children.item(0).children.item(i).children.item(0).children.item(0).checked) {
+                count += 1;
+            }
+        }
+        if (count > 0) {
+            return ComfirmDialog('<%=drpMessage.Items(4).Text%>', 0, strID, 0, 0);
+        } else {
+            Alertbox('<%=drpMessage.Items(2).Text%>');
+            return false;
+        }
+    }
     function ComfirmDialog(strText, value, ObjectIdClick, ID, Type) {
         $("#<%=hidIndex.CLientID %>").val(ID);
         if (value == 0) {
@@ -172,7 +186,7 @@
                 </asp:BoundField>
                 <asp:TemplateField HeaderText="In văn bản kiến nghị">
                     <ItemTemplate>
-                        <asp:HyperLink ID="hplPKN" Text="Phiếu kiến nghị" runat="server" ToolTip="In phiếu kiến nghị doanh nghiệp"
+                        <asp:HyperLink ID="hplPKN" Text="Phiếu kiến nghị" runat="server" Target="_blank" ToolTip="In phiếu kiến nghị doanh nghiệp"
                             CausesValidation='False' />
                     </ItemTemplate>
                     <ItemStyle CssClass="GridTextLink" HorizontalAlign="Center" Width="15%" />
@@ -187,6 +201,7 @@
         </asp:GridView>
         <div>
             <asp:Button ID="btnDelete" CssClass="btn" runat="server" Text="Xóa" />
+            <asp:Button ID="btnKeThua" CssClass="btn" runat="server" Text="Kế thừa" />
             <asp:Label ID="lblPage_Size" runat="server" Text="Số bản ghi trên trang:"></asp:Label>
             <asp:DropDownList ID="drpPage_Size" runat="server" AutoPostBack="True" Width="70px"
                 CssClass="input_form">
@@ -219,6 +234,7 @@
                 <asp:ListItem Text='Bạn có chắc chắn muốn xóa bản đã chọn?' Value='1'></asp:ListItem>
                 <asp:ListItem Text='Bạn phải chọn ít nhất một bản ghi.' Value='2'></asp:ListItem>
                 <asp:ListItem Text='Bạn có chắc chắn muốn kế thừa bản ghi này không?' Value='3'></asp:ListItem>
+                <asp:ListItem Text='Bạn có chắc chắn muốn kế thừa bản ghi đã chọn?' Value='4'></asp:ListItem>
             </asp:DropDownList>
             <asp:HiddenField ID="hidID" Value="0" runat="server" />
             <asp:Button ID="btnSubmit" Text="Click" runat="server" />

@@ -74,14 +74,14 @@ Partial Class Control_CauHoi_BienBanThanhTra_BienBanThanhTra
                     txtCoQuanBanHanh.Text = "THANH TRA BỘ LĐTBXH" & vbNewLine & "ĐOÀN THANH TRA " & strSoQD & "/QĐ-TTr"
                     hidTTBo.Value = "THANH TRA BỘ LĐTBXH"
                     txtQDThanhTra.Text = "Thực hiện Quyết định số " & strSoQD & "/QĐ-TTr ngày ... tháng ... năm ... của Chánh thanh tra Bộ Lao động - Thương binh và Xã hội, "
-                    txtQDThanhTra.Text = txtQDThanhTra.Text & "ngày " & Day(dn.NgayKetThucPhieu).ToString & " tháng " & Month(dn.NgayKetThucPhieu).ToString & " năm " & Year(dn.NgayKetThucPhieu).ToString & " Đoàn thanh tra của Bộ Lao động - Thương binh và Xã hội đã tiến hành thanh tra việc chấp hành các quy định của pháp luật lao động" & strBHXH_BinhDangGioi & " tại "
+                    txtQDThanhTra.Text = txtQDThanhTra.Text & If(dn.NgayKetThucPhieu Is Nothing, "ngày  tháng  năm", "ngày " & Day(dn.NgayKetThucPhieu).ToString & " tháng " & Month(dn.NgayKetThucPhieu).ToString & " năm " & Year(dn.NgayKetThucPhieu).ToString) & " Đoàn thanh tra của Bộ Lao động - Thương binh và Xã hội đã tiến hành thanh tra việc chấp hành các quy định của pháp luật lao động" & strBHXH_BinhDangGioi & " tại "
                     txtQDThanhTra.Text = txtQDThanhTra.Text & dn.TenDoanhNghiep & "."
                     'txtDoanThanhTra.Text = "Ông ... - Thanh tra viên ... Bộ Lao động – Thương binh và Xã hội - Trưởng đoàn" & Environment.NewLine & "Ông ... - Thanh tra viên ... Bộ Lao động - Thương binh và Xã hội - Thành viên" & Environment.NewLine & "Ông ... - Thanh tra viên Sở Lao động - Thương binh và Xã hội ... - Thành viên."
                 Else 'Là thanh sở
                     txtCoQuanBanHanh.Text = "SỞ LĐTBXH " & tinh.ToUpper & vbNewLine & "ĐOÀN THANH TRA " & strSoQD & "/QĐ-TTr"
                     hidTTBo.Value = "SỞ LĐTBXH " & tinh.ToUpper
                     txtQDThanhTra.Text = "Thực hiện Quyết định số " & strSoQD & "/QĐ-TTr ngày ... tháng ... năm ... của Chánh thanh tra Sở Lao động - Thương binh và Xã hội " & tinh & ", "
-                    txtQDThanhTra.Text = txtQDThanhTra.Text & "ngày " & Day(dn.NgayKetThucPhieu).ToString & " tháng " & Month(dn.NgayKetThucPhieu).ToString & " năm " & Year(dn.NgayKetThucPhieu).ToString & " Đoàn thanh tra của Sở đã tiến hành thanh tra việc chấp hành các quy định của pháp luật lao động" & strBHXH_BinhDangGioi & " tại "
+                    txtQDThanhTra.Text = txtQDThanhTra.Text & If(dn.NgayKetThucPhieu Is Nothing, "ngày  tháng  năm", "ngày " & Day(dn.NgayKetThucPhieu).ToString & " tháng " & Month(dn.NgayKetThucPhieu).ToString & " năm " & Year(dn.NgayKetThucPhieu).ToString) & " Đoàn thanh tra của Sở đã tiến hành thanh tra việc chấp hành các quy định của pháp luật lao động" & strBHXH_BinhDangGioi & " tại "
                     txtQDThanhTra.Text = txtQDThanhTra.Text & dn.TenDoanhNghiep & "."
                     'txtDoanThanhTra.Text = "Ông ... - Thanh tra viên ... Sở Lao động – Thương binh và Xã hội - Trưởng đoàn" & Environment.NewLine & "Ông ... - Thanh tra viên ... Sở Lao động - Thương binh và Xã hội - Thành viên" & Environment.NewLine & "Ông ... - Thanh tra viên Sở Lao động - Thương binh và Xã hội ... - Thành viên."
                 End If
@@ -172,7 +172,7 @@ Partial Class Control_CauHoi_BienBanThanhTra_BienBanThanhTra
                     document.ReplaceText("<<cqbanhanh1>>", hidTTBo.Value)
                     document.ReplaceText("<<cqbanhanh2>>", hidDoanTT.Value)
                     ''''Tỉnh
-                    document.ReplaceText("<<tinh>>", dn.TenTinh + "," + " ngày " + Day(dn.NgayKetThucPhieu).ToString + " tháng " + Month(dn.NgayKetThucPhieu).ToString + " năm " + Year(dn.NgayKetThucPhieu).ToString)
+                    document.ReplaceText("<<tinh>>", dn.TenTinh + "," + If(dn.NgayKetThucPhieu Is Nothing, "ngày  tháng  năm", " ngày " + Day(dn.NgayKetThucPhieu).ToString + " tháng " + Month(dn.NgayKetThucPhieu).ToString + " năm " + Year(dn.NgayKetThucPhieu).ToString))
                     ''''Phạm vi
                     document.ReplaceText("<<phamvi>>", txtPhamVi.Text)
                     ''''Quyết định thanh tra

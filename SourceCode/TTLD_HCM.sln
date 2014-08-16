@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SourceCode", ".", "{126C3251-CEC2-403F-90CC-EB374358F23C}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SourceCode", ".", "{98CF61BB-ADEC-4304-AACF-02A0013BD87A}"
 	ProjectSection(WebsiteProperties) = preProject
 		SccProjectName = "Svn"
 		SccAuxPath = "Svn"
@@ -31,8 +31,8 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{126C3251-CEC2-403F-90CC-EB374358F23C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{126C3251-CEC2-403F-90CC-EB374358F23C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98CF61BB-ADEC-4304-AACF-02A0013BD87A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98CF61BB-ADEC-4304-AACF-02A0013BD87A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

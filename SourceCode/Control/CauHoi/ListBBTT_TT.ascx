@@ -174,11 +174,11 @@
                 </asp:BoundField>
                 <asp:TemplateField HeaderText="Xuất văn bản thanh tra">
                     <ItemTemplate>
-                        <asp:HyperLink ID="hplBBTT" Text="Biên bản TT" runat="server" ToolTip="In biên bản thanh tra"
+                        <asp:HyperLink ID="hplBBTT" Text="Biên bản TT" runat="server" Target="_blank" ToolTip="In biên bản thanh tra"
                             CausesValidation='False' />&nbsp;|&nbsp;
-                        <asp:HyperLink ID="hplKLTT" Text="Kết luận TT" runat="server" ToolTip="In kết luận thanh tra"
+                        <asp:HyperLink ID="hplKLTT" Text="Kết luận TT" runat="server" Target="_blank" ToolTip="In kết luận thanh tra"
                             CausesValidation='False' />&nbsp;|&nbsp;
-                        <asp:HyperLink ID="hplBBVP" Text="Biên bản VP" runat="server" ToolTip="In biên bản vi phạm"
+                        <asp:HyperLink ID="hplBBVP" Text="Biên bản VP" runat="server" Target="_blank" ToolTip="In biên bản vi phạm"
                             CausesValidation='False' />
                     </ItemTemplate>
                     <ItemStyle CssClass="GridTextLink" HorizontalAlign="Center" Width="20%" />
