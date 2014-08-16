@@ -149,7 +149,7 @@
                 </asp:BoundField>
                 <asp:TemplateField>
                     <ItemTemplate>
-                        <asp:HyperLink ID="hplBCTH" Text="Báo cáo thực hiện" runat="server" ToolTip="Báo cáo thực hiện"
+                        <asp:HyperLink ID="hplBCTH" Text="Báo cáo thực hiện" runat="server" Target="_blank" ToolTip="Báo cáo thực hiện"
                             CausesValidation='False' />
                     </ItemTemplate>
                     <ItemStyle CssClass="GridTextLink" HorizontalAlign="Center" />
