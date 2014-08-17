@@ -211,9 +211,53 @@ Partial Class Control_DoanhNghiep_Create
                 txtTongLoiNhuanSauThue.Text = IIf(IsNothing(d.TongLoiNhuanSauThue), 0, d.TongLoiNhuanSauThue)
                 txtSonguoilamnghenguyhiem.Text = IIf(IsNothing(d.SoNguoiLamNgheNguyHiem) OrElse d.SoNguoiLamNgheNguyHiem = 0, 0, FormatNumber(d.SoNguoiLamNgheNguyHiem))
                 txtNguoilamCVCoYCNN.Text = IIf(IsNothing(d.SoNguoiLamCongViecYeuCauNghiemNgat) OrElse d.SoNguoiLamCongViecYeuCauNghiemNgat = 0, 0, FormatNumber(d.SoNguoiLamCongViecYeuCauNghiemNgat))
+                txtNguoiLienHe.Text = If(d.NguoiLienHe Is Nothing, "", d.NguoiLienHe)
+                txtEmailLH.Text = If(d.EmailLH Is Nothing, "", d.EmailLH)
+                txtCodeDienThoaiLH.Text = If(d.DienThoaiLH Is Nothing, "", d.DienThoaiLH)
+            Else
+                Reset()
             End If
         End Using
     End Sub
+    Protected Sub Reset()
+        'txtTendoanhnghiep.Text = ""
+        'txtTenVietTat.Text = ""
+        'txtCodeNamtldn.Text = ""
+        ddlLoaiHinhDN.SelectedValue = 0
+
+        txtTrusochinh.Text = ""
+        ddlKhuCongNghiep.SelectedValue = 0
+        'ddlTinh.SelectedValue = CInt(ddlTinh.SelectedIndex)
+        ddlHuyen.SelectedValue = 0
+
+        txtSotknganhang.Text = ""
+        txtTennganhang.Text = ""
+        txtUrl.Text = ""
+        txtEmail.Text = ""
+
+        ddlLinhVuc.SelectedValue = -1
+        chkIsCongDoan.SelectedValue = 0
+        txtCodeDienthoai.Text = ""
+        txtFax.Text = ""
+        'txtSochungnhandkkd.Text = ""
+        txtNgaychungnhandkkd.Text = ""
+        txtLanthaydoi.Text = ""
+
+        txtNgaythaydoi.Text = ""
+
+        txtTongsonhanvien.Text = ""
+        txtSochinhanh.Text = ""
+        txtSolaodongnu.Text = ""
+        txtTonggiatrisp.Text = ""
+        txtTongLoiNhuanSauThue.Text = ""
+        txtSonguoilamnghenguyhiem.Text = ""
+        txtNguoilamCVCoYCNN.Text = ""
+        txtNguoiLienHe.Text = ""
+        txtEmailLH.Text = ""
+        txtCodeDienThoaiLH.Text = ""
+        hidID.Value = 0
+    End Sub
+
     Protected Function Save() As Boolean
         Using data As New ThanhTraLaoDongEntities
             Dim p As New DoanhNghiep
