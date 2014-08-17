@@ -212,6 +212,9 @@ Partial Class Control_DoanhNghiep_Create
                 txtTongLoiNhuanSauThue.Text = IIf(IsNothing(d.TongLoiNhuanSauThue), 0, d.TongLoiNhuanSauThue)
                 txtSonguoilamnghenguyhiem.Text = IIf(IsNothing(d.SoNguoiLamNgheNguyHiem) OrElse d.SoNguoiLamNgheNguyHiem = 0, 0, FormatNumber(d.SoNguoiLamNgheNguyHiem))
                 txtNguoilamCVCoYCNN.Text = IIf(IsNothing(d.SoNguoiLamCongViecYeuCauNghiemNgat) OrElse d.SoNguoiLamCongViecYeuCauNghiemNgat = 0, 0, FormatNumber(d.SoNguoiLamCongViecYeuCauNghiemNgat))
+                txtNguoiLienHe.Text = If(d.NguoiLienHe Is Nothing, "", d.NguoiLienHe)
+                txtEmailLH.Text = If(d.EmailLH Is Nothing, "", d.EmailLH)
+                txtCodeDienThoaiLH.Text = If(d.DienThoaiLH Is Nothing, "", d.DienThoaiLH)
             Else
                 Reset()
             End If
@@ -233,7 +236,7 @@ Partial Class Control_DoanhNghiep_Create
         txtUrl.Text = ""
         txtEmail.Text = ""
 
-        'ddlLinhVuc.SelectedValue = 0
+        ddlLinhVuc.SelectedValue = -1
         chkIsCongDoan.SelectedValue = 0
         txtCodeDienthoai.Text = ""
         txtFax.Text = ""
@@ -250,7 +253,10 @@ Partial Class Control_DoanhNghiep_Create
         txtTongLoiNhuanSauThue.Text = ""
         txtSonguoilamnghenguyhiem.Text = ""
         txtNguoilamCVCoYCNN.Text = ""
-
+        txtNguoiLienHe.Text = ""
+        txtEmailLH.Text = ""
+        txtCodeDienThoaiLH.Text = ""
+        hidID.Value = 0
     End Sub
     Protected Function Save() As Boolean
         Using data As New ThanhTraLaoDongEntities
