@@ -28,11 +28,11 @@ Partial Class Control_GopY_List
             Dim arrSearch() As String = {iPage.ToString, strSearch.ToString}
             ViewState("search") = arrSearch
             Dim intPag_Size As Int32 = drpPage_Size.SelectedValue
-            Dim p = (From q In data.Gopies Where q.NoiDung.Contains(strSearch) Order By q.GopYId Ascending Select q).Skip((iPage - 1) * intPag_Size).Take(intPag_Size).ToList
+            Dim p = (From q In data.Gopies Where q.NoiDung.Contains(strSearch) Order By q.NgayTao Descending Select q).Skip((iPage - 1) * intPag_Size).Take(intPag_Size).ToList
             Dim strKey_Name() As String = {"GopYId", "NoiDung", "NguoiTao", "NgayTao"}
             'Tong so ban ghi
             If p.Count > 0 Then
-                Dim t = (From q In data.Gopies Where q.NoiDung.Contains(strSearch) Order By q.GopYId Ascending Select q).ToList
+                Dim t = (From q In data.Gopies Where q.NoiDung.Contains(strSearch) Select q).ToList
                 hidCount.Value = t.Count()
                 Create_Pager(hidCount.Value, iPage, intPag_Size, 10)
             Else

@@ -2697,7 +2697,7 @@ Partial Class Control_CauHoi12_Create
                                 If Not IsNothing(pn.SoNguoiLamCongViecYeuCauNghiemNgat) AndAlso pn.SoNguoiLamCongViecYeuCauNghiemNgat > q7.Q706232 Then
                                     strKL = "; chưa tổ chức huấn luyện " & String.Format(info, "{0:n0}", pn.SoNguoiLamCongViecYeuCauNghiemNgat - q7.Q706232) & " người làm công việc có yêu cầu nghiêm ngặt về an toàn theo quy định"
                                     strTenCotCauHoi += "Q706232;"
-                                    arrKN.Add("Thực hiện huấn luyện cho " & String.Format(info, "{0:n0}", q7.Q706232) & " người làm công việc về an toàn vệ sinh lao động theo đúng quy định.")
+                                    arrKN.Add("Thực hiện huấn luyện cho " & String.Format(info, "{0:n0}", pn.SoNguoiLamCongViecYeuCauNghiemNgat - q7.Q706232) & " người làm công việc về an toàn vệ sinh lao động theo đúng quy định.")
 
                                     'strKL = "; chưa cấp thẻ an toàn vệ sinh lao động cho " & String.Format(info, "{0:n0}", pn.SoNguoiLamCongViecYeuCauNghiemNgat - q7.Q706232) & " người"
                                     'strTenCotCauHoi += "Q706232;"
