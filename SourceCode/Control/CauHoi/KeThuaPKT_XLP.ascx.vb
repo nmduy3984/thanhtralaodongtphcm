@@ -77,7 +77,7 @@ Partial Class Control_CauHoi_KeThuaPKT_XLP
 
                         Dim iPhieuIdOld As Integer = phieuId
                         'B1: Tạo phiếu nhập header
-                        TaoPhieuHeader(iPhieuIdOld)
+                        TaoPhieuHeader(iPhieuIdOld, SQD)
                         'B2: Tạo các mục câu hỏi
                         TaoCauHoi1(iPhieuIdOld)
                         TaoCauHoi2(iPhieuIdOld)
@@ -103,7 +103,7 @@ Partial Class Control_CauHoi_KeThuaPKT_XLP
         End Using
     End Sub
 #Region "Tạo BBTT kế thừa từ PTKT hoặc kế thừa PTKT --> PTKT"
-    Protected Sub TaoPhieuHeader(ByVal iPhieuIdOld As Integer)
+    Protected Sub TaoPhieuHeader(ByVal iPhieuIdOld As Integer, ByVal SQD As String)
         '' Tạo phiếu tại đây
         Using data As New ThanhTraLaoDongEntities
             '' Lấy thông tin Doanh nghiệp ra
@@ -133,7 +133,7 @@ Partial Class Control_CauHoi_KeThuaPKT_XLP
                 pn.NguoiLienHe = p.NguoiLienHe
                 pn.DienThoaiLH = p.DienThoaiLH
                 pn.EmailLH = p.EmailLH
-                pn.SoQuyenDinh = p.SoQuyenDinh
+                pn.SoQuyenDinh = SQD
                 pn.NgayKetThucPhieu = Nothing
                 pn.NgayTao = Date.Now
                 pn.NguoiTao = Session("Username")
