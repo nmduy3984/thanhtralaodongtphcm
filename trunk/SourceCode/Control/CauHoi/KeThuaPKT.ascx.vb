@@ -75,7 +75,7 @@ Partial Class Control_CauHoi_KeThuaPKT
 
                         Dim iPhieuIdOld As Integer = phieuId
                         'B1: Tạo phiếu nhập header
-                        TaoPhieuHeader(iPhieuIdOld)
+                        TaoPhieuHeader(iPhieuIdOld, SQD)
                         'B2: Tạo các mục câu hỏi
                         TaoCauHoi1(iPhieuIdOld)
                         TaoCauHoi2(iPhieuIdOld)
@@ -89,6 +89,8 @@ Partial Class Control_CauHoi_KeThuaPKT
                         TaoCauHoi10(iPhieuIdOld)
                         TaoCauHoi11(iPhieuIdOld)
                         TaoCauHoi12(iPhieuIdOld)
+                        KetLuan(iPhieuIdOld)
+                        HanhViDN(iPhieuIdOld)
                         Excute_Javascript("AlertboxRedirect('Kế thừa phiếu thành công.','../BienBanThanhTra/List.aspx');", Me.Page, True)
                     Catch ex As Exception
                         log4net.Config.XmlConfigurator.Configure()
@@ -101,7 +103,7 @@ Partial Class Control_CauHoi_KeThuaPKT
         End Using
     End Sub
 #Region "Tạo BBTT kế thừa từ PTKT hoặc kế thừa PTKT --> PTKT"
-    Protected Sub TaoPhieuHeader(ByVal iPhieuIdOld As Integer)
+    Protected Sub TaoPhieuHeader(ByVal iPhieuIdOld As Integer, ByVal SQD As String)
         '' Tạo phiếu tại đây
         Using data As New ThanhTraLaoDongEntities
             '' Lấy thông tin Doanh nghiệp ra
@@ -131,7 +133,7 @@ Partial Class Control_CauHoi_KeThuaPKT
                 pn.NguoiLienHe = p.NguoiLienHe
                 pn.DienThoaiLH = p.DienThoaiLH
                 pn.EmailLH = p.EmailLH
-                pn.SoQuyenDinh = p.SoQuyenDinh
+                pn.SoQuyenDinh = SQD
                 pn.NgayKetThucPhieu = Nothing
                 pn.NgayTao = Date.Now
                 pn.NguoiTao = Session("Username")
@@ -623,6 +625,57 @@ Partial Class Control_CauHoi_KeThuaPKT
                     p.NgayTao = Date.Now
                     data.CauHoi12.AddObject(p)
                     data.SaveChanges()
+                End If
+            End Using
+        Catch ex As Exception
+            log4net.Config.XmlConfigurator.Configure()
+            log.Error("Error error " & AddTabSpace(1) & Session("Username") & AddTabSpace(1) & "IP:" & GetIPAddress(), ex)
+        End Try
+    End Sub
+    Protected Sub KetLuan(ByVal iPhieuIdOld As Integer)
+        Try
+            Using data As New ThanhTraLaoDongEntities
+                Dim q = (From a In data.KetLuans Where a.PhieuId = iPhieuIdOld Select a).ToList
+                If q.Count > 0 Then
+                    Dim lstKL As New List(Of KetLuan)
+                    For i As Integer = 0 To q.Count - 1
+                        Dim p As New KetLuan
+                        p.PhieuId = hidPhieuIdNew.Value
+                        p.TenCotCauHoi = q(i).TenCotCauHoi
+                        p.NDKetLuan = q(i).NDKetLuan
+                        p.IsViPham = q(i).IsViPham
+                        p.TenBangCauHoi = q(i).TenBangCauHoi
+                        lstKL.Add(p)
+                    Next
+                    For i As Integer = 0 To lstKL.Count - 1
+                        data.KetLuans.AddObject(lstKL(i))
+                        data.SaveChanges()
+                    Next
+                End If
+            End Using
+        Catch ex As Exception
+            log4net.Config.XmlConfigurator.Configure()
+            log.Error("Error error " & AddTabSpace(1) & Session("Username") & AddTabSpace(1) & "IP:" & GetIPAddress(), ex)
+        End Try
+    End Sub
+    Protected Sub HanhViDN(ByVal iPhieuIdOld As Integer)
+        Try
+            Using data As New ThanhTraLaoDongEntities
+                Dim q = (From a In data.HanhViDNs Where a.PhieuId = iPhieuIdOld Select a).ToList
+                If q.Count > 0 Then
+                    Dim lstHVDN As New List(Of HanhViDN)
+                    For i As Integer = 0 To q.Count - 1
+                        Dim p As New HanhViDN
+                        p.PhieuId = hidPhieuIdNew.Value
+                        p.HanhViId = q(i).HanhViId
+                        p.MucPhat = q(i).MucPhat
+                        p.DoanhNghiepID = q(i).DoanhNghiepID
+                        lstHVDN.Add(p)
+                    Next
+                    For i As Integer = 0 To lstHVDN.Count - 1
+                        data.HanhViDNs.AddObject(lstHVDN(i))
+                        data.SaveChanges()
+                    Next
                 End If
             End Using
         Catch ex As Exception
