@@ -2588,3 +2588,315 @@ System.Threading.ThreadAbortException: Thread was being aborted.
    at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
    at System.Web.HttpResponse.Redirect(String url)
    at Control_CauHoi_ListBBTT.btnTenPhieu_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListBBTT.ascx.vb:line 209
+2014-08-14 23:03:41,859 [231] ERROR Control_CauHoi_ListPKT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListPKT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListPKT.ascx.vb:line 200
+2014-08-16 20:12:20,024 [17] ERROR Control_CauHoi_ListBBTT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListBBTT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListBBTT.ascx.vb:line 198
+2014-08-16 20:24:08,742 [14] ERROR Control_CauHoi_ListBBTT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListBBTT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListBBTT.ascx.vb:line 198
+2014-08-16 20:31:18,502 [4] ERROR Control_CauHoi_ListBBTT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListBBTT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListBBTT.ascx.vb:line 198
+2014-08-16 20:48:57,487 [21] ERROR Control_CauHoi_ListBBTT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListBBTT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListBBTT.ascx.vb:line 198
+2014-08-16 22:15:01,782 [41] ERROR Control_CauHoi_ListPKT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListPKT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListPKT.ascx.vb:line 200
+2014-08-17 12:34:04,739 [40] ERROR Control_CauHoi_ListBBTT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListBBTT.btnTenPhieu_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListBBTT.ascx.vb:line 209
+2014-08-17 21:16:32,402 [55] ERROR Control_CauHoi_ListBBTT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListBBTT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListBBTT.ascx.vb:line 198
+2014-08-17 21:21:29,292 [52] ERROR Control_CauHoi_ListBBTT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListBBTT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListBBTT.ascx.vb:line 198
+2014-08-22 08:42:06,975 [22] ERROR Control_CauHoi_ListBBTT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListBBTT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListBBTT.ascx.vb:line 198
+2014-08-22 09:01:37,886 [27] ERROR Control_CauHoi_ListPKT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListPKT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListPKT.ascx.vb:line 200
+2014-08-22 09:33:04,816 [8] ERROR Control_DoanhNghiep_HoSoDoanhNghiep - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_DoanhNghiep_HoSoDoanhNghiep.btnSoLanTuKiemTra_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\DoanhNghiepBBTT\HoSoDoanhNghiep.ascx.vb:line 108
+2014-08-25 21:57:31,180 [14] ERROR Control_CauHoi_KeThuaPKT - Error error 	admin	IP:127.0.0.1
+System.InvalidOperationException: An object with the same key already exists in the ObjectStateManager. The existing object is in the Modified state. An object can only be added to the ObjectStateManager again if it is in the added state.
+   at System.Data.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   at System.Data.Objects.ObjectContext.AddObject(String entitySetName, Object entity)
+   at System.Data.Objects.ObjectSet`1.AddObject(TEntity entity)
+   at Control_CauHoi_KeThuaPKT.btnSave_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\KeThuaPKT.ascx.vb:line 70
+2014-08-25 21:58:28,443 [15] ERROR Control_CauHoi_KeThuaPKT - Error error 	admin	IP:127.0.0.1
+System.InvalidOperationException: An object with the same key already exists in the ObjectStateManager. The existing object is in the Modified state. An object can only be added to the ObjectStateManager again if it is in the added state.
+   at System.Data.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   at System.Data.Objects.ObjectContext.AddObject(String entitySetName, Object entity)
+   at System.Data.Objects.ObjectSet`1.AddObject(TEntity entity)
+   at Control_CauHoi_KeThuaPKT.btnSave_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\KeThuaPKT.ascx.vb:line 70
+2014-08-25 21:59:04,312 [15] ERROR Control_CauHoi_KeThuaPKT - Error error 	admin	IP:127.0.0.1
+System.InvalidOperationException: An object with the same key already exists in the ObjectStateManager. The existing object is in the Modified state. An object can only be added to the ObjectStateManager again if it is in the added state.
+   at System.Data.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   at System.Data.Objects.ObjectContext.AddObject(String entitySetName, Object entity)
+   at System.Data.Objects.ObjectSet`1.AddObject(TEntity entity)
+   at Control_CauHoi_KeThuaPKT.btnSave_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\KeThuaPKT.ascx.vb:line 70
+2014-08-25 22:00:05,286 [18] ERROR Control_CauHoi_KeThuaPKT - Error error 	admin	IP:127.0.0.1
+System.InvalidOperationException: An object with the same key already exists in the ObjectStateManager. The existing object is in the Modified state. An object can only be added to the ObjectStateManager again if it is in the added state.
+   at System.Data.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   at System.Data.Objects.ObjectContext.AddObject(String entitySetName, Object entity)
+   at System.Data.Objects.ObjectSet`1.AddObject(TEntity entity)
+   at Control_CauHoi_KeThuaPKT.btnSave_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\KeThuaPKT.ascx.vb:line 70
+2014-08-25 22:00:22,392 [18] ERROR Control_CauHoi_KeThuaPKT - Error error 	admin	IP:127.0.0.1
+System.InvalidOperationException: An object with the same key already exists in the ObjectStateManager. The existing object is in the Modified state. An object can only be added to the ObjectStateManager again if it is in the added state.
+   at System.Data.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   at System.Data.Objects.ObjectContext.AddObject(String entitySetName, Object entity)
+   at System.Data.Objects.ObjectSet`1.AddObject(TEntity entity)
+   at Control_CauHoi_KeThuaPKT.btnSave_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\KeThuaPKT.ascx.vb:line 70
+2014-08-25 22:01:17,200 [18] ERROR Control_CauHoi_KeThuaPKT - Error error 	admin	IP:127.0.0.1
+System.InvalidOperationException: An object with the same key already exists in the ObjectStateManager. The existing object is in the Modified state. An object can only be added to the ObjectStateManager again if it is in the added state.
+   at System.Data.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   at System.Data.Objects.ObjectContext.AddObject(String entitySetName, Object entity)
+   at System.Data.Objects.ObjectSet`1.AddObject(TEntity entity)
+   at Control_CauHoi_KeThuaPKT.btnSave_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\KeThuaPKT.ascx.vb:line 70
+2014-08-25 22:03:43,389 [15] ERROR Control_CauHoi_ListBBTT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListBBTT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListBBTT.ascx.vb:line 198
+2014-08-26 22:01:02,260 [9] ERROR Control_CauHoi_ListBBTT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListBBTT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListBBTT.ascx.vb:line 198
+2014-08-26 22:13:12,970 [4] ERROR Control_CauHoi_ListBBTT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListBBTT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListBBTT.ascx.vb:line 198
+2014-08-26 22:19:26,628 [23] ERROR Control_CauHoi_ListBBTT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListBBTT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListBBTT.ascx.vb:line 198
+2014-08-26 22:22:33,328 [23] ERROR Control_CauHoi_ListBBTT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListBBTT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListBBTT.ascx.vb:line 198
+2014-08-26 22:59:37,866 [24] ERROR Control_CauHoi_ListPKT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListPKT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListPKT.ascx.vb:line 200
+2014-08-26 23:09:44,152 [16] ERROR Control_CauHoi_ListPKT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListPKT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListPKT.ascx.vb:line 200
+2014-08-26 23:09:59,575 [5] ERROR Control_CauHoi_ListPKT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListPKT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListPKT.ascx.vb:line 200
+2014-08-26 23:12:14,553 [12] ERROR Control_CauHoi_ListPKT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListPKT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListPKT.ascx.vb:line 200
+2014-08-26 23:32:13,129 [11] ERROR Control_CauHoi_ListPKT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListPKT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListPKT.ascx.vb:line 200
+2014-08-29 21:13:14,838 [76] ERROR Control_CauHoi_ListBBTT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListBBTT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListBBTT.ascx.vb:line 198
+2014-08-29 21:13:59,651 [74] ERROR Control_CauHoi_ListBBTT - Error error 	admin	IP:127.0.0.1
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Control_CauHoi_ListBBTT.btnSubmit_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\CauHoi\ListBBTT.ascx.vb:line 198
+2014-08-29 22:22:06,661 [71] ERROR Control_DoanhNghiep_List - Error error 	thanhtraso	IP:127.0.0.1
+System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The DELETE statement conflicted with the REFERENCE constraint "FK_PhieuNhapHeader_DoanhNghiep". The conflict occurred in database "ThanhTraLaoDongFinal", table "dbo.PhieuNhapHeader", column 'DoanhNghiepId'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   --- End of inner exception stack trace ---
+   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   at System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at Control_DoanhNghiep_List.btnDelete_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\DoanhNghiepXLP\List.ascx.vb:line 314
+2014-08-29 22:22:42,924 [72] ERROR Control_DoanhNghiep_List - Error error 	thanhtraso	IP:127.0.0.1
+System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The DELETE statement conflicted with the REFERENCE constraint "FK_PhieuNhapHeader_DoanhNghiep". The conflict occurred in database "ThanhTraLaoDongFinal", table "dbo.PhieuNhapHeader", column 'DoanhNghiepId'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   --- End of inner exception stack trace ---
+   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   at System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at Control_DoanhNghiep_List.btnDelete_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\DoanhNghiepXLP\List.ascx.vb:line 314
+2014-08-29 22:26:52,527 [70] ERROR Control_DoanhNghiep_List - Error error 	thanhtraso	IP:127.0.0.1
+System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The DELETE statement conflicted with the REFERENCE constraint "FK_PhieuNhapHeader_DoanhNghiep". The conflict occurred in database "ThanhTraLaoDongFinal", table "dbo.PhieuNhapHeader", column 'DoanhNghiepId'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   --- End of inner exception stack trace ---
+   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   at System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at Control_DoanhNghiep_List.btnDelete_Click(Object sender, EventArgs e) in D:\SVN\Projects\thanhtralaodongtphcm\SourceCode\Control\DoanhNghiepXLP\List.ascx.vb:line 314

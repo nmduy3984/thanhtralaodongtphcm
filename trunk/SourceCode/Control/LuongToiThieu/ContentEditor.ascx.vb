@@ -78,15 +78,20 @@ Partial Class Control_LuongToiThieu_ContentEditor
         Dim strLogName As String = ""
         Using data As New ThanhTraLaoDongEntities
             intId = hidID.Value
-            Dim q = (From p In data.DanhMucHanhVis Where p.HanhViId = intId Select p).FirstOrDefault
+            Dim q = (From p In data.LuongToiThieux Where p.LuongToiThieuID = intId Select p).FirstOrDefault
             Try
-                data.DanhMucHanhVis.DeleteObject(q)
-                data.SaveChanges()
-                Excute_Javascript("Alertbox('Xóa dữ liệu thành công.');window.location ='../../Page/LuongToiThieu/List.aspx';", Me.Page, True)
+                Dim huyen = (From a In data.Huyens Where a.LuongToiThieuID = intId).ToList
+                If huyen.Count = 0 Then
+                    data.LuongToiThieux.DeleteObject(q)
+                    data.SaveChanges()
+                    Excute_Javascript("Alertbox('Xóa dữ liệu thành công.');window.location ='../../Page/LuongToiThieu/List.aspx';", Me.Page, True)
+                Else
+                    Excute_Javascript("Alertbox('Xóa thất bại. Lương tối thiểu này hiện tại có huyện tham chiếu đến.');", Me.Page, True)
+                End If
             Catch ex As Exception
                 log4net.Config.XmlConfigurator.Configure()
                 log.Error("Error error " & AddTabSpace(1) & Session("Username") & AddTabSpace(1) & "IP:" & GetIPAddress(), ex)
-                Excute_Javascript("Alertbox('Xóa thất bại.');", Me.Page, True)
+                Excute_Javascript("Alertbox('Xóa thất bại (" & ex.Message & ").');", Me.Page, True)
             End Try
         End Using
     End Sub

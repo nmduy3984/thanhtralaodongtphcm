@@ -81,15 +81,19 @@ Partial Class Control_TinhTP_ContentEditor
             intId = hidID.Value
             Dim q = (From p In data.Tinhs Where p.TinhId = intId Select p).FirstOrDefault
             Try
-                data.Tinhs.DeleteObject(q)
-                data.SaveChanges()
-                Insert_App_Log("Delete Don vi hanh chinh:" & q.TenTinh & "", Function_Name.TinhTP, Audit_Type.Delete, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
-
-                Excute_Javascript("Alertbox('Xóa dữ liệu thành công.');window.location ='../../Page/TinhTP/List.aspx';", Me.Page, True)
+                Dim dn = (From a In data.DoanhNghieps Where a.TinhId = intId).ToList
+                If dn.Count = 0 Then
+                    data.Tinhs.DeleteObject(q)
+                    data.SaveChanges()
+                    Insert_App_Log("Delete Tinh:" & q.TenTinh & "", Function_Name.TinhTP, Audit_Type.Delete, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
+                    Excute_Javascript("Alertbox('Xóa dữ liệu thành công.');window.location ='../../Page/TinhTP/List.aspx';", Me.Page, True)
+                Else
+                    Excute_Javascript("Alertbox('Xóa thất bại. Tỉnh này hiện tại có doanh nghiệp tham chiếu đến.');", Me.Page, True)
+                End If
             Catch ex As Exception
                 log4net.Config.XmlConfigurator.Configure()
                 log.Error("Error error " & AddTabSpace(1) & Session("Username") & AddTabSpace(1) & "IP:" & GetIPAddress(), ex)
-                Excute_Javascript("Alertbox('Xóa thất bại. Tỉnh/Tp này đang được tham chiếu bởi người dùng hoặc doanh nghiệp.');", Me.Page, True)
+                Excute_Javascript("Alertbox('Xóa thất bại (" & ex.Message & ").');", Me.Page, True)
             End Try
         End Using
     End Sub

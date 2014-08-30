@@ -158,27 +158,17 @@ Partial Class Control_Quyetdinhthanhtra_List
             Try
                 'Xóa bảng QuyetDinhTTDoanhNghiep và Doanh nghiệp
                 Dim qdttdn = (From a In data.QuyetDinhTTDoanhNghieps Where a.QuyetDinhTT.Equals(q.SoQuyetDinh)).ToList
-                For i As Integer = 0 To qdttdn.Count - 1
-                    Dim dnid As Integer = qdttdn(i).DoanhNghiepId
-                    'Kiểm tra doanh nghiệp có trong PhieuNhapHeader?
-                    'Nếu không có thì cho xóa
-                    Dim pn = (From a In data.PhieuNhapHeaders Where a.DoanhNghiepId = dnid).ToList
-                    If pn.Count = 0 Then
-                        Dim dn As DoanhNghiep = (From a In data.DoanhNghieps Where a.DoanhNghiepId = dnid).SingleOrDefault
-                        data.DoanhNghieps.DeleteObject(dn)
-                        data.SaveChanges()
-                    End If
-                    data.QuyetDinhTTDoanhNghieps.DeleteObject(qdttdn(i))
+                If qdttdn.Count = 0 Then
+                    data.QuyetDinhThanhTras.DeleteObject(q)
                     data.SaveChanges()
-                Next
-                data.QuyetDinhThanhTras.DeleteObject(q)
-                data.SaveChanges()
-                'Insert_App_Log("Insert  Quyetdinhthanhtra:" & txtTitle.Text.Trim & "", Function_Name.Quyetdinhthanhtra, Audit_Type.Create, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
-                Excute_Javascript("Alertbox('Xóa dữ liệu thành công.');", Me.Page, True)
+                    Excute_Javascript("Alertbox('Xóa dữ liệu thành công.');", Me.Page, True)
+                Else
+                    Excute_Javascript("Alertbox('Xóa thất bại. Quyết định này hiện tại có doanh nghiệp tham chiếu đến.');", Me.Page, True)
+                End If
             Catch ex As Exception
                 log4net.Config.XmlConfigurator.Configure()
                 log.Error("Error error " & AddTabSpace(1) & Session("Username") & AddTabSpace(1) & "IP:" & GetIPAddress(), ex)
-                Excute_Javascript("Alertbox('Xóa thất bại.');", Me.Page, True)
+                Excute_Javascript("Alertbox('Xóa thất bại (" & ex.Message & ").');", Me.Page, True)
             End Try
         End Using
         Dim arrSearch() As String
@@ -190,6 +180,7 @@ Partial Class Control_Quyetdinhthanhtra_List
         Dim soQD As String = ""
         Dim intCount As Integer
         Dim intTotal As Integer
+        Dim strSQD = ""
         Using data As New ThanhTraLaoDongEntities
             Try
                 For Each item As GridViewRow In grdShow.Rows
@@ -202,37 +193,26 @@ Partial Class Control_Quyetdinhthanhtra_List
                         Try
                             'Xóa bảng QuyetDinhTTDoanhNghiep và Doanh nghiệp
                             Dim qdttdn = (From a In data.QuyetDinhTTDoanhNghieps Where a.QuyetDinhTT.Equals(q.SoQuyetDinh)).ToList
-                            For i As Integer = 0 To qdttdn.Count - 1
-                                Dim dnid As Integer = qdttdn(i).DoanhNghiepId
-                                'Kiểm tra doanh nghiệp có trong PhieuNhapHeader?
-                                'Nếu không có thì cho xóa
-                                Dim pn = (From a In data.PhieuNhapHeaders Where a.DoanhNghiepId = dnid).ToList
-                                If pn.Count = 0 Then
-                                    Dim dn As DoanhNghiep = (From a In data.DoanhNghieps Where a.DoanhNghiepId = dnid).SingleOrDefault
-                                    data.DoanhNghieps.DeleteObject(dn)
-                                    data.SaveChanges()
-                                End If
-                                data.QuyetDinhTTDoanhNghieps.DeleteObject(qdttdn(i))
+                            If qdttdn.Count = 0 Then
+                                data.QuyetDinhThanhTras.DeleteObject(q)
                                 data.SaveChanges()
-                            Next
-
-                            data.QuyetDinhThanhTras.DeleteObject(q)
-                            data.SaveChanges()
-                            'Insert_App_Log("Insert Quyetdinhthanhtra:" & txtTitle.Text.Trim & "", Function_Name.Quyetdinhthanhtra, Audit_Type.Create, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
-                            intCount += 1
+                                intCount += 1
+                            Else
+                                strSQD += q.SoQuyetDinh & ";"
+                            End If
                         Catch ex As Exception
                         End Try
                     End If
                 Next
                 If intCount > 0 Then
-                    Excute_Javascript("Alertbox('Xóa dữ liệu thành công. " & intCount.ToString & " /" & intTotal.ToString & " record.');", Me.Page, True)
+                    Excute_Javascript("Alertbox('Xóa dữ liệu thành công. " & intCount.ToString & " /" & intTotal.ToString & " record. " & If(Not strSQD.Equals(""), "Các số quyết định (" & strSQD & ") do hiện tại có doanh nghiệp tham chiếu đến", "") & "');", Me.Page, True)
                 Else
                     Excute_Javascript("Alertbox('Xóa thất bại.');", Me.Page, True)
                 End If
             Catch ex As Exception
                 log4net.Config.XmlConfigurator.Configure()
                 log.Error("Error error " & AddTabSpace(1) & Session("Username") & AddTabSpace(1) & "IP:" & GetIPAddress(), ex)
-                Excute_Javascript("Alertbox('Xóa thất bại.');", Me.Page, True)
+                Excute_Javascript("Alertbox('Xóa thất bại (" & ex.Message & ").');", Me.Page, True)
             End Try
         End Using
         Dim arrSearch() As String

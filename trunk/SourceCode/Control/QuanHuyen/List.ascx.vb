@@ -186,14 +186,19 @@ Partial Class Control_QuanHuyen_List
 
             Dim q = (From p In data.Huyens Where p.HuyenId = intId Select p).FirstOrDefault
             Try
-                data.Huyens.DeleteObject(q)
-                data.SaveChanges()
-                Insert_App_Log("Delete Quan/Huyen:" & q.TenHuyen & "", Function_Name.QuanHuyen, Audit_Type.Delete, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
-                Excute_Javascript("Alertbox('Xóa dữ liệu thành công.');", Me.Page, True)
+                Dim dn = (From a In data.DoanhNghieps Where a.HuyenId = intId).ToList
+                If dn.Count = 0 Then
+                    data.Huyens.DeleteObject(q)
+                    data.SaveChanges()
+                    Insert_App_Log("Delete Quan/Huyen:" & q.TenHuyen & "", Function_Name.QuanHuyen, Audit_Type.Delete, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
+                    Excute_Javascript("Alertbox('Xóa dữ liệu thành công.');", Me.Page, True)
+                Else
+                    Excute_Javascript("Alertbox('Xóa thất bại. Huyện này hiện tại có doanh nghiệp tham chiếu đến.');", Me.Page, True)
+                End If
             Catch ex As Exception
                 log4net.Config.XmlConfigurator.Configure()
                 log.Error("Error error " & AddTabSpace(1) & Session("Username") & AddTabSpace(1) & "IP:" & GetIPAddress(), ex)
-                Excute_Javascript("Alertbox('Xóa thất bại.');", Me.Page, True)
+                Excute_Javascript("Alertbox('Xóa thất bại (" & ex.Message & ").');", Me.Page, True)
             End Try
         End Using
         BindToGrid(, , , CInt(hidTinhThanhTraSo.Value))
@@ -203,6 +208,7 @@ Partial Class Control_QuanHuyen_List
         Dim intId As Integer = 0
         Dim intCount As Integer
         Dim intTotal As Integer
+        Dim strHuyen = ""
         Using data As New ThanhTraLaoDongEntities
             Try
                 For Each item As GridViewRow In grdShow.Rows
@@ -211,26 +217,27 @@ Partial Class Control_QuanHuyen_List
                     If chkItem.Checked Then
                         intTotal += 1
                         intId = grdShow.DataKeys(item.RowIndex)("HuyenId").ToString
-
                         Dim q = (From p In data.Huyens Where p.HuyenId = intId Select p).FirstOrDefault
-                        Try
+                        Dim dn = (From a In data.DoanhNghieps Where a.HuyenId = intId).ToList
+                        If dn.Count = 0 Then
                             data.Huyens.DeleteObject(q)
                             data.SaveChanges()
                             Insert_App_Log("Delete Quan/Huyen:" & q.TenHuyen & "", Function_Name.QuanHuyen, Audit_Type.Delete, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
                             intCount += 1
-                        Catch ex As Exception
-                        End Try
+                        Else
+                            strHuyen += q.TenHuyen & ";"
+                        End If
                     End If
                 Next
                 If intCount > 0 Then
-                    Excute_Javascript("Alertbox('Xóa dữ liệu thành công. " & intCount.ToString & " /" & intTotal.ToString & " record.');", Me.Page, True)
+                    Excute_Javascript("Alertbox('Xóa dữ liệu thành công." & intCount.ToString & " /" & intTotal.ToString & " record. " & If(Not strHuyen.Equals(""), " Các huyện (" & strHuyen & ") hiện tại có doanh nghiệp tham chiếu đến", "") & "');", Me.Page, True)
                 Else
-                    Excute_Javascript("Alertbox('Xóa thất bại.');", Me.Page, True)
+                    Excute_Javascript("Alertbox('Xóa thất bại." & If(Not strHuyen.Equals(""), " Các huyện (" & strHuyen & ") hiện tại có doanh nghiệp tham chiếu đến", "") & "');", Me.Page, True)
                 End If
             Catch ex As Exception
                 log4net.Config.XmlConfigurator.Configure()
                 log.Error("Error error " & AddTabSpace(1) & Session("Username") & AddTabSpace(1) & "IP:" & GetIPAddress(), ex)
-                Excute_Javascript("Alertbox('Xóa thất bại.');", Me.Page, True)
+                Excute_Javascript("Alertbox('Xóa thất bại (" & ex.Message & ").');", Me.Page, True)
             End Try
         End Using
         BindToGrid(, , , CInt(hidTinhThanhTraSo.Value))

@@ -3,11 +3,19 @@
 <script type="text/javascript">
     function ajaxJquery() {
         $(function () {
-             
+
         });
 
     }
-   
+    function CheckMaPhieu() {
+        var maphieu = $("#<%=txtMaPhieu.ClientId %>");
+        if (maphieu.val().trim() == "") {
+            AlertboxThenFocus("Vui lòng nhập mã phiếu.", maphieu);
+            maphieu.select();
+            return false;
+        }
+        return true;
+    }
 </script>
 <div id="view" class="BoxField" runat="server">
     <div class="DivRow tbl_row_0">
@@ -16,32 +24,48 @@
                 THÔNG TIN CHI TIẾT DOANH NGHIỆP
             </h3>
         </div>
+        <div class="DivRow">
+            <div class="DivLabel">
+                <asp:Label ID="Label1" CssClass="TextLabel" runat="server" Text="Mã Phiếu:" />
+            </div>
+            <div class="DivTextBox">
+                <asp:TextBox ID="txtMaPhieu" runat="server" CssClass='TextBox' MaxLength="7" ToolTip="Nhập tối đa 7 kí tự"></asp:TextBox>
+            </div>
+        </div>
+        <div class="DivRow">
+            <div class="DivLabel">
+                &nbsp;&nbsp;&nbsp;</div>
+            <div class="DivTextBox">
+                <div style="float: left">
+                    <asp:Button ID="btnMaPhieu" runat="server" Text=" Lưu " CssClass="btn" ToolTip="Lưu mã phiếu" OnClientClick="javascript:return CheckMaPhieu();" />
+                </div>
+            </div>
+        </div>
     </div>
     <div class="DivRow tbl_row_1">
-    <div class="ModePhieu" style="font: normal 12px/18px Tahoma, Geneva, sans-serif;
-        color: #FF0000;">
-        <% If Not IsNothing(Session("ModePhieu")) Then%>
-        <% If Session("ModePhieu") = Cls_Common.ModePhieu.Create Then%>
-        Mode Tạo mới
-        <%ElseIf Session("ModePhieu") = Cls_Common.ModePhieu.Edit Then%>
-        Mode Chỉnh sửa
-        <%Else%>
-        Mode Xem chi tiết
-        <%End If%>
-        <%Else%>
-        Mode Xem chi tiết
-        <%End If%>
-    </div></div>
-    <div style="clear: both;  ">
+        <div class="ModePhieu" style="font: normal 12px/18px Tahoma, Geneva, sans-serif;
+            color: #FF0000;">
+            <% If Not IsNothing(Session("ModePhieu")) Then%>
+            <% If Session("ModePhieu") = Cls_Common.ModePhieu.Create Then%>
+            Mode Tạo mới
+            <%ElseIf Session("ModePhieu") = Cls_Common.ModePhieu.Edit Then%>
+            Mode Chỉnh sửa
+            <%Else%>
+            Mode Xem chi tiết
+            <%End If%>
+            <%Else%>
+            Mode Xem chi tiết
+            <%End If%>
+        </div>
     </div>
-    
-     
+    <div style="clear: both;">
+    </div>
     <div class="DivRow tbl_row_0">
         <div class="tbl_colLeft">
             <asp:Label ID="lblTendoanhnghiep_detail" runat="server" Text="Tên doanh nghiệp:" />
         </div>
         <div class="tbl_colRight">
-              <asp:LinkButton ID="lkbTendoanhnghiep" runat="server" OnClick="btnSubmit_Click" CausesValidation='False'></asp:LinkButton>
+            <asp:LinkButton ID="lkbTendoanhnghiep" runat="server" OnClick="btnSubmit_Click" CausesValidation='False'></asp:LinkButton>
         </div>
     </div>
     <div class="DivRow tbl_row_1">
@@ -259,6 +283,5 @@
 </div>
 <div style="display: none">
     <asp:HiddenField ID="hidID" Value="0" runat="server" />
-        <asp:Button ID="btnSubmit" runat="server" CssClass="btn" Text="submit" />
-
-  </div>
+    <asp:Button ID="btnSubmit" runat="server" CssClass="btn" Text="submit" />
+</div>

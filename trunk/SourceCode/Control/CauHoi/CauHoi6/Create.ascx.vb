@@ -194,11 +194,18 @@ Partial Class Control_CauHoi6_Create
             Dim lhdnid = data.uspLoaiHinhDNId(hidPhieuID.Value).FirstOrDefault
             Dim iSum3HDLDFist As Integer = 0
             Dim iSum2HDLDFist As Integer = 0
-            If Not q2 Is Nothing Then
+            If Not q2 Is Nothing AndAlso p Is Nothing Then
                 iSum3HDLDFist = IIf(IsNothing(q2.Q211), 0, q2.Q211) + IIf(IsNothing(q2.Q212), 0, q2.Q212) + IIf(IsNothing(q2.Q213), 0, q2.Q213) + IIf(Not IsNothing(lhdnid.LoaiHinhDNId) And lhdnid.LoaiHinhDNId = 1, 0, q2.Q2110)
                 iSum2HDLDFist = IIf(IsNothing(q2.Q211), 0, q2.Q211) + IIf(IsNothing(q2.Q212), 0, q2.Q212) + IIf(Not IsNothing(lhdnid.LoaiHinhDNId) And lhdnid.LoaiHinhDNId = 1, 0, q2.Q2110)
                 txtQ611.Text = iSum3HDLDFist
                 txtQ621.Text = iSum2HDLDFist
+                hidSum3HDLDFirst.Value = iSum3HDLDFist
+                hidSum2HDLDFirst.Value = iSum2HDLDFist
+            ElseIf Not q2 Is Nothing AndAlso Not p Is Nothing Then
+                iSum3HDLDFist = IIf(IsNothing(p.Q611) = True, 0, p.Q611)
+                iSum2HDLDFist = IIf(IsNothing(p.Q621) = True, 0, p.Q621)
+                txtQ611.Text = IIf(IsNothing(p.Q611) = True, "", p.Q611)
+                txtQ621.Text = IIf(IsNothing(p.Q621) = True, "", p.Q621)
                 hidSum3HDLDFirst.Value = iSum3HDLDFist
                 hidSum2HDLDFirst.Value = iSum2HDLDFist
             End If

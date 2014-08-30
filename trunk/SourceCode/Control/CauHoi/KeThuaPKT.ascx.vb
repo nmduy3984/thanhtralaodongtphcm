@@ -62,6 +62,13 @@ Partial Class Control_CauHoi_KeThuaPKT
                     phieuId = grdShow.DataKeys(item.RowIndex)("PhieuID").ToString
                     DNId = grdShow.DataKeys(item.RowIndex)("DoanhNghiepId").ToString
                     Try
+                        'Thay doi trang thai IsEdited bang QuyetDinhThanhTra
+                        Dim qdtt = (From a In data.QuyetDinhThanhTras
+                                   Where a.SoQuyetDinh.Contains(SQD) Select a).FirstOrDefault
+                        If Not qdtt Is Nothing Then
+                            qdtt.IsEdited = True
+                            data.SaveChanges()
+                        End If
                         'Thêm doanh nghiệp vào bảng QuyetDinhTTDoanhNghiep  nếu chưa có
                         Dim qddn As QuyetDinhTTDoanhNghiep = (From a In data.QuyetDinhTTDoanhNghieps Where a.DoanhNghiepId = DNId And a.QuyetDinhTT.Equals(SQD)).SingleOrDefault
                         If qddn Is Nothing Then

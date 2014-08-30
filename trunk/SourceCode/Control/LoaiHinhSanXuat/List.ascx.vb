@@ -131,21 +131,22 @@ Partial Class Control_LoaiHinhSanXuat_List
         Dim strLogName As String = ""
         Using data As New ThanhTraLaoDongEntities
             intId = grdShow.DataKeys(hidID.Value)("LoaiHinhSXId").ToString
-            Dim k = (From t In data.LoaiHinhSanXuats Where t.ParentID = intId Select t).FirstOrDefault
-            If Not k Is Nothing Then
-                Excute_Javascript("Alertbox('Bản ghi đang tham chiếu,vui lòng kiểm tra lại.');", Me.Page, True)
-                Exit Sub
-            End If
             Dim q = (From p In data.LoaiHinhSanXuats Where p.LoaiHinhSXId = intId Select p).FirstOrDefault
             Try
-                data.LoaiHinhSanXuats.DeleteObject(q)
-                data.SaveChanges()
-                Insert_App_Log("Delete  Loai Hinh San Xuat:" & q.Title & "", Function_Name.LoaiHinhSanXuat, Audit_Type.Delete, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
-                Excute_Javascript("Alertbox('Xóa dữ liệu thành công.');", Me.Page, True)
+                Dim dn = (From a In data.DoanhNghieps Where a.LoaiHinhSXId = intId).ToList
+                Dim lhsxChild = (From a In data.LoaiHinhSanXuats Where a.ParentID = intId).ToList
+                If dn.Count = 0 And lhsxChild.Count = 0 Then
+                    data.LoaiHinhSanXuats.DeleteObject(q)
+                    data.SaveChanges()
+                    Insert_App_Log("Delete  Loai Hinh San Xuat:" & q.Title & "", Function_Name.LoaiHinhSanXuat, Audit_Type.Delete, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
+                    Excute_Javascript("Alertbox('Xóa dữ liệu thành công.');", Me.Page, True)
+                Else
+                    Excute_Javascript("Alertbox('Xóa thất bại. Loại hình sản xuất này hiện tại có doanh nghiệp hoặc loại hình sản xuất khác tham chiếu đến.');", Me.Page, True)
+                End If
             Catch ex As Exception
                 log4net.Config.XmlConfigurator.Configure()
                 log.Error("Error error " & AddTabSpace(1) & Session("Username") & AddTabSpace(1) & "IP:" & GetIPAddress(), ex)
-                Excute_Javascript("Alertbox('Xóa thất bại.');", Me.Page, True)
+                Excute_Javascript("Alertbox('Xóa thất bại (" & ex.Message & ").');", Me.Page, True)
             End Try
         End Using
         BindToGrid()
@@ -154,6 +155,7 @@ Partial Class Control_LoaiHinhSanXuat_List
         Dim intId As Integer = 0
         Dim intCount As Integer
         Dim intTotal As Integer
+        Dim strLHSX = ""
         Using data As New ThanhTraLaoDongEntities
             Try
                 For Each item As GridViewRow In grdShow.Rows
@@ -162,31 +164,27 @@ Partial Class Control_LoaiHinhSanXuat_List
                     If chkItem.Checked Then
                         intTotal += 1
                         intId = grdShow.DataKeys(item.RowIndex)("LoaiHinhSXId").ToString
-                        Dim k = (From t In data.LoaiHinhSanXuats Where t.ParentID = intId Select t).FirstOrDefault
-                        If Not k Is Nothing Then
-                            Excute_Javascript("Alertbox('Bản ghi đang tham chiếu,vui lòng kiểm tra lại.');", Me.Page, True)
-                            Exit Sub
-                        End If
                         Dim q = (From p In data.LoaiHinhSanXuats Where p.LoaiHinhSXId = intId Select p).FirstOrDefault
-                        Try
+                        Dim dn = (From a In data.DoanhNghieps Where a.LoaiHinhSXId = intId).ToList
+                        Dim lhsxChild = (From a In data.LoaiHinhSanXuats Where a.ParentID = intId).ToList
+                        If dn.Count = 0 And lhsxChild.Count = 0 Then
                             data.LoaiHinhSanXuats.DeleteObject(q)
                             data.SaveChanges()
-                            Insert_App_Log("Delete Loai Hinh San Xuat:" & q.Title & "", Function_Name.LoaiHinhSanXuat, Audit_Type.Delete, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
                             intCount += 1
-                        Catch ex As Exception
-
-                        End Try
+                        Else
+                            strLHSX += q.Title & ";"
+                        End If
                     End If
                 Next
                 If intCount > 0 Then
-                    Excute_Javascript("Alertbox('Xóa dữ liệu thành công. " & intCount.ToString & " /" & intTotal.ToString & " record.');", Me.Page, True)
+                    Excute_Javascript("Alertbox('Xóa dữ liệu thành công." & intCount.ToString & " /" & intTotal.ToString & " record. " & If(Not strLHSX.Equals(""), " Các loại hình sản xuất (" & strLHSX & ") hiện tại có doanh nghiệp hoặc loại hình sản xuất khác tham chiếu đến", "") & "');", Me.Page, True)
                 Else
-                    Excute_Javascript("Alertbox('Xóa thất bại.');", Me.Page, True)
+                    Excute_Javascript("Alertbox('Xóa thất bại." & If(Not strLHSX.Equals(""), " Các loại hình sản xuất (" & strLHSX & ") hiện tại có doanh nghiệp hoặc loại hình sản xuất khác tham chiếu đến", "") & "');", Me.Page, True)
                 End If
             Catch ex As Exception
                 log4net.Config.XmlConfigurator.Configure()
                 log.Error("Error error " & AddTabSpace(1) & Session("Username") & AddTabSpace(1) & "IP:" & GetIPAddress(), ex)
-                Excute_Javascript("Alertbox('Xóa thất bại.');", Me.Page, True)
+                Excute_Javascript("Alertbox('Xóa thất bại (" & ex.Message & ").');", Me.Page, True)
             End Try
         End Using
         BindToGrid()

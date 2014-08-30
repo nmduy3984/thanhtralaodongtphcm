@@ -80,14 +80,20 @@ Partial Class Control_LoaiHinhSanXuat_ContentEditor
             intId = hidID.Value
             Dim q = (From p In data.LoaiHinhSanXuats Where p.LoaiHinhSXId = intId Select p).FirstOrDefault
             Try
-                data.LoaiHinhSanXuats.DeleteObject(q)
-                data.SaveChanges()
-                Insert_App_Log("Delete  Loai hinh san xuat:" & q.Title & "", Function_Name.LoaiHinhSanXuat, Audit_Type.Delete, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
-                Excute_Javascript("Alertbox('Xóa dữ liệu thành công.');window.location ='../../Page/LoaiHinhSanXuat/List.aspx';", Me.Page, True)
+                Dim dn = (From a In data.DoanhNghieps Where a.LoaiHinhSXId = intId).ToList
+                Dim lhsxChild = (From a In data.LoaiHinhSanXuats Where a.ParentID = intId).ToList
+                If dn.Count = 0 And lhsxChild.Count = 0 Then
+                    data.LoaiHinhSanXuats.DeleteObject(q)
+                    data.SaveChanges()
+                    Insert_App_Log("Delete  Loai hinh san xuat:" & q.Title & "", Function_Name.LoaiHinhSanXuat, Audit_Type.Delete, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
+                    Excute_Javascript("Alertbox('Xóa dữ liệu thành công.');window.location ='../../Page/LoaiHinhSanXuat/List.aspx';", Me.Page, True)
+                Else
+                    Excute_Javascript("Alertbox('Xóa thất bại. Loại hình sản xuất này hiện tại có doanh nghiệp hoặc loại hình sản xuất khác tham chiếu đến.');", Me.Page, True)
+                End If
             Catch ex As Exception
                 log4net.Config.XmlConfigurator.Configure()
                 log.Error("Error error " & AddTabSpace(1) & Session("Username") & AddTabSpace(1) & "IP:" & GetIPAddress(), ex)
-                Excute_Javascript("Alertbox('Xóa thất bại.');", Me.Page, True)
+                Excute_Javascript("Alertbox('Xóa thất bại (" & ex.Message & ").');", Me.Page, True)
             End Try
         End Using
     End Sub

@@ -62,7 +62,7 @@ Partial Class Control_CauHoi_ThongTinChungBB
                 Else
                     lblNgaychungnhandkkd.Text = CType(p(0).NgayChungNhanDKKD, Date).ToString("dd/MM/yyyy")
                 End If
-                lblSochinhanh.Text = IIf(IsNothing(p(0).SoChiNhanh) = True, "", String.Format("{0:n0}", p(0).SoChiNhanh))
+                lblSochinhanh.Text = IIf(IsNothing(p(0).SoChiNhanh) = True, "", p(0).SoChiNhanh)
                 lblTongsonhanvien.Text = IIf(IsNothing(p(0).TongSoNhanVien) = True, "", String.Format("{0:n0}", p(0).TongSoNhanVien))
                 lblSolaodongnu.Text = IIf(IsNothing(p(0).SoLaoDongNu) = True, "", String.Format("{0:n0}", p(0).SoLaoDongNu))
                 lblSonguoilamnghenguyhiem.Text = IIf(IsNothing(p(0).SoNguoiLamNgheNguyHiem) = True, "", String.Format("{0:n0}", p(0).SoNguoiLamNgheNguyHiem))

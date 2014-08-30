@@ -218,7 +218,7 @@ Partial Class Control_DoanhNghiep_Edit
                     txtNgaythaydoi.Text = CType(d.NgayThayDoi, Date).ToString("dd/MM/yyyy")
                 End If
                 txtTongsonhanvien.Text = FormatNumber(d.TongSoNhanVien)
-                txtSochinhanh.Text = FormatNumber(d.SoChiNhanh)
+                txtSochinhanh.Text = d.SoChiNhanh
                 txtSolaodongnu.Text = FormatNumber(d.SoLaoDongNu)
                 txtTonggiatrisp.Text = IIf(IsNothing(d.TongGiaTriSP), 0, d.TongGiaTriSP)
                 txtTongLoiNhuanSauThue.Text = IIf(IsNothing(d.TongLoiNhuanSauThue), 0, d.TongLoiNhuanSauThue)
@@ -238,9 +238,8 @@ Partial Class Control_DoanhNghiep_Edit
                     Where q.DoanhNghiepId = hidID.Value).FirstOrDefault()
             If Not IsNothing(p) Then
                 Try
-                    Dim iLanThayDoi, iSoCN, iSoNguoiLVDH, iSoNguoiLCVYCNN, iSoLaoDongNu As Integer
+                    Dim iLanThayDoi, iSoNguoiLVDH, iSoNguoiLCVYCNN, iSoLaoDongNu As Integer
                     iLanThayDoi = GetNumberByFormat(txtLanthaydoi.Text.Trim())
-                    iSoCN = GetNumberByFormat(txtSochinhanh.Text.Trim())
                     iSoNguoiLVDH = GetNumberByFormat(txtSonguoilamnghenguyhiem.Text.Trim())
                     iSoNguoiLCVYCNN = GetNumberByFormat(txtNguoilamCVCoYCNN.Text.Trim())
 
@@ -270,7 +269,7 @@ Partial Class Control_DoanhNghiep_Edit
                     p.NgayChungNhanDKKD = StringToDate(txtNgaychungnhandkkd.Text.Trim())
                     p.LanThayDoi = iLanThayDoi
                     p.NgayThayDoi = IIf(txtNgaythaydoi.Text.Trim().Equals("") = True, Nothing, StringToDate(txtNgaythaydoi.Text.Trim()))
-                    p.SoChiNhanh = iSoCN
+                    p.SoChiNhanh = txtSochinhanh.Text.Trim()
                     If txtTongsonhanvien.Text.Trim().Equals("") OrElse txtTongsonhanvien.Text.Trim().Equals("0") Then
                         p.TongSoNhanVien = 0
                     Else

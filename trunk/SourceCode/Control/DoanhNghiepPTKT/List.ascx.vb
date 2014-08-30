@@ -283,16 +283,50 @@ Partial Class Control_DoanhNghiep_List
         Dim intId As Integer
         Dim strLogName As String = ""
         Using data As New ThanhTraLaoDongEntities
+            Dim isUser As String = Session("IsUser")
+            Dim UserName As String = Session("UserName")
             intId = grdShow.DataKeys(hidID.Value)("DoanhNghiepId").ToString
-            Try
-                data.DoanhNghieps.DeleteObject(data.DoanhNghieps.Where(Function(c) c.DoanhNghiepId = intId).FirstOrDefault())
-                data.SaveChanges()
-                Insert_App_Log("Delete Doanh Nghiep:" & intId & "", Function_Name.DoanhNghiepPTKT, Audit_Type.Delete, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
-            Catch ex As Exception
-                log4net.Config.XmlConfigurator.Configure()
-                log.Error("Error error " & AddTabSpace(1) & Session("Username") & AddTabSpace(1) & "IP:" & GetIPAddress(), ex)
-                Excute_Javascript("Alertbox('Xóa doanh nghiệp thất bại do doanh nghiệp đã được tạo phiếu');", Me.Page, True)
-            End Try
+            Dim dn = (From q In data.DoanhNghieps
+                      Where q.DoanhNghiepId = intId
+                      Select q).FirstOrDefault()
+            If Not IsNothing(dn) Then
+                If isUser = UserType.Admin Or UserName = dn.NguoiTao Then '' Có quyền Xóa                    
+                    Try
+                        Dim pn = (From a In data.PhieuNhapHeaders Where a.DoanhNghiepId = intId).ToList()
+                        If pn.Count = 0 Then
+                            'Dim qddn = (From a In data.QuyetDinhTTDoanhNghieps Where a.DoanhNghiepId = intId).ToList
+                            'If qddn.Count > 0 Then
+                            '    For i As Integer = 0 To qddn.Count - 1
+                            '        Dim SQD As String = qddn(i).QuyetDinhTT
+                            '        Dim qdtt = (From a In data.QuyetDinhThanhTras
+                            '           Where a.SoQuyetDinh.Equals(SQD) Select a).FirstOrDefault
+                            '        If qdtt Is Nothing Then
+                            '            qdtt.IsEdited = False
+                            '            data.QuyetDinhThanhTras.AddObject(qdtt)
+                            '            data.SaveChanges()
+                            '        End If
+                            '        data.QuyetDinhTTDoanhNghieps.DeleteObject(qddn(i))
+                            '        data.SaveChanges()
+                            '    Next
+                            'End If
+                            data.DoanhNghieps.DeleteObject(dn)
+                            data.SaveChanges()
+                            Insert_App_Log("Delete Doanh Nghiep:" & intId & "", Function_Name.DoanhNghiepPTKT, Audit_Type.Delete, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
+                            Excute_Javascript("Alertbox('Xóa dữ liệu thành công.');", Me.Page, True)
+                        Else
+                            Excute_Javascript("Alertbox('Doanh nghiệp đang được tham chiếu từ biên bản thanh tra hoặc phiếu kiểm tra.');", Me.Page, True)
+                        End If
+                    Catch ex As Exception
+                        log4net.Config.XmlConfigurator.Configure()
+                        log.Error("Error error " & AddTabSpace(1) & Session("Username") & AddTabSpace(1) & "IP:" & GetIPAddress(), ex)
+                        Excute_Javascript("Alertbox('Xóa doanh nghiệp thất bại (" & ex.Message & ").');", Me.Page, True)
+                    End Try
+                Else
+                    Excute_Javascript("Alertbox('Bạn không có quyền xóa với doanh nghiệp này.');", Me.Page, True)
+                End If
+            Else
+                Excute_Javascript("Alertbox('Không tồn tại doanh nghiệp này.');", Me.Page, True)
+            End If
         End Using
         Dim arrSearch() As String
         arrSearch = ViewState("search")
@@ -302,6 +336,12 @@ Partial Class Control_DoanhNghiep_List
         Dim intId As Integer = 0
         Dim intCount As Integer
         Dim intTotal As Integer
+        Dim isUser As String = Session("IsUser")
+        Dim UserName As String = Session("UserName")
+        Dim strDN1 As String = ""
+        Dim strDN2 As String = ""
+        Dim strDN3 As String = ""
+        Dim strCombine As String = ""
         Using data As New ThanhTraLaoDongEntities
             Try
                 For Each item As GridViewRow In grdShow.Rows
@@ -310,21 +350,56 @@ Partial Class Control_DoanhNghiep_List
                     If chkItem.Checked Then
                         intTotal += 1
                         intId = grdShow.DataKeys(item.RowIndex)("DoanhNghiepId").ToString
-                        data.DoanhNghieps.DeleteObject(data.DoanhNghieps.Where(Function(c) c.DoanhNghiepId = intId).FirstOrDefault())
-                        data.SaveChanges()
-                        intCount += 1
-                        Insert_App_Log("Delete Doanh Nghiep:" & intId & "", Function_Name.DoanhNghiepPTKT, Audit_Type.Delete, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
+                        Dim dn = (From q In data.DoanhNghieps
+                                  Where q.DoanhNghiepId = intId
+                                  Select q).FirstOrDefault()
+                        If Not IsNothing(dn) Then
+                            If isUser = UserType.Admin Or UserName = dn.NguoiTao Then '' Có quyền Xóa 
+                                Dim pn = (From a In data.PhieuNhapHeaders Where a.DoanhNghiepId = intId).ToList()
+                                If pn.Count = 0 Then
+                                    'Dim qddn = (From a In data.QuyetDinhTTDoanhNghieps Where a.DoanhNghiepId = intId).ToList
+                                    'If qddn.Count > 0 Then
+                                    '    For i As Integer = 0 To qddn.Count - 1
+                                    '        Dim SQD As String = qddn(i).QuyetDinhTT
+                                    '        Dim qdtt = (From a In data.QuyetDinhThanhTras
+                                    '           Where a.SoQuyetDinh.Equals(SQD) Select a).FirstOrDefault
+                                    '        If qdtt Is Nothing Then
+                                    '            qdtt.IsEdited = False
+                                    '            data.QuyetDinhThanhTras.AddObject(qdtt)
+                                    '            data.SaveChanges()
+                                    '        End If
+                                    '        data.QuyetDinhTTDoanhNghieps.DeleteObject(qddn(i))
+                                    '        data.SaveChanges()
+                                    '    Next
+                                    'End If
+                                    data.DoanhNghieps.DeleteObject(dn)
+                                    data.SaveChanges()
+                                    intCount += 1
+                                    Insert_App_Log("Delete Doanh Nghiep:" & intId & "", Function_Name.DoanhNghiepPTKT, Audit_Type.Delete, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
+                                Else
+                                    strDN1 += dn.TenDoanhNghiep & "; "
+                                End If
+                            Else
+                                strDN2 += dn.TenDoanhNghiep & "; "
+                            End If
+                        Else
+                            strDN3 += dn.TenDoanhNghiep & "; "
+                        End If
                     End If
                 Next
+                strCombine += If(Not strDN1.Equals(""), "Doanh nghiệp (" & strDN1 & ") đang được tham chiếu từ biên bản thanh tra hoặc phiếu kiểm tra.\n", "")
+                strCombine += If(Not strDN2.Equals(""), "Doanh nghiệp (" & strDN2 & ") bạn không có quyền xóa.\n", "")
+                strCombine += If(Not strDN3.Equals(""), "Doanh nghiệp (" & strDN3 & ") không tồn tại.", "")
+
                 If intCount > 0 Then
-                    Excute_Javascript("Alertbox('Xóa dữ liệu thành công. " & intCount.ToString & " /" & intTotal.ToString & " record.');", Me.Page, True)
+                    Excute_Javascript("Alertbox('Xóa dữ liệu thành công. " & intCount.ToString & " /" & intTotal.ToString & " record. " & If(Not strCombine.Equals(""), "Các doanh nghiệp không xóa được do:\n" & strCombine, "") & "');", Me.Page, True)
                 Else
-                    Excute_Javascript("Alertbox('Xóa doanh nghiệp thất bại');", Me.Page, True)
+                    Excute_Javascript("Alertbox('Xóa doanh nghiệp thất bại do:\n" & If(Not strCombine.Equals(""), strCombine, "") & "');", Me.Page, True)
                 End If
             Catch ex As Exception
                 log4net.Config.XmlConfigurator.Configure()
                 log.Error("Error error " & AddTabSpace(1) & Session("Username") & AddTabSpace(1) & "IP:" & GetIPAddress(), ex)
-                Excute_Javascript("Alertbox('Xóa doanh nghiệp thất bại do doanh nghiệp đã được tạo phiếu');", Me.Page, True)
+                Excute_Javascript("Alertbox('Xóa doanh nghiệp thất bại (" & ex.Message & ").');", Me.Page, True)
             End Try
         End Using
 

@@ -177,9 +177,28 @@
             </div>
             <div class="DivRow">
             </div>
+            <div class="Div-Left">
+                <div class="DivLabelDoanhNghiep">
+                    <asp:Label ID="lblSochungnhandkkd" CssClass="TextLabel" runat="server" Text="2. Giấy ĐKKD số:" /><span
+                        class="fieldRequired">&nbsp;</span>
+                </div>
+                <cc2:ValidationTextBox ID="txtSochungnhandkkd" runat="server" CssClass='TextBox ToolTip'
+                    DataType="requiredAndAlphaNumeric" AssociatedLableText="số chứng nhận ĐKKD hoặc giấy phép đầu tư" />
+            </div>
+            <div class="Div-Left">
+                <div class="DivLabelDoanhNghiep">
+                    <asp:Label ID="lblNgaychungnhandkkd" CssClass="TextLabel" runat="server" Text="Ngày cấp giấy ĐKKD:" /><span
+                        class="fieldRequired">&nbsp;</span>
+                </div>
+                <cc2:ValidationTextBox ID="txtNgaychungnhandkkd" runat="server" CssClass='TextBox Date ToolTip'
+                    AssociatedLableText="đúng định dạng dd/mm/yyyy" DataType="required" />
+                (dd/mm/yyyy)
+            </div>
+            <div class="DivRow">
+            </div>
             <div class="Div-Right">
                 <div class="DivLabelDoanhNghiep">
-                    <asp:Label ID="lblLoaihinhdnid" CssClass="TextLabel" runat="server" Text="2. Loại hình kinh tế:" /><span
+                    <asp:Label ID="lblLoaihinhdnid" CssClass="TextLabel" runat="server" Text="3. Loại hình kinh tế:" /><span
                         class="fieldRequired">&nbsp;</span>
                 </div>
                 <cc1:ValidationDropdownlist ID="ddlLoaiHinhDN" runat="server" Style="width: 248px"
@@ -189,7 +208,7 @@
             </div>
             <div class="Div-Left">
                 <div class="DivLabelDoanhNghiep">
-                    <asp:Label ID="lblTrusochinh" CssClass="TextLabel" runat="server" Text="3. Trụ sở chính:" /><span
+                    <asp:Label ID="lblTrusochinh" CssClass="TextLabel" runat="server" Text="4. Trụ sở chính:" /><span
                         class="fieldRequired">&nbsp;</span>
                 </div>
                 <cc2:ValidationTextBox ID="txtTrusochinh" runat="server" CssClass='TextBox ToolTip' DataType="required"
@@ -226,7 +245,7 @@
             </div>
             <div class="Div-Left">
                 <div class="DivLabelDoanhNghiep">
-                    <asp:Label ID="lblLoaihinhsxid1" CssClass="TextLabel" runat="server" Text="4. Lĩnh vực sản xuất kinh doanh chủ yếu:" /><span
+                    <asp:Label ID="lblLoaihinhsxid1" CssClass="TextLabel" runat="server" Text="5. Lĩnh vực sản xuất kinh doanh chủ yếu:" /><span
                         class="fieldRequired">&nbsp;</span>
                 </div>
                 <cc1:ValidationDropdownlist ID="ddlLinhVuc" runat="server" CssClass='DropDownList'
@@ -280,25 +299,7 @@
             </div>
             <div class="DivRow">
             </div>
-            <div class="Div-Left">
-                <div class="DivLabelDoanhNghiep">
-                    <asp:Label ID="lblSochungnhandkkd" CssClass="TextLabel" runat="server" Text="5. Giấy ĐKKD số:" /><span
-                        class="fieldRequired">&nbsp;</span>
-                </div>
-                <cc2:ValidationTextBox ID="txtSochungnhandkkd" runat="server" CssClass='TextBox ToolTip'
-                    DataType="requiredAndAlphaNumeric" AssociatedLableText="số chứng nhận ĐKKD hoặc giấy phép đầu tư" />
-            </div>
-            <div class="Div-Left">
-                <div class="DivLabelDoanhNghiep">
-                    <asp:Label ID="lblNgaychungnhandkkd" CssClass="TextLabel" runat="server" Text="Ngày cấp giấy ĐKKD:" /><span
-                        class="fieldRequired">&nbsp;</span>
-                </div>
-                <cc2:ValidationTextBox ID="txtNgaychungnhandkkd" runat="server" CssClass='TextBox Date ToolTip'
-                    AssociatedLableText="đúng định dạng dd/mm/yyyy" DataType="required" />
-                (dd/mm/yyyy)
-            </div>
-            <div class="DivRow">
-            </div>
+            
             <div class="Div-Left">
                 <div class="DivLabelDoanhNghiep">
                     <asp:Label ID="lblLanthaydoi" CssClass="TextLabel" runat="server" Text="Lần thay đổi giấy ĐKKD:" />
@@ -323,12 +324,12 @@
             </div>
             <div class="DivRow">
             </div>
-            <div class="Div-Left">
+            <div>
                 <div class="DivLabelDoanhNghiep">
-                    <asp:Label ID="lblSochinhanh" CssClass="TextLabel" runat="server" Text="Số chi nhánh, đơn vị hạch toán phụ thuộc:" />
+                    <asp:Label ID="lblSochinhanh" CssClass="TextLabel" runat="server" Text="Các chi nhánh, đơn vị hạch toán phụ thuộc:" />
                 </div>
-                <cc2:ValidationTextBox ID="txtSochinhanh" runat="server" CssClass='TextBox' DataType="integer"
-                    AssociatedLableText="Nhập số" />
+                <asp:TextBox ID="txtSochinhanh" runat="server" CssClass='TextBox' Height="150px"
+                    Width="690px" TextMode="MultiLine"></asp:TextBox>
             </div>
             <div class="DivRow">
             </div>

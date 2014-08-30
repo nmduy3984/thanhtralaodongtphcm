@@ -18,7 +18,7 @@ Imports System.Runtime.Serialization
 Imports System.Xml.Serialization
 
 
-<Assembly: EdmSchemaAttribute("1539ba36-c405-4ddd-9aeb-0202c7d0ce5c")>
+<Assembly: EdmSchemaAttribute("e9589d8b-2c06-4df7-a251-be53edaa9699")>
 #Region "EDM Relationship Metadata"
 <Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_SysFuncRolesStatusPermission_Function", "Function", System.Data.Metadata.Edm.RelationshipMultiplicity.One, GetType(ThanhTraLaoDongModel.[Function]), "SysFuncRolesStatusPermission", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.SysFuncRolesStatusPermission), True)>
 <Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_UsersMenu_Menu", "Menu", System.Data.Metadata.Edm.RelationshipMultiplicity.One, GetType(ThanhTraLaoDongModel.Menu), "UsersMenu", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.UsersMenu), True)>
@@ -38,34 +38,34 @@ Imports System.Xml.Serialization
 <Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_OTHER_LIST_OTHER_LIST_TABLE", "OtherListTable", System.Data.Metadata.Edm.RelationshipMultiplicity.One, GetType(ThanhTraLaoDongModel.OtherListTable), "OtherList", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.OtherList), True)>
 <Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_HanhViDN_HanhVi", "DanhMucHanhVi", System.Data.Metadata.Edm.RelationshipMultiplicity.One, GetType(ThanhTraLaoDongModel.DanhMucHanhVi), "HanhViDN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.HanhViDN), True)>
 <Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoiKienNghi_DanhMucKienNghi", "DanhMucKienNghi", System.Data.Metadata.Edm.RelationshipMultiplicity.One, GetType(ThanhTraLaoDongModel.DanhMucKienNghi), "CauHoiKienNghi", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoiKienNghi), True)>
-<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi1_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi1", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi1), True)>
-<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi12_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi12", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi12), True)>
-<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_HanhViDN_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.One, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "HanhViDN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.HanhViDN), True)>
-<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_KetLuan_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "KetLuan", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.KetLuan), True)>
 <Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoiKienNghi_CauHoiHierarchy", "CauHoiHierarchy", System.Data.Metadata.Edm.RelationshipMultiplicity.One, GetType(ThanhTraLaoDongModel.CauHoiHierarchy), "CauHoiKienNghi", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoiKienNghi), True)>
-<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi9_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.One, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi9", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi9), True)>
-<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi6_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi6", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi6), True)>
-<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi10_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi10", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi10), True)>
-<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi11_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi11", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi11), True)>
-<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi4_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi4", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi4), True)>
 <Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_DanhGia_Users", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.User), "DanhGia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.DanhGia), True)>
 <Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_GopY_Users", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.User), "GopY", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.GopY), True)>
 <Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_Huyen_Tinh", "Tinh", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.Tinh), "Huyen", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.Huyen), True)>
 <Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_UsersTinh_Tinh", "Tinh", System.Data.Metadata.Edm.RelationshipMultiplicity.One, GetType(ThanhTraLaoDongModel.Tinh), "UsersTinh", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.UsersTinh), True)>
-<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi2_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi2", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi2), True)>
-<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi3_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi3", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi3), True)>
-<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi7_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi7", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi7), True)>
-<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi8_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi8", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi8), True)>
-<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi5_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi5", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi5), True)>
 <Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_QuyetDinhThanhTra_Tinh", "Tinh", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.Tinh), "QuyetDinhThanhTra", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.QuyetDinhThanhTra), True)>
 <Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_QuyetDinhThanhTra_Tinh1", "Tinh", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.Tinh), "QuyetDinhThanhTra", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.QuyetDinhThanhTra), True)>
+<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_KhuCongNghiep_Tinh", "Tinh", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.Tinh), "KhuCongNghiep", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.KhuCongNghiep), True)>
 <Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_DoanhNghiep_Huyen", "Huyen", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.Huyen), "DoanhNghiep", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.DoanhNghiep), True)>
 <Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_DoanhNghiep_LoaiHinhDoanhNghiep", "LoaiHinhDoanhNghiep", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.LoaiHinhDoanhNghiep), "DoanhNghiep", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.DoanhNghiep), True)>
 <Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_DoanhNghiep_LoaiHinhSanXuat1", "LoaiHinhSanXuat", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.LoaiHinhSanXuat), "DoanhNghiep", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.DoanhNghiep), True)>
 <Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_DoanhNghiep_Tinh", "Tinh", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.Tinh), "DoanhNghiep", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.DoanhNghiep), True)>
-<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_PhieuNhapHeader_DoanhNghiep", "DoanhNghiep", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.DoanhNghiep), "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), True)>
 <Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_QuyetDinhTTDoanhNghiep_DoanhNghiep", "DoanhNghiep", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.DoanhNghiep), "QuyetDinhTTDoanhNghiep", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.QuyetDinhTTDoanhNghiep), True)>
-<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_KhuCongNghiep_Tinh", "Tinh", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.Tinh), "KhuCongNghiep", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.KhuCongNghiep), True)>
+<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi1_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi1", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi1), True)>
+<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi10_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi10", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi10), True)>
+<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi11_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi11", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi11), True)>
+<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi12_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi12", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi12), True)>
+<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi2_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi2", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi2), True)>
+<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi3_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi3", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi3), True)>
+<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi4_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi4", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi4), True)>
+<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi5_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi5", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi5), True)>
+<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi6_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi6", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi6), True)>
+<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi7_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi7", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi7), True)>
+<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi8_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi8", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi8), True)>
+<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_CauHoi9_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.One, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "CauHoi9", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.CauHoi9), True)>
+<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_PhieuNhapHeader_DoanhNghiep", "DoanhNghiep", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.DoanhNghiep), "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), True)>
+<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_HanhViDN_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.One, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "HanhViDN", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.HanhViDN), True)>
+<Assembly: EdmRelationshipAttribute("ThanhTraLaoDongModel", "FK_KetLuan_PhieuNhapHeader", "PhieuNhapHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, GetType(ThanhTraLaoDongModel.PhieuNhapHeader), "KetLuan", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, GetType(ThanhTraLaoDongModel.KetLuan), True)>
 
 #End Region
 
@@ -556,20 +556,6 @@ Namespace ThanhTraLaoDongModel
         ''' <summary>
         ''' No Metadata Documentation available.
         ''' </summary>
-        Public ReadOnly Property PhieuNhapHeaders() As ObjectSet(Of PhieuNhapHeader)
-            Get
-                If (_PhieuNhapHeaders Is Nothing) Then
-                    _PhieuNhapHeaders = MyBase.CreateObjectSet(Of PhieuNhapHeader)("PhieuNhapHeaders")
-                End If
-                Return _PhieuNhapHeaders
-            End Get
-        End Property
-    
-        Private _PhieuNhapHeaders As ObjectSet(Of PhieuNhapHeader)
-    
-        ''' <summary>
-        ''' No Metadata Documentation available.
-        ''' </summary>
         Public ReadOnly Property DanhMucTrichDans() As ObjectSet(Of DanhMucTrichDan)
             Get
                 If (_DanhMucTrichDans Is Nothing) Then
@@ -878,6 +864,20 @@ Namespace ThanhTraLaoDongModel
         ''' <summary>
         ''' No Metadata Documentation available.
         ''' </summary>
+        Public ReadOnly Property KhuCongNghieps() As ObjectSet(Of KhuCongNghiep)
+            Get
+                If (_KhuCongNghieps Is Nothing) Then
+                    _KhuCongNghieps = MyBase.CreateObjectSet(Of KhuCongNghiep)("KhuCongNghieps")
+                End If
+                Return _KhuCongNghieps
+            End Get
+        End Property
+    
+        Private _KhuCongNghieps As ObjectSet(Of KhuCongNghiep)
+    
+        ''' <summary>
+        ''' No Metadata Documentation available.
+        ''' </summary>
         Public ReadOnly Property DoanhNghieps() As ObjectSet(Of DoanhNghiep)
             Get
                 If (_DoanhNghieps Is Nothing) Then
@@ -892,16 +892,16 @@ Namespace ThanhTraLaoDongModel
         ''' <summary>
         ''' No Metadata Documentation available.
         ''' </summary>
-        Public ReadOnly Property KhuCongNghieps() As ObjectSet(Of KhuCongNghiep)
+        Public ReadOnly Property PhieuNhapHeaders() As ObjectSet(Of PhieuNhapHeader)
             Get
-                If (_KhuCongNghieps Is Nothing) Then
-                    _KhuCongNghieps = MyBase.CreateObjectSet(Of KhuCongNghiep)("KhuCongNghieps")
+                If (_PhieuNhapHeaders Is Nothing) Then
+                    _PhieuNhapHeaders = MyBase.CreateObjectSet(Of PhieuNhapHeader)("PhieuNhapHeaders")
                 End If
-                Return _KhuCongNghieps
+                Return _PhieuNhapHeaders
             End Get
         End Property
     
-        Private _KhuCongNghieps As ObjectSet(Of KhuCongNghiep)
+        Private _PhieuNhapHeaders As ObjectSet(Of PhieuNhapHeader)
 
         #End Region
 
@@ -1125,13 +1125,6 @@ Namespace ThanhTraLaoDongModel
         End Sub
     
         ''' <summary>
-        ''' Deprecated Method for adding a new object to the PhieuNhapHeaders EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
-        ''' </summary>
-        Public Sub AddToPhieuNhapHeaders(ByVal phieuNhapHeader As PhieuNhapHeader)
-            MyBase.AddObject("PhieuNhapHeaders", phieuNhapHeader)
-        End Sub
-    
-        ''' <summary>
         ''' Deprecated Method for adding a new object to the DanhMucTrichDans EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
         ''' </summary>
         Public Sub AddToDanhMucTrichDans(ByVal danhMucTrichDan As DanhMucTrichDan)
@@ -1286,6 +1279,13 @@ Namespace ThanhTraLaoDongModel
         End Sub
     
         ''' <summary>
+        ''' Deprecated Method for adding a new object to the KhuCongNghieps EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+        ''' </summary>
+        Public Sub AddToKhuCongNghieps(ByVal khuCongNghiep As KhuCongNghiep)
+            MyBase.AddObject("KhuCongNghieps", khuCongNghiep)
+        End Sub
+    
+        ''' <summary>
         ''' Deprecated Method for adding a new object to the DoanhNghieps EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
         ''' </summary>
         Public Sub AddToDoanhNghieps(ByVal doanhNghiep As DoanhNghiep)
@@ -1293,10 +1293,10 @@ Namespace ThanhTraLaoDongModel
         End Sub
     
         ''' <summary>
-        ''' Deprecated Method for adding a new object to the KhuCongNghieps EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+        ''' Deprecated Method for adding a new object to the PhieuNhapHeaders EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
         ''' </summary>
-        Public Sub AddToKhuCongNghieps(ByVal khuCongNghiep As KhuCongNghiep)
-            MyBase.AddObject("KhuCongNghieps", khuCongNghiep)
+        Public Sub AddToPhieuNhapHeaders(ByVal phieuNhapHeader As PhieuNhapHeader)
+            MyBase.AddObject("PhieuNhapHeaders", phieuNhapHeader)
         End Sub
 
         #End Region
@@ -15052,21 +15052,21 @@ Namespace ThanhTraLaoDongModel
         ''' </summary>
         <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=true)>
         <DataMemberAttribute()>
-        Public Property SoChiNhanh() As Nullable(Of Global.System.Int32)
+        Public Property SoChiNhanh() As Global.System.String
             Get
                 Return _SoChiNhanh
             End Get
             Set
                 OnSoChiNhanhChanging(value)
                 ReportPropertyChanging("SoChiNhanh")
-                _SoChiNhanh = StructuralObject.SetValidValue(value)
+                _SoChiNhanh = StructuralObject.SetValidValue(value, true)
                 ReportPropertyChanged("SoChiNhanh")
                 OnSoChiNhanhChanged()
             End Set
         End Property
     
-        Private _SoChiNhanh As Nullable(Of Global.System.Int32)
-        Private Partial Sub OnSoChiNhanhChanging(value As Nullable(Of Global.System.Int32))
+        Private _SoChiNhanh As Global.System.String
+        Private Partial Sub OnSoChiNhanhChanging(value As Global.System.String)
         End Sub
     
         Private Partial Sub OnSoChiNhanhChanged()
@@ -15706,14 +15706,14 @@ Namespace ThanhTraLaoDongModel
         <XmlIgnoreAttribute()>
         <SoapIgnoreAttribute()>
         <DataMemberAttribute()>
-        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_PhieuNhapHeader_DoanhNghiep", "PhieuNhapHeader")>
-         Public Property PhieuNhapHeaders() As EntityCollection(Of PhieuNhapHeader)
+        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_QuyetDinhTTDoanhNghiep_DoanhNghiep", "QuyetDinhTTDoanhNghiep")>
+         Public Property QuyetDinhTTDoanhNghieps() As EntityCollection(Of QuyetDinhTTDoanhNghiep)
             Get
-                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of PhieuNhapHeader)("ThanhTraLaoDongModel.FK_PhieuNhapHeader_DoanhNghiep", "PhieuNhapHeader")
+                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of QuyetDinhTTDoanhNghiep)("ThanhTraLaoDongModel.FK_QuyetDinhTTDoanhNghiep_DoanhNghiep", "QuyetDinhTTDoanhNghiep")
             End Get
             Set
                 If (Not value Is Nothing)
-                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of PhieuNhapHeader)("ThanhTraLaoDongModel.FK_PhieuNhapHeader_DoanhNghiep", "PhieuNhapHeader", value)
+                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of QuyetDinhTTDoanhNghiep)("ThanhTraLaoDongModel.FK_QuyetDinhTTDoanhNghiep_DoanhNghiep", "QuyetDinhTTDoanhNghiep", value)
                 End If
             End Set
         End Property
@@ -15724,14 +15724,14 @@ Namespace ThanhTraLaoDongModel
         <XmlIgnoreAttribute()>
         <SoapIgnoreAttribute()>
         <DataMemberAttribute()>
-        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_QuyetDinhTTDoanhNghiep_DoanhNghiep", "QuyetDinhTTDoanhNghiep")>
-         Public Property QuyetDinhTTDoanhNghieps() As EntityCollection(Of QuyetDinhTTDoanhNghiep)
+        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_PhieuNhapHeader_DoanhNghiep", "PhieuNhapHeader")>
+         Public Property PhieuNhapHeaders() As EntityCollection(Of PhieuNhapHeader)
             Get
-                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of QuyetDinhTTDoanhNghiep)("ThanhTraLaoDongModel.FK_QuyetDinhTTDoanhNghiep_DoanhNghiep", "QuyetDinhTTDoanhNghiep")
+                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of PhieuNhapHeader)("ThanhTraLaoDongModel.FK_PhieuNhapHeader_DoanhNghiep", "PhieuNhapHeader")
             End Get
             Set
                 If (Not value Is Nothing)
-                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of QuyetDinhTTDoanhNghiep)("ThanhTraLaoDongModel.FK_QuyetDinhTTDoanhNghiep_DoanhNghiep", "QuyetDinhTTDoanhNghiep", value)
+                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of PhieuNhapHeader)("ThanhTraLaoDongModel.FK_PhieuNhapHeader_DoanhNghiep", "PhieuNhapHeader", value)
                 End If
             End Set
         End Property
@@ -19736,21 +19736,21 @@ Namespace ThanhTraLaoDongModel
         ''' </summary>
         <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=true)>
         <DataMemberAttribute()>
-        Public Property SoChiNhanh() As Nullable(Of Global.System.Int32)
+        Public Property SoChiNhanh() As Global.System.String
             Get
                 Return _SoChiNhanh
             End Get
             Set
                 OnSoChiNhanhChanging(value)
                 ReportPropertyChanging("SoChiNhanh")
-                _SoChiNhanh = StructuralObject.SetValidValue(value)
+                _SoChiNhanh = StructuralObject.SetValidValue(value, true)
                 ReportPropertyChanged("SoChiNhanh")
                 OnSoChiNhanhChanged()
             End Set
         End Property
     
-        Private _SoChiNhanh As Nullable(Of Global.System.Int32)
-        Private Partial Sub OnSoChiNhanhChanging(value As Nullable(Of Global.System.Int32))
+        Private _SoChiNhanh As Global.System.String
+        Private Partial Sub OnSoChiNhanhChanging(value As Global.System.String)
         End Sub
     
         Private Partial Sub OnSoChiNhanhChanged()
@@ -19829,31 +19829,6 @@ Namespace ThanhTraLaoDongModel
         End Sub
     
         Private Partial Sub OnSoNguoiLamNgheNguyHiemChanged()
-        End Sub
-    
-        ''' <summary>
-        ''' No Metadata Documentation available.
-        ''' </summary>
-        <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=true)>
-        <DataMemberAttribute()>
-        Public Property SoNguoiLamCongViecYeuCauNghiemNgat() As Nullable(Of Global.System.Int32)
-            Get
-                Return _SoNguoiLamCongViecYeuCauNghiemNgat
-            End Get
-            Set
-                OnSoNguoiLamCongViecYeuCauNghiemNgatChanging(value)
-                ReportPropertyChanging("SoNguoiLamCongViecYeuCauNghiemNgat")
-                _SoNguoiLamCongViecYeuCauNghiemNgat = StructuralObject.SetValidValue(value)
-                ReportPropertyChanged("SoNguoiLamCongViecYeuCauNghiemNgat")
-                OnSoNguoiLamCongViecYeuCauNghiemNgatChanged()
-            End Set
-        End Property
-    
-        Private _SoNguoiLamCongViecYeuCauNghiemNgat As Nullable(Of Global.System.Int32)
-        Private Partial Sub OnSoNguoiLamCongViecYeuCauNghiemNgatChanging(value As Nullable(Of Global.System.Int32))
-        End Sub
-    
-        Private Partial Sub OnSoNguoiLamCongViecYeuCauNghiemNgatChanged()
         End Sub
     
         ''' <summary>
@@ -20161,6 +20136,31 @@ Namespace ThanhTraLaoDongModel
         ''' </summary>
         <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=true)>
         <DataMemberAttribute()>
+        Public Property SoNguoiLamCongViecYeuCauNghiemNgat() As Nullable(Of Global.System.Int32)
+            Get
+                Return _SoNguoiLamCongViecYeuCauNghiemNgat
+            End Get
+            Set
+                OnSoNguoiLamCongViecYeuCauNghiemNgatChanging(value)
+                ReportPropertyChanging("SoNguoiLamCongViecYeuCauNghiemNgat")
+                _SoNguoiLamCongViecYeuCauNghiemNgat = StructuralObject.SetValidValue(value)
+                ReportPropertyChanged("SoNguoiLamCongViecYeuCauNghiemNgat")
+                OnSoNguoiLamCongViecYeuCauNghiemNgatChanged()
+            End Set
+        End Property
+    
+        Private _SoNguoiLamCongViecYeuCauNghiemNgat As Nullable(Of Global.System.Int32)
+        Private Partial Sub OnSoNguoiLamCongViecYeuCauNghiemNgatChanging(value As Nullable(Of Global.System.Int32))
+        End Sub
+    
+        Private Partial Sub OnSoNguoiLamCongViecYeuCauNghiemNgatChanged()
+        End Sub
+    
+        ''' <summary>
+        ''' No Metadata Documentation available.
+        ''' </summary>
+        <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=true)>
+        <DataMemberAttribute()>
         Public Property TongLoiNhuanSauThue() As Nullable(Of Global.System.Decimal)
             Get
                 Return _TongLoiNhuanSauThue
@@ -20186,31 +20186,6 @@ Namespace ThanhTraLaoDongModel
         ''' </summary>
         <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=true)>
         <DataMemberAttribute()>
-        Public Property ThanhPhanThamGia() As Global.System.String
-            Get
-                Return _ThanhPhanThamGia
-            End Get
-            Set
-                OnThanhPhanThamGiaChanging(value)
-                ReportPropertyChanging("ThanhPhanThamGia")
-                _ThanhPhanThamGia = StructuralObject.SetValidValue(value, true)
-                ReportPropertyChanged("ThanhPhanThamGia")
-                OnThanhPhanThamGiaChanged()
-            End Set
-        End Property
-    
-        Private _ThanhPhanThamGia As Global.System.String
-        Private Partial Sub OnThanhPhanThamGiaChanging(value As Global.System.String)
-        End Sub
-    
-        Private Partial Sub OnThanhPhanThamGiaChanged()
-        End Sub
-    
-        ''' <summary>
-        ''' No Metadata Documentation available.
-        ''' </summary>
-        <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=true)>
-        <DataMemberAttribute()>
         Public Property DaiDienDoanhNghiep() As Global.System.String
             Get
                 Return _DaiDienDoanhNghiep
@@ -20229,6 +20204,31 @@ Namespace ThanhTraLaoDongModel
         End Sub
     
         Private Partial Sub OnDaiDienDoanhNghiepChanged()
+        End Sub
+    
+        ''' <summary>
+        ''' No Metadata Documentation available.
+        ''' </summary>
+        <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=true)>
+        <DataMemberAttribute()>
+        Public Property ThanhPhanThamGia() As Global.System.String
+            Get
+                Return _ThanhPhanThamGia
+            End Get
+            Set
+                OnThanhPhanThamGiaChanging(value)
+                ReportPropertyChanging("ThanhPhanThamGia")
+                _ThanhPhanThamGia = StructuralObject.SetValidValue(value, true)
+                ReportPropertyChanged("ThanhPhanThamGia")
+                OnThanhPhanThamGiaChanged()
+            End Set
+        End Property
+    
+        Private _ThanhPhanThamGia As Global.System.String
+        Private Partial Sub OnThanhPhanThamGiaChanging(value As Global.System.String)
+        End Sub
+    
+        Private Partial Sub OnThanhPhanThamGiaChanged()
         End Sub
     
         ''' <summary>
@@ -20330,6 +20330,31 @@ Namespace ThanhTraLaoDongModel
     
         Private Partial Sub OnNguoiLienHeChanged()
         End Sub
+    
+        ''' <summary>
+        ''' No Metadata Documentation available.
+        ''' </summary>
+        <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=true)>
+        <DataMemberAttribute()>
+        Public Property MaPhieu() As Global.System.String
+            Get
+                Return _MaPhieu
+            End Get
+            Set
+                OnMaPhieuChanging(value)
+                ReportPropertyChanging("MaPhieu")
+                _MaPhieu = StructuralObject.SetValidValue(value, true)
+                ReportPropertyChanged("MaPhieu")
+                OnMaPhieuChanged()
+            End Set
+        End Property
+    
+        Private _MaPhieu As Global.System.String
+        Private Partial Sub OnMaPhieuChanging(value As Global.System.String)
+        End Sub
+    
+        Private Partial Sub OnMaPhieuChanged()
+        End Sub
 
         #End Region
 
@@ -20349,96 +20374,6 @@ Namespace ThanhTraLaoDongModel
             Set
                 If (Not value Is Nothing)
                     CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of CauHoi1)("ThanhTraLaoDongModel.FK_CauHoi1_PhieuNhapHeader", "CauHoi1", value)
-                End If
-            End Set
-        End Property
-    
-        ''' <summary>
-        ''' No Metadata Documentation available.
-        ''' </summary>
-        <XmlIgnoreAttribute()>
-        <SoapIgnoreAttribute()>
-        <DataMemberAttribute()>
-        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_CauHoi12_PhieuNhapHeader", "CauHoi12")>
-         Public Property CauHoi12() As EntityCollection(Of CauHoi12)
-            Get
-                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of CauHoi12)("ThanhTraLaoDongModel.FK_CauHoi12_PhieuNhapHeader", "CauHoi12")
-            End Get
-            Set
-                If (Not value Is Nothing)
-                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of CauHoi12)("ThanhTraLaoDongModel.FK_CauHoi12_PhieuNhapHeader", "CauHoi12", value)
-                End If
-            End Set
-        End Property
-    
-        ''' <summary>
-        ''' No Metadata Documentation available.
-        ''' </summary>
-        <XmlIgnoreAttribute()>
-        <SoapIgnoreAttribute()>
-        <DataMemberAttribute()>
-        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_HanhViDN_PhieuNhapHeader", "HanhViDN")>
-         Public Property HanhViDNs() As EntityCollection(Of HanhViDN)
-            Get
-                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of HanhViDN)("ThanhTraLaoDongModel.FK_HanhViDN_PhieuNhapHeader", "HanhViDN")
-            End Get
-            Set
-                If (Not value Is Nothing)
-                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of HanhViDN)("ThanhTraLaoDongModel.FK_HanhViDN_PhieuNhapHeader", "HanhViDN", value)
-                End If
-            End Set
-        End Property
-    
-        ''' <summary>
-        ''' No Metadata Documentation available.
-        ''' </summary>
-        <XmlIgnoreAttribute()>
-        <SoapIgnoreAttribute()>
-        <DataMemberAttribute()>
-        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_KetLuan_PhieuNhapHeader", "KetLuan")>
-         Public Property KetLuans() As EntityCollection(Of KetLuan)
-            Get
-                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of KetLuan)("ThanhTraLaoDongModel.FK_KetLuan_PhieuNhapHeader", "KetLuan")
-            End Get
-            Set
-                If (Not value Is Nothing)
-                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of KetLuan)("ThanhTraLaoDongModel.FK_KetLuan_PhieuNhapHeader", "KetLuan", value)
-                End If
-            End Set
-        End Property
-    
-        ''' <summary>
-        ''' No Metadata Documentation available.
-        ''' </summary>
-        <XmlIgnoreAttribute()>
-        <SoapIgnoreAttribute()>
-        <DataMemberAttribute()>
-        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_CauHoi9_PhieuNhapHeader", "CauHoi9")>
-         Public Property CauHoi9() As EntityCollection(Of CauHoi9)
-            Get
-                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of CauHoi9)("ThanhTraLaoDongModel.FK_CauHoi9_PhieuNhapHeader", "CauHoi9")
-            End Get
-            Set
-                If (Not value Is Nothing)
-                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of CauHoi9)("ThanhTraLaoDongModel.FK_CauHoi9_PhieuNhapHeader", "CauHoi9", value)
-                End If
-            End Set
-        End Property
-    
-        ''' <summary>
-        ''' No Metadata Documentation available.
-        ''' </summary>
-        <XmlIgnoreAttribute()>
-        <SoapIgnoreAttribute()>
-        <DataMemberAttribute()>
-        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_CauHoi6_PhieuNhapHeader", "CauHoi6")>
-         Public Property CauHoi6() As EntityCollection(Of CauHoi6)
-            Get
-                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of CauHoi6)("ThanhTraLaoDongModel.FK_CauHoi6_PhieuNhapHeader", "CauHoi6")
-            End Get
-            Set
-                If (Not value Is Nothing)
-                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of CauHoi6)("ThanhTraLaoDongModel.FK_CauHoi6_PhieuNhapHeader", "CauHoi6", value)
                 End If
             End Set
         End Property
@@ -20485,14 +20420,14 @@ Namespace ThanhTraLaoDongModel
         <XmlIgnoreAttribute()>
         <SoapIgnoreAttribute()>
         <DataMemberAttribute()>
-        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_CauHoi4_PhieuNhapHeader", "CauHoi4")>
-         Public Property CauHoi4() As EntityCollection(Of CauHoi4)
+        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_CauHoi12_PhieuNhapHeader", "CauHoi12")>
+         Public Property CauHoi12() As EntityCollection(Of CauHoi12)
             Get
-                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of CauHoi4)("ThanhTraLaoDongModel.FK_CauHoi4_PhieuNhapHeader", "CauHoi4")
+                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of CauHoi12)("ThanhTraLaoDongModel.FK_CauHoi12_PhieuNhapHeader", "CauHoi12")
             End Get
             Set
                 If (Not value Is Nothing)
-                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of CauHoi4)("ThanhTraLaoDongModel.FK_CauHoi4_PhieuNhapHeader", "CauHoi4", value)
+                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of CauHoi12)("ThanhTraLaoDongModel.FK_CauHoi12_PhieuNhapHeader", "CauHoi12", value)
                 End If
             End Set
         End Property
@@ -20539,6 +20474,60 @@ Namespace ThanhTraLaoDongModel
         <XmlIgnoreAttribute()>
         <SoapIgnoreAttribute()>
         <DataMemberAttribute()>
+        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_CauHoi4_PhieuNhapHeader", "CauHoi4")>
+         Public Property CauHoi4() As EntityCollection(Of CauHoi4)
+            Get
+                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of CauHoi4)("ThanhTraLaoDongModel.FK_CauHoi4_PhieuNhapHeader", "CauHoi4")
+            End Get
+            Set
+                If (Not value Is Nothing)
+                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of CauHoi4)("ThanhTraLaoDongModel.FK_CauHoi4_PhieuNhapHeader", "CauHoi4", value)
+                End If
+            End Set
+        End Property
+    
+        ''' <summary>
+        ''' No Metadata Documentation available.
+        ''' </summary>
+        <XmlIgnoreAttribute()>
+        <SoapIgnoreAttribute()>
+        <DataMemberAttribute()>
+        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_CauHoi5_PhieuNhapHeader", "CauHoi5")>
+         Public Property CauHoi5() As EntityCollection(Of CauHoi5)
+            Get
+                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of CauHoi5)("ThanhTraLaoDongModel.FK_CauHoi5_PhieuNhapHeader", "CauHoi5")
+            End Get
+            Set
+                If (Not value Is Nothing)
+                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of CauHoi5)("ThanhTraLaoDongModel.FK_CauHoi5_PhieuNhapHeader", "CauHoi5", value)
+                End If
+            End Set
+        End Property
+    
+        ''' <summary>
+        ''' No Metadata Documentation available.
+        ''' </summary>
+        <XmlIgnoreAttribute()>
+        <SoapIgnoreAttribute()>
+        <DataMemberAttribute()>
+        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_CauHoi6_PhieuNhapHeader", "CauHoi6")>
+         Public Property CauHoi6() As EntityCollection(Of CauHoi6)
+            Get
+                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of CauHoi6)("ThanhTraLaoDongModel.FK_CauHoi6_PhieuNhapHeader", "CauHoi6")
+            End Get
+            Set
+                If (Not value Is Nothing)
+                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of CauHoi6)("ThanhTraLaoDongModel.FK_CauHoi6_PhieuNhapHeader", "CauHoi6", value)
+                End If
+            End Set
+        End Property
+    
+        ''' <summary>
+        ''' No Metadata Documentation available.
+        ''' </summary>
+        <XmlIgnoreAttribute()>
+        <SoapIgnoreAttribute()>
+        <DataMemberAttribute()>
         <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_CauHoi7_PhieuNhapHeader", "CauHoi7")>
          Public Property CauHoi7() As EntityCollection(Of CauHoi7)
             Get
@@ -20575,14 +20564,14 @@ Namespace ThanhTraLaoDongModel
         <XmlIgnoreAttribute()>
         <SoapIgnoreAttribute()>
         <DataMemberAttribute()>
-        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_CauHoi5_PhieuNhapHeader", "CauHoi5")>
-         Public Property CauHoi5() As EntityCollection(Of CauHoi5)
+        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_CauHoi9_PhieuNhapHeader", "CauHoi9")>
+         Public Property CauHoi9() As EntityCollection(Of CauHoi9)
             Get
-                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of CauHoi5)("ThanhTraLaoDongModel.FK_CauHoi5_PhieuNhapHeader", "CauHoi5")
+                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of CauHoi9)("ThanhTraLaoDongModel.FK_CauHoi9_PhieuNhapHeader", "CauHoi9")
             End Get
             Set
                 If (Not value Is Nothing)
-                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of CauHoi5)("ThanhTraLaoDongModel.FK_CauHoi5_PhieuNhapHeader", "CauHoi5", value)
+                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of CauHoi9)("ThanhTraLaoDongModel.FK_CauHoi9_PhieuNhapHeader", "CauHoi9", value)
                 End If
             End Set
         End Property
@@ -20614,6 +20603,42 @@ Namespace ThanhTraLaoDongModel
             Set
                 If (Not value Is Nothing)
                     CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedReference(Of DoanhNghiep)("ThanhTraLaoDongModel.FK_PhieuNhapHeader_DoanhNghiep", "DoanhNghiep", value)
+                End If
+            End Set
+        End Property
+    
+        ''' <summary>
+        ''' No Metadata Documentation available.
+        ''' </summary>
+        <XmlIgnoreAttribute()>
+        <SoapIgnoreAttribute()>
+        <DataMemberAttribute()>
+        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_HanhViDN_PhieuNhapHeader", "HanhViDN")>
+         Public Property HanhViDNs() As EntityCollection(Of HanhViDN)
+            Get
+                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of HanhViDN)("ThanhTraLaoDongModel.FK_HanhViDN_PhieuNhapHeader", "HanhViDN")
+            End Get
+            Set
+                If (Not value Is Nothing)
+                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of HanhViDN)("ThanhTraLaoDongModel.FK_HanhViDN_PhieuNhapHeader", "HanhViDN", value)
+                End If
+            End Set
+        End Property
+    
+        ''' <summary>
+        ''' No Metadata Documentation available.
+        ''' </summary>
+        <XmlIgnoreAttribute()>
+        <SoapIgnoreAttribute()>
+        <DataMemberAttribute()>
+        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_KetLuan_PhieuNhapHeader", "KetLuan")>
+         Public Property KetLuans() As EntityCollection(Of KetLuan)
+            Get
+                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of KetLuan)("ThanhTraLaoDongModel.FK_KetLuan_PhieuNhapHeader", "KetLuan")
+            End Get
+            Set
+                If (Not value Is Nothing)
+                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of KetLuan)("ThanhTraLaoDongModel.FK_KetLuan_PhieuNhapHeader", "KetLuan", value)
                 End If
             End Set
         End Property
@@ -22917,14 +22942,14 @@ Namespace ThanhTraLaoDongModel
         <XmlIgnoreAttribute()>
         <SoapIgnoreAttribute()>
         <DataMemberAttribute()>
-        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_DoanhNghiep_Tinh", "DoanhNghiep")>
-         Public Property DoanhNghieps() As EntityCollection(Of DoanhNghiep)
+        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_KhuCongNghiep_Tinh", "KhuCongNghiep")>
+         Public Property KhuCongNghieps() As EntityCollection(Of KhuCongNghiep)
             Get
-                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of DoanhNghiep)("ThanhTraLaoDongModel.FK_DoanhNghiep_Tinh", "DoanhNghiep")
+                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of KhuCongNghiep)("ThanhTraLaoDongModel.FK_KhuCongNghiep_Tinh", "KhuCongNghiep")
             End Get
             Set
                 If (Not value Is Nothing)
-                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of DoanhNghiep)("ThanhTraLaoDongModel.FK_DoanhNghiep_Tinh", "DoanhNghiep", value)
+                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of KhuCongNghiep)("ThanhTraLaoDongModel.FK_KhuCongNghiep_Tinh", "KhuCongNghiep", value)
                 End If
             End Set
         End Property
@@ -22935,14 +22960,14 @@ Namespace ThanhTraLaoDongModel
         <XmlIgnoreAttribute()>
         <SoapIgnoreAttribute()>
         <DataMemberAttribute()>
-        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_KhuCongNghiep_Tinh", "KhuCongNghiep")>
-         Public Property KhuCongNghieps() As EntityCollection(Of KhuCongNghiep)
+        <EdmRelationshipNavigationPropertyAttribute("ThanhTraLaoDongModel", "FK_DoanhNghiep_Tinh", "DoanhNghiep")>
+         Public Property DoanhNghieps() As EntityCollection(Of DoanhNghiep)
             Get
-                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of KhuCongNghiep)("ThanhTraLaoDongModel.FK_KhuCongNghiep_Tinh", "KhuCongNghiep")
+                Return CType(Me,IEntityWithRelationships).RelationshipManager.GetRelatedCollection(Of DoanhNghiep)("ThanhTraLaoDongModel.FK_DoanhNghiep_Tinh", "DoanhNghiep")
             End Get
             Set
                 If (Not value Is Nothing)
-                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of KhuCongNghiep)("ThanhTraLaoDongModel.FK_KhuCongNghiep_Tinh", "KhuCongNghiep", value)
+                    CType(Me, IEntityWithRelationships).RelationshipManager.InitializeRelatedCollection(Of DoanhNghiep)("ThanhTraLaoDongModel.FK_DoanhNghiep_Tinh", "DoanhNghiep", value)
                 End If
             End Set
         End Property
@@ -28409,21 +28434,21 @@ Namespace ThanhTraLaoDongModel
         ''' </summary>
         <EdmScalarPropertyAttribute(EntityKeyProperty:=false, IsNullable:=true)>
         <DataMemberAttribute()>
-        Public Property SoChiNhanh() As Nullable(Of Global.System.Int32)
+        Public Property SoChiNhanh() As Global.System.String
             Get
                 Return _SoChiNhanh
             End Get
             Set
                 OnSoChiNhanhChanging(value)
                 ReportPropertyChanging("SoChiNhanh")
-                _SoChiNhanh = StructuralObject.SetValidValue(value)
+                _SoChiNhanh = StructuralObject.SetValidValue(value, true)
                 ReportPropertyChanged("SoChiNhanh")
                 OnSoChiNhanhChanged()
             End Set
         End Property
     
-        Private _SoChiNhanh As Nullable(Of Global.System.Int32)
-        Private Partial Sub OnSoChiNhanhChanging(value As Nullable(Of Global.System.Int32))
+        Private _SoChiNhanh As Global.System.String
+        Private Partial Sub OnSoChiNhanhChanging(value As Global.System.String)
         End Sub
     
         Private Partial Sub OnSoChiNhanhChanged()
