@@ -476,12 +476,12 @@
             </div>
             <div class="DivRow">
             </div>
-            <div class="Div-Left">
+            <div>
                 <div class="DivLabelDoanhNghiep">
-                    <asp:Label ID="lblSochinhanh" CssClass="TextLabel" runat="server" Text="Số chi nhánh, đơn vị hạch toán phụ thuộc:" />
+                    <asp:Label ID="lblSochinhanh" CssClass="TextLabel" runat="server" Text="Các chi nhánh, đơn vị hạch toán phụ thuộc:" />
                 </div>
-                <cc2:ValidationTextBox ID="txtSochinhanh" runat="server" CssClass='TextBox' DataType="integer"
-                    AssociatedLableText="Nhập số" />
+                <asp:TextBox ID="txtSochinhanh" runat="server" CssClass='TextBox' Height="150px"
+                    Width="690px" TextMode="MultiLine"></asp:TextBox>
             </div>
             <div class="DivRow">
             </div>

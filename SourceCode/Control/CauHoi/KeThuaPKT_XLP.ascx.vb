@@ -64,6 +64,13 @@ Partial Class Control_CauHoi_KeThuaPKT_XLP
 
 
                     Try
+                        'Thay doi trang thai IsEdited bang QuyetDinhThanhTra
+                        Dim qdtt = (From a In data.QuyetDinhThanhTras
+                                   Where a.SoQuyetDinh.Contains(SQD) Select a).FirstOrDefault
+                        If Not qdtt Is Nothing Then
+                            qdtt.IsEdited = True
+                            data.SaveChanges()
+                        End If
                         'Thêm doanh nghiệp vào bảng QuyetDinhTTDoanhNghiep  nếu chưa có
                         Dim qddn As QuyetDinhTTDoanhNghiep = (From a In data.QuyetDinhTTDoanhNghieps Where a.DoanhNghiepId = DNId And a.QuyetDinhTT.Equals(SQD)).SingleOrDefault
                         If qddn Is Nothing Then
@@ -91,6 +98,8 @@ Partial Class Control_CauHoi_KeThuaPKT_XLP
                         TaoCauHoi10(iPhieuIdOld)
                         TaoCauHoi11(iPhieuIdOld)
                         TaoCauHoi12(iPhieuIdOld)
+                        KetLuan(iPhieuIdOld)
+                        HanhViDN(iPhieuIdOld)
                         Excute_Javascript("AlertboxRedirect('Kế thừa phiếu thành công.','../BienBanThanhTra/List.aspx');", Me.Page, True)
                     Catch ex As Exception
                         log4net.Config.XmlConfigurator.Configure()
@@ -632,6 +641,58 @@ Partial Class Control_CauHoi_KeThuaPKT_XLP
             log.Error("Error error " & AddTabSpace(1) & Session("Username") & AddTabSpace(1) & "IP:" & GetIPAddress(), ex)
         End Try
     End Sub
+    Protected Sub KetLuan(ByVal iPhieuIdOld As Integer)
+        Try
+            Using data As New ThanhTraLaoDongEntities
+                Dim q = (From a In data.KetLuans Where a.PhieuId = iPhieuIdOld Select a).ToList
+                If q.Count > 0 Then
+                    Dim lstKL As New List(Of KetLuan)
+                    For i As Integer = 0 To q.Count - 1
+                        Dim p As New KetLuan
+                        p.PhieuId = hidPhieuIdNew.Value
+                        p.TenCotCauHoi = q(i).TenCotCauHoi
+                        p.NDKetLuan = q(i).NDKetLuan
+                        p.IsViPham = q(i).IsViPham
+                        p.TenBangCauHoi = q(i).TenBangCauHoi
+                        lstKL.Add(p)
+                    Next
+                    For i As Integer = 0 To lstKL.Count - 1
+                        data.KetLuans.AddObject(lstKL(i))
+                        data.SaveChanges()
+                    Next
+                End If
+            End Using
+        Catch ex As Exception
+            log4net.Config.XmlConfigurator.Configure()
+            log.Error("Error error " & AddTabSpace(1) & Session("Username") & AddTabSpace(1) & "IP:" & GetIPAddress(), ex)
+        End Try
+    End Sub
+    Protected Sub HanhViDN(ByVal iPhieuIdOld As Integer)
+        Try
+            Using data As New ThanhTraLaoDongEntities
+                Dim q = (From a In data.HanhViDNs Where a.PhieuId = iPhieuIdOld Select a).ToList
+                If q.Count > 0 Then
+                    Dim lstHVDN As New List(Of HanhViDN)
+                    For i As Integer = 0 To q.Count - 1
+                        Dim p As New HanhViDN
+                        p.PhieuId = hidPhieuIdNew.Value
+                        p.HanhViId = q(i).HanhViId
+                        p.MucPhat = q(i).MucPhat
+                        p.DoanhNghiepID = q(i).DoanhNghiepID
+                        lstHVDN.Add(p)
+                    Next
+                    For i As Integer = 0 To lstHVDN.Count - 1
+                        data.HanhViDNs.AddObject(lstHVDN(i))
+                        data.SaveChanges()
+                    Next
+                End If
+            End Using
+        Catch ex As Exception
+            log4net.Config.XmlConfigurator.Configure()
+            log.Error("Error error " & AddTabSpace(1) & Session("Username") & AddTabSpace(1) & "IP:" & GetIPAddress(), ex)
+        End Try
+    End Sub
+
 #End Region
 
     Protected Sub btnBack_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnBack.Click

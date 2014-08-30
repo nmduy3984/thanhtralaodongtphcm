@@ -80,15 +80,19 @@ Partial Class Control_KhuCongNghiep_ContentEditor
             intId = hidID.Value
             Dim q = (From p In data.KhuCongNghieps Where p.KhuCongNghiepId = intId Select p).FirstOrDefault
             Try
-                data.KhuCongNghieps.DeleteObject(q)
-                data.SaveChanges()
-                Insert_App_Log("Delete KhuCongNghieps:" & q.TenKhuCongNghiep & "", Function_Name.KhuCongNghiep, Audit_Type.Delete, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
-
-                Excute_Javascript("Alertbox('Xóa dữ liệu thành công.');window.location ='../../Page/KhuCongNghiep/List.aspx';", Me.Page, True)
+                Dim dn = (From a In data.DoanhNghieps Where a.KhuCongNghiepId = intId).ToList
+                If dn.Count = 0 Then
+                    data.KhuCongNghieps.DeleteObject(q)
+                    data.SaveChanges()
+                    Insert_App_Log("Delete KhuCongNghieps:" & q.TenKhuCongNghiep & "", Function_Name.KhuCongNghiep, Audit_Type.Delete, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
+                    Excute_Javascript("Alertbox('Xóa dữ liệu thành công.');window.location ='../../Page/KhuCongNghiep/List.aspx';", Me.Page, True)
+                Else
+                    Excute_Javascript("Alertbox('Xóa thất bại. Khu công nghiệp này hiện tại có doanh nghiệp tham chiếu đến.');", Me.Page, True)
+                End If
             Catch ex As Exception
                 log4net.Config.XmlConfigurator.Configure()
                 log.Error("Error error " & AddTabSpace(1) & Session("Username") & AddTabSpace(1) & "IP:" & GetIPAddress(), ex)
-                Excute_Javascript("Alertbox('Xóa thất bại.');", Me.Page, True)
+                Excute_Javascript("Alertbox('Xóa thất bại (" & ex.Message & ").');", Me.Page, True)
             End Try
         End Using
     End Sub

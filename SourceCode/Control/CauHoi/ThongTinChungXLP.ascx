@@ -6,7 +6,15 @@
         });
 
     }
-   
+    function CheckMaPhieu() {
+        var maphieu = $("#<%=txtMaPhieu.ClientId %>");
+        if (maphieu.val().trim() == "") {
+            AlertboxThenFocus("Vui lòng nhập mã phiếu.", maphieu);
+            maphieu.select();
+            return false;
+        }
+        return true;
+    }
 </script>
 <div id="view" class="BoxField" runat="server">
     <div class="DivRow tbl_row_0">
@@ -14,6 +22,23 @@
             <h3>
                 THÔNG TIN CHI TIẾT DOANH NGHIỆP
             </h3>
+        </div>
+        <div class="DivRow">
+            <div class="DivLabel">
+                <asp:Label ID="Label1" CssClass="TextLabel" runat="server" Text="Mã Phiếu:" />
+            </div>
+            <div class="DivTextBox">
+                <asp:TextBox ID="txtMaPhieu" runat="server" CssClass='TextBox' MaxLength="7" ToolTip="Nhập tối đa 7 kí tự"></asp:TextBox>
+            </div>
+        </div>
+        <div class="DivRow">
+            <div class="DivLabel">
+                &nbsp;&nbsp;&nbsp;</div>
+            <div class="DivTextBox">
+                <div style="float: left">
+                    <asp:Button ID="btnMaPhieu" runat="server" Text=" Lưu " CssClass="btn" ToolTip="Lưu mã phiếu" OnClientClick="javascript:return CheckMaPhieu();" />
+                </div>
+            </div>
         </div>
     </div>
     <div class="DivRow tbl_row_1">

@@ -82,27 +82,17 @@ Partial Class Control_Quyetdinhthanhtra_ContentEditor
             Try
                 'Xóa bảng QuyetDinhTTDoanhNghiep và Doanh nghiệp
                 Dim qdttdn = (From a In data.QuyetDinhTTDoanhNghieps Where a.QuyetDinhTT.Equals(q.SoQuyetDinh)).ToList
-                For i As Integer = 0 To qdttdn.Count - 1
-                    Dim dnid As Integer = qdttdn(i).DoanhNghiepId
-                    'Kiểm tra doanh nghiệp có trong PhieuNhapHeader?
-                    'Nếu không có thì cho xóa
-                    Dim pn = (From a In data.PhieuNhapHeaders Where a.DoanhNghiepId = dnid).ToList
-                    If pn.Count = 0 Then
-                        Dim dn As DoanhNghiep = (From a In data.DoanhNghieps Where a.DoanhNghiepId = dnid).SingleOrDefault
-                        data.DoanhNghieps.DeleteObject(dn)
-                        data.SaveChanges()
-                    End If
-                    data.QuyetDinhTTDoanhNghieps.DeleteObject(qdttdn(i))
+                If qdttdn.Count = 0 Then
+                    data.QuyetDinhThanhTras.DeleteObject(q)
                     data.SaveChanges()
-                Next
-
-                data.QuyetDinhThanhTras.DeleteObject(q)
-                data.SaveChanges()
-                Excute_Javascript("AlertboxRedirect('Xóa dữ liệu thành công.','../../Page/QuyetdinhthanhtraTTB/List.aspx');", Me.Page, True)
+                    Excute_Javascript("AlertboxRedirect('Xóa dữ liệu thành công.','../../Page/QuyetdinhthanhtraTTB/List.aspx');", Me.Page, True)
+                Else
+                    Excute_Javascript("Alertbox('Xóa thất bại. Quyết định này hiện tại có doanh nghiệp tham chiếu đến.');", Me.Page, True)
+                End If
             Catch ex As Exception
                 log4net.Config.XmlConfigurator.Configure()
                 log.Error("Error error " & AddTabSpace(1) & Session("Username") & AddTabSpace(1) & "IP:" & GetIPAddress(), ex)
-                Excute_Javascript("Alertbox('Xóa thất bại.');", Me.Page, True)
+                Excute_Javascript("Alertbox('Xóa thất bại (" & ex.Message & ").');", Me.Page, True)
             End Try
         End Using
     End Sub

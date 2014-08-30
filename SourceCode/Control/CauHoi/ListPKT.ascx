@@ -105,7 +105,7 @@
                         Text="Hủy" />
                 </div>--%>
                 <div class="BoxField">
-                    <asp:Label ID="Label1" runat="server" Text="Tên phiếu:" class="SubjectTitle" Style="width: 25%;
+                    <asp:Label ID="Label1" runat="server" Text="Mã/Tên phiếu:" class="SubjectTitle" Style="width: 25%;
                         text-align: right; float: left" />
                     <asp:TextBox ID="txtTitleFilter" CssClass="TextBox" runat="server" Text="" MaxLength="100" />
                 </div>

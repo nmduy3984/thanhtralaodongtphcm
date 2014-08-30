@@ -280,14 +280,14 @@
     
 </script>
 <style type="text/css">
-.textmulti
-{
-    width:690px ;    
-}
-.divwrap
-{
-    width:895px;   
-}
+    .textmulti
+    {
+        width: 690px;
+    }
+    .divwrap
+    {
+        width: 895px;
+    }
 </style>
 <asp:UpdatePanel ID="uplDoanhnghiep" runat="server">
     <ContentTemplate>
@@ -305,7 +305,7 @@
                         class="fieldRequired">&nbsp;</span>
                 </div>
                 <cc2:ValidationTextBox ID="txtTendoanhnghiep" runat="server" CssClass='TextBox ToolTip textmulti'
-                    AssociatedLableText="tên ghi đúng theo con dấu" DataType="required"/>
+                    AssociatedLableText="tên ghi đúng theo con dấu" DataType="required" />
             </div>
             <div class="DivRow">
             </div>
@@ -404,8 +404,8 @@
                 <div class="DivLabelDoanhNghiep">
                     <asp:Label ID="lblKhucongnghiep" CssClass="TextLabel" runat="server" Text="Khu công nghiệp:" />
                 </div>
-                <cc1:ValidationDropdownlist ID="ddlKhuCongNghiep" runat="server" CssClass='DropDownList' AssociatedLableText="khu công nghiệp"
-                    Style="width: 248px" DataType="none" AutoPostBack="false" />
+                <cc1:ValidationDropdownlist ID="ddlKhuCongNghiep" runat="server" CssClass='DropDownList'
+                    AssociatedLableText="khu công nghiệp" Style="width: 248px" DataType="none" AutoPostBack="false" />
             </div>
             <div class="DivRow">
             </div>
@@ -466,7 +466,6 @@
                 <cc2:ValidationTextBox ID="txtUrl" runat="server" CssClass='TextBox' CustomPattern="UrlWeb"
                     DataType="custom" AssociatedLableText="Địa chỉ website" />
             </div>
-            
             <div class="DivRow">
             </div>
             <div class="Div-Left">
@@ -476,12 +475,12 @@
             </div>
             <div class="DivRow">
             </div>
-            <div class="Div-Left">
+            <div>
                 <div class="DivLabelDoanhNghiep">
-                    <asp:Label ID="lblSochinhanh" CssClass="TextLabel" runat="server" Text="Số chi nhánh, đơn vị hạch toán phụ thuộc:" />
+                    <asp:Label ID="lblSochinhanh" CssClass="TextLabel" runat="server" Text="Các chi nhánh, đơn vị hạch toán phụ thuộc:" />
                 </div>
-                <cc2:ValidationTextBox ID="txtSochinhanh" runat="server" CssClass='TextBox' DataType="integer"
-                    AssociatedLableText="Nhập số" />
+                <asp:TextBox ID="txtSochinhanh" runat="server" CssClass='TextBox' Height="150px"
+                    Width="690px" TextMode="MultiLine"></asp:TextBox>
             </div>
             <div class="DivRow">
             </div>

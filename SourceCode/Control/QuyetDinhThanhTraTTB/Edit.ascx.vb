@@ -159,14 +159,14 @@ Partial Class Control_Quyetdinhthanhtra_Edit
                         lstDiaChi &= dn(i).TruSoChinh + Str_Symbol_Group
                         lstTinh &= dn(i).TinhId & Str_Symbol_Group
                         lstHuyen &= dn(i).HuyenId & Str_Symbol_Group
-                        lstThoiGian &= CType(dn(i).ThoiGianLamViec, Date).ToString("dd/MM/yyyy") + Str_Symbol_Group
+                        lstThoiGian &= If(dn(dn.Count - 1).ThoiGianLamViec Is Nothing, "", CType(dn(dn.Count - 1).ThoiGianLamViec, Date).ToString("dd/MM/yyyy")) + Str_Symbol_Group
                     Next
                     lstDoanhNghiepId &= dn(dn.Count - 1).DoanhNghiepId
                     lstDoanhNghiep &= dn(dn.Count - 1).TenDoanhNghiep
                     lstDiaChi &= dn(dn.Count - 1).TruSoChinh
                     lstTinh &= dn(dn.Count - 1).TinhId
                     lstHuyen &= dn(dn.Count - 1).HuyenId
-                    lstThoiGian &= CType(dn(dn.Count - 1).ThoiGianLamViec, Date).ToString("dd/MM/yyyy")
+                    lstThoiGian &= If(dn(dn.Count - 1).ThoiGianLamViec Is Nothing, "", CType(dn(dn.Count - 1).ThoiGianLamViec, Date).ToString("dd/MM/yyyy"))
                 End If
                 hidlstDoanhNghiepId.Value = lstDoanhNghiepId
                 hidlstDoanhNghiep.Value = lstDoanhNghiep

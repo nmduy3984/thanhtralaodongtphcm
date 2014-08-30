@@ -39,6 +39,9 @@ Partial Class Control_CauHoi_ThongTinChungXLP
 
             If p.Count > 0 Then
                 Dim pn = (From a In data.PhieuNhapHeaders Where a.PhieuID = iPhieuId).FirstOrDefault
+                If Not pn Is Nothing Then
+                    txtMaPhieu.Text = IIf(IsNothing(pn.MaPhieu) = True, "", pn.MaPhieu)
+                End If
                 lkbTendoanhnghiep.Text = IIf(IsNothing(p(0).TenDoanhNghiep) = True, "", p(0).TenDoanhNghiep)
                 lblDienthoai.Text = IIf(IsNothing(p(0).DienThoai) = True, "", p(0).DienThoai)
                 lblFax.Text = IIf(IsNothing(p(0).Fax) = True, "", p(0).Fax)
@@ -60,7 +63,7 @@ Partial Class Control_CauHoi_ThongTinChungXLP
                 Else
                     lblNgaychungnhandkkd.Text = CType(p(0).NgayChungNhanDKKD, Date).ToString("dd/MM/yyyy")
                 End If
-                lblSochinhanh.Text = IIf(IsNothing(p(0).SoChiNhanh) = True, "", String.Format("{0:n0}", p(0).SoChiNhanh))
+                lblSochinhanh.Text = IIf(IsNothing(p(0).SoChiNhanh) = True, "", p(0).SoChiNhanh)
                 lblTongsonhanvien.Text = IIf(IsNothing(p(0).TongSoNhanVien) = True, "", String.Format("{0:n0}", p(0).TongSoNhanVien))
                 lblSolaodongnu.Text = IIf(IsNothing(p(0).SoLaoDongNu) = True, "", String.Format("{0:n0}", p(0).SoLaoDongNu))
                 lblSonguoilamnghenguyhiem.Text = IIf(IsNothing(p(0).SoNguoiLamNgheNguyHiem) = True, "", String.Format("{0:n0}", p(0).SoNguoiLamNgheNguyHiem))
@@ -92,4 +95,20 @@ Partial Class Control_CauHoi_ThongTinChungXLP
         Response.Redirect("../../Page/DoanhNghiepXLP/Edit.aspx?DNId=" & hidID.Value)
     End Sub
 #End Region
+
+    Protected Sub btnMaPhieu_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnMaPhieu.Click
+        Using data As New ThanhTraLaoDongEntities
+            Try
+                Dim iPhieuId = CInt(Session("phieuid"))
+                Dim pn = (From a In data.PhieuNhapHeaders Where a.PhieuID = iPhieuId).FirstOrDefault
+                If Not pn Is Nothing Then
+                    pn.MaPhieu = txtMaPhieu.Text.Trim()
+                    data.SaveChanges()
+                    Excute_Javascript("AlertboxRedirect('Lưu mã phiếu thành công.','../../Page/PhieuKiemTra/ThongTinChungXLP.aspx?DNId=" & hidID.Value & "');", Me.Page, True)
+                End If
+            Catch ex As Exception
+                Excute_Javascript("Alertbox('Lưu mã phiếu thất bại.');", Me.Page, True)
+            End Try
+        End Using
+    End Sub
 End Class
