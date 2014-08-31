@@ -144,7 +144,7 @@ Partial Class Control_DoanhNghiep_ContentEditor
                             Insert_App_Log("Delete Doanh Nghiep:" & intId & "", Function_Name.DoanhNghiepPTKT, Audit_Type.Delete, Request.ServerVariables("REMOTE_ADDR"), Session("UserName"))
                             Excute_Javascript("Alertbox('Xóa dữ liệu thành công.');window.location ='../../Page/DoanhNghiepPTKT/List.aspx';", Me.Page, True)
                         Else
-                            Excute_Javascript("Alertbox('Doanh nghiệp đang được tham chiếu từ biên bản thanh tra hoặc phiếu kiểm tra.');", Me.Page, True)
+                            Excute_Javascript("Alertbox('Xóa doanh nghiệp thất bại. Doanh nghiệp đang được tham chiếu từ biên bản thanh tra hoặc phiếu kiểm tra.');", Me.Page, True)
                         End If
                     Catch ex As Exception
                         log4net.Config.XmlConfigurator.Configure()
